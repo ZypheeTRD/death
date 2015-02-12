@@ -179,8 +179,6 @@ class Life_Client_Core
 		class updateViewDistance {};
 		class settingsMenu {};
 		class settingsInit {};
-		class AAN {};
-
 	};
 	
 	class Functions
@@ -229,8 +227,6 @@ class Life_Client_Core
 		class addExp {};
 		class fadeSound {};
 		class randomRound {};
-		class emptyFuel {};
-        class fatigueReset {}; //Add this line
 
 	};
 	
@@ -389,8 +385,6 @@ class Life_Client_Core
 		class safeFix {};
 		class vehicleGarage {};
 		class gangDeposit {};
-		class calldialog {};
-		class sendChannel {};
 	};
 	
 	class Cam

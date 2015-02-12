@@ -30,7 +30,6 @@ if(_localize) exitWith {
                 case 0: {systemChat _msg;};
                 case 1: {hint _msg;};
                 case 2: {titleText[_msg,"PLAIN"];};
-				case 3: {[_message,(player getVariable["realname",name player])] call life_fnc_AAN;};
             };
         };
     } else {
@@ -39,7 +38,6 @@ if(_localize) exitWith {
             case 0: {systemChat _msg;};
             case 1: {hint _msg;};
             case 2: {titleText[_msg,"PLAIN"];};
-			case 3: {[_message,(player getVariable["realname",name player])] call life_fnc_AAN;};
         };
     };
 };

@@ -32,8 +32,8 @@ life_removeWanted = false;
 life_action_gathering = false;
 life_fadeSound = false;
 life_rebAmount = 10000 + round(random 70000);
-life_channel_send = true; //Channel 7
-life_fatigue = 0.5; //Set the max fatigue limit (50%)
+
+
 
 //Persistent Saving
 __CONST__(life_save_civ,FALSE); //Save weapons for civs?

@@ -27,4 +27,3 @@
 #include "prof.hpp"
 #include "common_EditorWrapper.hpp"
 #include "market.hpp"
-#include "channel.hpp"
