@@ -44,7 +44,6 @@ if(count life_spawn_point == 0) then
 					player setPos (getMarkerPos (life_spawn_point select 0));
 				};
 				
-				{_bPos = _bPos - [(_house buildingPos _x)];} foreach (_house getVariable ["slots",[]]);
 				_pos = _bPos call BIS_fnc_selectRandom;
 				player setPosATL _pos;
 			} else {
@@ -62,6 +61,29 @@ if(count life_spawn_point == 0) then
 	};
 	titleText[format["%2 %1",life_spawn_point select 1,localize "STR_Spawn_Spawned"],"BLACK IN"];
 };
+
+//Introcam
+[] spawn life_fnc_IntroCam;
+[] spawn {
+  sleep 5;
+  if(playerSide == west) then {
+  hintC "Welcome to the Arcadia Police Department, please get onto teamspeak at ts69.gameservers.com:9577";
+			player say2d "copintro";
+  };
+  if(playerSide == civilian) then {
+
+  hintC "Welcome to Arcadia Life, please behave yourself. The eye of the law is always watching.";
+	        player say2d "civintro";
+ 
+ };
+   if(playerSide == independent) then {
+
+  hintC "Welcome to the Arcadia Medical Team. It is your duty to help the civilians and the police of Arcadia.";
+	        player say2d "medintro";
+ 
+ };
+};
+
 
 if(life_firstSpawn) then {
 	life_firstSpawn = false;

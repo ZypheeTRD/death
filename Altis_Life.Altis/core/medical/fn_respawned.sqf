@@ -58,9 +58,15 @@ if(life_is_arrested) exitWith {
 	[] call SOCK_fnc_updateRequest;
 };
 
+//Rebel reward
+if(!isNil "life_rebRecieve") then {
+[[life_rebRecieve,life_rebAmount],"TON_fnc_rebReward",false,false] spawn life_fnc_MP;
+life_rebRecieve = nil;
+};
+
 //Johnny law got me but didn't let the EMS revive me, reward them half the bounty.
 if(!isNil "life_copRecieve") then {
-	[[player,life_copRecieve,true],"life_fnc_wantedBounty",false,false] spawn life_fnc_MP;
+	[[getPlayerUID player,player,life_copRecieve,true],"life_fnc_wantedBounty",false,false] spawn life_fnc_MP;
 	life_copRecieve = nil;
 };
 

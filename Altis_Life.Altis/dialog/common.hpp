@@ -1085,4 +1085,3 @@ class Life_RscToolbox {
 	font = "PuristaMedium";
 	sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 };
-

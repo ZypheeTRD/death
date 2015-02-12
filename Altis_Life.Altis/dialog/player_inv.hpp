@@ -308,6 +308,31 @@ class playerSettings {
 			y = 0.805;
 			w = (6.25 / 40);
 			h = (1 / 25);
+			
+			
+		};
+		
+		class ProfButton : life_RscButtonMenu {
+ 
+			text = "Proficiency";
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+			onButtonClick = "[] call life_fnc_profSetup;";
+			x = 0.11;
+			y = 0.70;
+			w = (5.75 / 40);
+			h = (1 / 25);
+			 
+			};
+			
+			class ButtonMarket : Life_RscButtonMenu {
+			idc = -1;
+			text = "Market";
+			onButtonClick = "[] spawn life_fnc_openMarketView;";
+			//x = 0.26 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
+			x = 0.26 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.805;
+			w = (6.25 / 40);
+			h = (1 / 25);
 		};
 	};
 };

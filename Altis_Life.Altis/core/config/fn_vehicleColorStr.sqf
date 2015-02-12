@@ -25,6 +25,8 @@ switch (_vehicle) do
 			case 6: {_color = "Black"};
 			case 7: {_color = "Black"};
 			case 8: {_color = "Taxi"};
+			case 9: {_color = "Police"};
+			case 10: {_color = "EMS"};
 		};
 	};
 	
@@ -40,6 +42,7 @@ switch (_vehicle) do
 			case 5: {_color = "White"};
 			case 6: {_color = "Grey"};
 			case 7: {_color = "Black"};
+			case 8: {_color = "Ghostbusters"};
 		};
 	};
 	
@@ -54,6 +57,7 @@ switch (_vehicle) do
 			case 4: {_color = "Tan"};
 			case 5: {_color = "Green"};
 			case 6: {_color = "Cop"};
+			case 7: {_color = "Ghostbusters"};
 		};
 	};
 	
@@ -66,6 +70,12 @@ switch (_vehicle) do
 			case 2: {_color = "Silver";};
 			case 3: {_color = "Orange";};
 			case 4: {_color = "Cop";};
+			case 5: {_color = "Police";};
+			case 6: {_color = "Blue Skull";};
+			case 7: {_color = "Creamy";};
+			case 8: {_color = "Red Ferrari";};
+			case 9: {_color = "Hello Kitty";};
+			case 10: {_color = "EMS";};
 		};
 	};
 	
@@ -84,6 +94,14 @@ switch (_vehicle) do
 		{
 			case 0: {_color = "White"};
 			case 1: {_color = "Red"};
+		};
+	};
+	
+	case "I_Heli_light_03_unarmed_F":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Blackcat"};
 		};
 	};
 	
@@ -111,7 +129,20 @@ switch (_vehicle) do
 			case 8: {_color = "Rebel Camo"};
 		};
 	};
-	
+
+	case "O_MRAP_02_F":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Rusty"};
+			case 1: {_color = "Arrrrrr"};
+			case 2: {_color = "Dark Camo"};
+			case 3: {_color = "Light Camo"};
+			case 4: {_color = "Cancer Awareness"};
+			case 5: {_color = "Equality"};
+		};
+	};
+
 	case "B_Heli_Light_01_F":
 	{
 		switch (_index) do
@@ -131,6 +162,7 @@ switch (_vehicle) do
 			case 12: {_color = "Waves Blue"};
 			case 13: {_color = "Rebel Digital"};
 			case 14: {_color = "EMS White"};
+			case 15: {_color = "Police"};
 		};
 	};
 	
@@ -142,7 +174,7 @@ switch (_vehicle) do
 			case 1: {_color = "White / Blue"};
 			case 2: {_color = "Digi Green"};
 			case 3: {_color = "Desert Digi"};
-			case 4: {_color = "EMS White"};
+			case 4: {_color = "EMS"};
 		};
 	};
 	
@@ -152,6 +184,9 @@ switch (_vehicle) do
 		{
 			case 0: {_color = "Regular"};
 			case 1: {_color = "Black"};
+			case 2: {_color = "Police"};
+			case 3: {_color = "SWAT"};
+			case 4: {_color = "EMS"};
 		};
 	};
 	
