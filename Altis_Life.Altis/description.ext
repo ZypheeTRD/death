@@ -8,6 +8,7 @@ disabledAI = true;
 disableChannels[]={0,1,2};
 enableDebugConsole = 1;
 respawnDialog = 0;
+LoadScreen  = "loadscreen\loadscreen.jpg";
 
 class Header
 {
@@ -24,7 +25,7 @@ corpseRemovalMinTime = 300;
 corpseRemovalMaxTime = 360;
 
 #include "dialog\MasterHandler.h"
-#include "infiSTAR_AdminMenu.hpp"
+//#include "infiSTAR_AdminMenu.hpp"
 
 class RscTitles
 {
