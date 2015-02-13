@@ -43,6 +43,7 @@ CONST(JJJJ_MMMM___EEEEEEE_SPAWN_WEAPON,"false");
 			};
 		};
 	};
+
 	copyToClipboard str(_cfgPatches);
 	
 	i.e

@@ -1,6 +1,7 @@
 author = "Tonic";
 onLoadName = "Altis Life RPG v3.1.4.8";
 onLoadMission = "A RPG game mode developed by Tonic";
+loadScreen = "loadscreen/loadscreen.jpg";
 joinUnassigned = 1;
 respawn = BASE;
 respawndelay = 5;
@@ -8,7 +9,6 @@ disabledAI = true;
 disableChannels[]={0,1,2};
 enableDebugConsole = 1;
 respawnDialog = 0;
-LoadScreen  = "loadscreen\loadscreen.jpg";
 
 class Header
 {
@@ -18,14 +18,13 @@ class Header
 };
 
 wreckLimit = 3;
-wreckRemovalMinTime = 50;
-wreckRemovalMaxTime = 130;
-corpseLimit = 10;
-corpseRemovalMinTime = 300;
-corpseRemovalMaxTime = 360;
+wreckRemovalMinTime = 60;
+wreckRemovalMaxTime = 320;
+corpseLimit = 150;
+corpseRemovalMinTime = 999;
+corpseRemovalMaxTime = 9999;
 
 #include "dialog\MasterHandler.h"
-//#include "infiSTAR_AdminMenu.hpp"
 
 class RscTitles
 {
@@ -33,7 +32,6 @@ class RscTitles
 	#include "dialog\progress.hpp"
 	#include "dialog\hud_nameTags.h"
 };
-
 
 class CfgFunctions
 {
@@ -57,83 +55,12 @@ class CfgSounds
 		titles[] = {};
 	};
 	
-		class flashbang
+	class flashbang
 	{
 		name = "flashbang";
 		sound[] = {"\sounds\flashbang.ogg", 1.0, 1};
 		titles[] = {};
-	};	
-	
-		class alert
-	{
-		name = "alert";
-		sound[] = {"\sounds\alert.ogg", 1.0, 1};
-		titles[] = {};
-	};	
-	
-		class carlock
-	{
-		name = "carlock";
-		sound[] = {"\sounds\carlock.ogg", 1.0, 1};
-		titles[] = {};
 	};
-	
-		class carunlock
-	{
-		name = "carunlock";
-		sound[] = {"\sounds\carunlock.ogg", 1.0, 1};
-		titles[] = {};
-	};
-	
-	class pickaxeUseSound
-	{
-		name = "pickaxeUseSound";
-		sound[] = {"\sounds\pickaxeUseSound.ogg", 1.0, 1};
-		titles[] = {};
-	};
-	
-		class MedicSirenLong
-	{
-		name = "MedicSirenLong";
-		sound[] = {"\sounds\MedicSirenLong.ogg", 1.0, 1};
-		titles[] = {};
-	};
-		class medintro
-	{
-		name = "medintro";
-		sound[] = {"\sounds\medintro.ogg", 1.0, 1};
-		titles[] = {};
-	};	
-		class civintro
-	{
-		name = "civintro";
-		sound[] = {"\sounds\civintro.ogg", 1.0, 1};
-		titles[] = {};
-	};
-	
-		class copintro
-	{
-		name = "copintro";
-		sound[] = {"\sounds\copintro.ogg", 1.0, 1};
-		titles[] = {};
-	};
-	
-			class cannabis
-	{
-		name = "cannabis";
-		sound[] = {"\sounds\cannabis.ogg", 1.0, 1};
-		titles[] = {};
-	};
-	
-		class shrooms
-	{
-		name = "shrooms";
-		sound[] = {"\sounds\shrooms.ogg", 1.0, 1};
-		titles[] = {};
-	};
-	
-	
-
 };
 
 class CfgDebriefing
