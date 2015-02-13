@@ -1,7 +1,8 @@
+#include "infiSTAR_AdminMenu.hpp"
 author = "Tonic";
 onLoadName = "Altis Life RPG v3.1.4.8";
 onLoadMission = "A RPG game mode developed by Tonic";
-loadScreen = "loadscreen/loadscreen.jpg";
+loadScreen = "nitrado_loadScreen.paa";
 joinUnassigned = 1;
 respawn = BASE;
 respawndelay = 5;
