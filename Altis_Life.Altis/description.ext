@@ -2,7 +2,7 @@
 author = "Tonic";
 onLoadName = "Altis Life RPG v3.1.4.8";
 onLoadMission = "Scripts altered by Arcadia Life Staff";
-loadScreen = "loadscreen/loadscreen.jpg";
+loadScreen = "loadscreen.jpg";
 joinUnassigned = 1;
 respawn = BASE;
 respawndelay = 5;
