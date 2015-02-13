@@ -25,11 +25,11 @@ switch(_type) do
     case "4": {_type = ["Reckless Driving",3500]};
     case "5": {_type = ["Driving Stolen Vehicle",8000]};
     case "6": {_type = ["Hit and Run",5000]};
-	case "7": {_type = ["Attempted Theft of a Police Vehicle",10000]};
-	case "8": {_type = ["Theft of a Police Vehicle",7350]};
+	case "7": {_type = ["Attempted Theft of a Police Vehicle",5000]};
+	case "8": {_type = ["Theft of a Police Vehicle",12350]};
     case "9": {_type = ["Public Indeceny",500]};
     case "10": {_type = ["Disturbing the Peace",500]};
-    case "11": {_type = ["Driving Illegal Vehicles",5500]};
+    case "11": {_type = ["Driving Illegal Vehicle",5500]};
     case "12": {_type = ["Evading from Police",8000]};
     case "13": {_type = ["Assault on an Officer",9000]};
 	case "14": {_type = ["Illegal Roadblocks",10000]};
@@ -57,7 +57,7 @@ switch(_type) do
 	case "261A": {_type = ["Attempted Rape",3000]};
 	case "261AB": {_type = ["Beastiality",7000]};
 	case "215": {_type = ["Attempted Auto Theft",2000]};
-	case "213": {_type = ["Use of Illegal Explosives",10000]};
+	case "213": {_type = ["Use of Illegal Explosives",100000]};
 	case "211": {_type = ["Robbery",1000]};
 	case "207": {_type = ["Kidnapping",3500]};
 	case "207A": {_type = ["Attempted Kidnapping",2000]};
