@@ -17,8 +17,9 @@ if(side _unit != civilian) exitWith {}; //Not a civ
 if(isNull _unit) exitWith {}; //Not valid
 if(_time < 1) exitwith {}; //Not Valid
 
-
-[[_unit,player,false],"life_fnc_wantedBounty",false,false] spawn life_fnc_MP;
+//Edited for Persistent Wanted System
+[[getPlayerUID _unit,_unit,player,false],"life_fnc_wantedBounty",false,false] spawn life_fnc_MP;
+//Edited for Persistent Wanted System
 
 if(isNull _unit) exitWith {}; //Not valid
 detach _unit;

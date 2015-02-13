@@ -30,7 +30,7 @@ hint "Robbery failed because the robber died!";
 _shop switchMove "";
 _action = _shop addAction["Rob the Gas Station",life_fnc_robShops];
 };
-if (_dist => 4) exitwith {//Test if robber didn't stay within 3 meters of a shop owner
+if (_dist  > 4) exitwith {//Test if robber didn't stay within 3 meters of a shop owner
 hint "Robbery failed due to unknown reason!";
 _shop switchMove "";
 _action = _shop addAction["Rob the Gas Station",life_fnc_robShops];

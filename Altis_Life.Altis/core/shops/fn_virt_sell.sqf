@@ -59,7 +59,7 @@ if(life_shop_type == "heroin") then
 	}
 		else
 	{
-		_array pushBack _array,[getPlayerUID player,profileName,_price]];
+		_array pushBack _array,[getPlayerUID player,profileName,_price]
 		life_shop_npc setVariable["sellers",_array,true];
 	};
 };

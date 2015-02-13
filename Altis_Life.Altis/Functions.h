@@ -178,6 +178,7 @@ class Life_Client_Core
 		class updateViewDistance {};
 		class settingsMenu {};
 		class settingsInit {};
+        class wantedAddP {}; //Persistent Wanted System
 	};
 	
 	class Functions
@@ -255,6 +256,7 @@ class Life_Client_Core
 		class removeLicenses {};
 		class demoChargeTimer {};
 		class civLoadout {};
+        class gangMarkers{};
 	};
 	
 	class Vehicle
@@ -301,6 +303,7 @@ class Life_Client_Core
 		class ticketPaid {};
 		class showArrestDialog {}; //changed
 		class arrestDialog_Arrest {}; //changed
+        class wantedGrab {}; //Persistent Wanted System
 	};
 	
 	class Gangs
