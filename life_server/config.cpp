@@ -104,7 +104,9 @@ class CfgFunctions
 			class clientDisconnect {};
 			class cleanupRequest {};
 			class setObjVar {};
-			class keyManagement {};
+			class keyManagement {};  
+            class getPrices {};
+            class ajustprices {};
 		};
 		
 		class Housing
