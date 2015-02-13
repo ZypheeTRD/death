@@ -152,9 +152,9 @@ class life_wanted_menu {
 		{
 			idc = 1002;
 			text = "Crimes";
-			x = 0.542; 
+			x = 0.742; 
 			y = 0.245;
-			w = (8 / 52); 
+			w = (.6); 
 			h = 0.03;
 		};
 	};
