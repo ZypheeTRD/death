@@ -4,35 +4,15 @@
 
 */
 
-private["_display", "_selectedindex", "_index", "_shortname"];
+private["_display","_selectedindex","_shortname"];
 
 disableSerialization;
-if(!dialog) exitWith {hint "Could not find dialog.";}; //cancel if no dlg
-
+if(!Dialog) exitWith {hint "Could not find dialog.";};
 _display = findDisplay 39500;
+_selectedindex = lbCurSel 1500; //Selected index
+if(isNull _display) exitWith {};
+if(_selectedindex == -1) exitWith{}; //If selected index is -1, set it to 0 (triggers refresh)
 
-if(isNull _display) exitWith {hint "Dialog not open!"; };
-
-//Selected index
-_selectedindex = lbCurSel 1500;
-
-//If selected index is -1, set it to 0 (triggers refresh)
-if(_selectedindex == -1) then
-{
-	lbSetCurSel [1500, 0];
-	
-	lbClear 1500;
-
-	//Recreate listbox items
-	{
-		_index = lbAdd [1500, [ [_x select 0, 0] call life_fnc_varHandle ] call life_fnc_varToStr ];
-		lbSetData [1500, _index, _x select 0];
-	}
-	foreach life_market_resources;
-}
-//Otherwise set data to selected entry
-else
-{
 	_shortname = lbData [1500, _selectedindex];
 	
 	ctrlSetText [1000, lbText [1500, _selectedindex] ]; //Set name
@@ -68,4 +48,3 @@ else
 		};
 	}
 	foreach life_market_prices;
-};

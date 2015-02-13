@@ -35,7 +35,7 @@ class marketView
 		class lblResourceName: RscText
 		{
 			idc = 1000;
-			text = "Resources"; //--- ToDo: Localize;
+			text = "Resource"; //--- ToDo: Localize;
 			x = 16.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 2.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 18 * GUI_GRID_W;
@@ -110,7 +110,7 @@ class marketView
 		class RscText_1003: RscText
 		{
 			idc = 1003;
-			text = "Price Difference"; //--- ToDo: Localize;
+			text = "Recent"; //--- ToDo: Localize;
 			x = 20.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 13.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 13 * GUI_GRID_W;
