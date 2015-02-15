@@ -12,22 +12,11 @@ _camTime = 30;// you can change the time for sure, I adjusted mine to the intro 
 // the one below basically says that if you already joined the server once the time of the camera movement will be faster, else it might get annoying
 
 if(!life_firstSpawn) then {
-	_camTime = 5;
+	_camTime = 10;
 };
 //intro move
 showCinemaBorder true;
 camUseNVG false;
-
-
- if(playerSide == west) then {
-  player say2d "copintro";
-  };
-  if(playerSide == civilian) then {
-  player say2d "civintro";
-  };
-  if(playerSide == independent) then {
-  player say2d "medintro";
-  };
 
 
 _camera = "camera" camCreate [(position player select 0)+_randCamX, (position player select 1)+_randCamY,(position player select 2)+_camDistance];
@@ -46,3 +35,13 @@ waitUntil {camCommitted _camera};
 _camera cameraEffect ["terminate","back"];
 camDestroy _camera;
 life_firstSpawn = false;
+
+ if(playerSide == west) then {
+  player say2d "copintro";
+  };
+  if(playerSide == civilian) then {
+  player say2d "civintro";
+  };
+  if(playerSide == independent) then {
+  player say2d "medintro";
+  };
