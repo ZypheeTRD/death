@@ -35,13 +35,3 @@ waitUntil {camCommitted _camera};
 _camera cameraEffect ["terminate","back"];
 camDestroy _camera;
 life_firstSpawn = false;
-
- if(playerSide == west) then {
-  player say2d "copintro";
-  };
-  if(playerSide == civilian) then {
-  player say2d "civintro";
-  };
-  if(playerSide == independent) then {
-  player say2d "medintro";
-  };

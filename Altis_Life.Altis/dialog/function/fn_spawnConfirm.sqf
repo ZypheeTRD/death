@@ -63,6 +63,18 @@ if(count life_spawn_point == 0) then
 	titleText[format["%2 %1",life_spawn_point select 1,localize "STR_Spawn_Spawned"],"BLACK IN"];
 };
 
+
+ if(playerSide == west) then {
+  player say2d "copintro";
+  };
+  if(playerSide == civilian) then {
+  player say2d "civintro";
+  };
+  if(playerSide == independent) then {
+  player say2d "medintro";
+  };
+
+
 //Introcam
 [] spawn life_fnc_IntroCam;
 
