@@ -46,6 +46,8 @@ switch (_var) do
 	case "life_inv_glass": {(localize "STR_Item_Glass")};
 	case "life_inv_diamond": {(localize "STR_Item_DiamondU")};
 	case "life_inv_diamondr": {(localize "STR_Item_DiamondC")};
+    case "life_inv_handcuffs": {(localize "STR_Item_Handcuffs")};
+    case "life_inv_handcuffkeys": {(localize "STR_Item_Handcuffkeys")};
 	case "life_inv_tbacon": {(localize "STR_Item_TBacon")};
 	case "life_inv_redgull": {(localize "STR_Item_RedGull")};
 	case "life_inv_lockpick": {(localize "STR_Item_Lockpick")};

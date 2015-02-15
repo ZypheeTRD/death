@@ -72,10 +72,10 @@ switch (true) do
 		[] spawn life_fnc_jerryRefuel;
 	};
 	
-	case (_item == "lockpick"):
-	{
-		[] spawn life_fnc_lockpick;
-	};
+//	case (_item == "lockpick"):
+//	{
+//		[] spawn life_fnc_lockpick;
+//	};
 	
 	case (_item in ["apple","rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtle","turtlesoup","donuts","tbacon","peach"]):
 	{

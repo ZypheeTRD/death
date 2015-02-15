@@ -30,73 +30,70 @@ _Btn5 = _display displayCtrl Btn5;
 _Btn6 = _display displayCtrl Btn6;
 life_vInact_curTarget = _curTarget;
 
-//Set Repair Action
+//Button 1 - Set vehicle repair action
 _Btn1 ctrlSetText localize "STR_vInAct_Repair";
 _Btn1 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_repairTruck;";
 
-if("ToolKit" in (items player) && (damage _curTarget < 1)) then {_Btn1 ctrlEnable true;} else {_Btn1 ctrlEnable false;};
-
-if(playerSide == west) then {
-	_Btn2 ctrlSetText localize "STR_vInAct_Registration";
-	_Btn2 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_searchVehAction;";
-	
-	_Btn3 ctrlSetText localize "STR_vInAct_SearchVehicle";
-	_Btn3 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_vehInvSearch;";
-	
-	_Btn4 ctrlSetText localize "STR_vInAct_PullOut";
-	_Btn4 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_pulloutAction;";
-	if(count crew _curTarget == 0) then {_Btn4 ctrlEnable false;};
-	
-	_Btn5 ctrlSetText localize "STR_vInAct_Impound";
-	_Btn5 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_impoundAction;";
-	
-	if(_curTarget isKindOf "Ship") then {
-		_Btn6 ctrlSetText localize "STR_vInAct_PushBoat";
-		_Btn6 buttonSetAction "[] spawn life_fnc_pushObject; closeDialog 0;";
-		if(_curTarget isKindOf "Ship" && {local _curTarget} && {count crew _curTarget == 0}) then { _Btn6 ctrlEnable true;} else {_Btn6 ctrlEnable false};
-	} else {
-		if(typeOf (_curTarget) in ["C_Kart_01_Blu_F","C_Kart_01_Red_F","C_Kart_01_Fuel_F","C_Kart_01_Vrana_F"]) then {
-			_Btn6 ctrlSetText localize "STR_vInAct_GetInKart";
-			_Btn6 buttonSetAction "player moveInDriver life_vInact_curTarget; closeDialog 0;";
-			if(count crew _curTarget == 0 && {canMove _curTarget} && {locked _curTarget == 0}) then {_Btn6 ctrlEnable true;} else {_Btn6 ctrlEnable false};
-		} else {
-			_Btn6 ctrlSetText localize "STR_vInAct_Unflip";
-			_Btn6 buttonSetAction "life_vInact_curTarget setPos [getPos life_vInact_curTarget select 0, getPos life_vInact_curTarget select 1, (getPos life_vInact_curTarget select 2)+0.5]; closeDialog 0;";
-			if(count crew _curTarget == 0 && {canMove _curTarget}) then { _Btn6 ctrlEnable false;} else {_Btn6 ctrlEnable true;};
-		};
-	};
-	
+if("ToolKit" in (items player) && (damage _curTarget < 1)) then 
+{
+    _Btn1 ctrlEnable true;
 } else {
-	
-	if(_curTarget isKindOf "Ship") then {
-		_Btn2 ctrlSetText localize "STR_vInAct_PushBoat";
-		_Btn2 buttonSetAction "[] spawn life_fnc_pushObject; closeDialog 0;";
-		if(_curTarget isKindOf "Ship" && {local _curTarget} && {count crew _curTarget == 0}) then { _Btn2 ctrlEnable true;} else {_Btn2 ctrlEnable false};
-	} else {
-		if(typeOf (_curTarget) in ["C_Kart_01_Blu_F","C_Kart_01_Red_F","C_Kart_01_Fuel_F","C_Kart_01_Vrana_F"]) then {
-			_Btn2 ctrlSetText localize "STR_vInAct_GetInKart";
-			_Btn2 buttonSetAction "player moveInDriver life_vInact_curTarget; closeDialog 0;";
-			if(count crew _curTarget == 0 && {canMove _curTarget} && {locked _curTarget == 0}) then {_Btn2 ctrlEnable true;} else {_Btn2 ctrlEnable false};
-		} else {
-			_Btn2 ctrlSetText localize "STR_vInAct_Unflip";
-			_Btn2 buttonSetAction "life_vInact_curTarget setPos [getPos life_vInact_curTarget select 0, getPos life_vInact_curTarget select 1, (getPos life_vInact_curTarget select 2)+0.5]; closeDialog 0;";
-			if(count crew _curTarget == 0 && {canMove _curTarget}) then { _Btn2 ctrlEnable false;} else {_Btn2 ctrlEnable true;};
-		};
-	};
-	
-	if(typeOf _curTarget == "O_Truck_03_device_F") then {
-		_Btn3 ctrlSetText localize "STR_vInAct_DeviceMine";
-		_Btn3 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_deviceMine";
-		if(!isNil {(_curTarget getVariable "mining")} OR !local _curTarget && {_curTarget in life_vehicles}) then {
-			_Btn3 ctrlEnable false;
-		} else {
-			_Btn3 ctrlEnable true;
-		};
-	} else {
-		_Btn3 ctrlShow false;
-	};
-	
-	_Btn4 ctrlShow false;
-	_Btn5 ctrlShow false;
-	_Btn6 ctrlShow false;
+    _Btn1 ctrlEnable false;
 };
+
+//Button 2 - Set search vehicle owner action
+_Btn2 ctrlSetText localize "STR_vInAct_Registration";
+_Btn2 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_searchVehAction;";
+	
+//Button 3 - Set search vehicle trunk action
+_Btn3 ctrlSetText localize "STR_vInAct_SearchVehicle";
+_Btn3 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_vehInvSearch;";
+
+//Button 4 - Set pullout action
+_Btn4 ctrlSetText localize "STR_vInAct_PullOut";
+_Btn4 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_pulloutAction; closeDialog 0;";
+
+if(count crew _curTarget == 0) then 
+{
+    _Btn4 ctrlEnable false;
+} else {
+    _Btn4 ctrlEnable true;
+};
+
+//Button 5 - Set impound vehicle action
+_Btn5 ctrlSetText localize "STR_vInAct_Impound";
+_Btn5 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_impoundAction; closeDialog 0;";
+
+//Button 6 - Set pushboat action if curTarget is a boat else if curTarget is a kart displays some kart actions
+if(_curTarget isKindOf "Ship") then 
+{
+	_Btn6 ctrlSetText localize "STR_vInAct_PushBoat";
+	_Btn6 buttonSetAction "[] spawn life_fnc_pushObject; closeDialog 0;";
+    if(_curTarget isKindOf "Ship" && {local _curTarget} && {count crew _curTarget == 0}) then 
+    { 
+        _Btn6 ctrlEnable true;
+    } else {
+        _Btn6 ctrlEnable false
+    };
+} else {
+	if(typeOf (_curTarget) in ["C_Kart_01_Blu_F","C_Kart_01_Red_F","C_Kart_01_Fuel_F","C_Kart_01_Vrana_F"]) then 
+	{
+		_Btn6 ctrlSetText localize "STR_vInAct_GetInKart";
+		_Btn6 buttonSetAction "player moveInDriver life_vInact_curTarget; closeDialog 0;";
+        if(count crew _curTarget == 0 && {canMove _curTarget} && {locked _curTarget == 0}) then 
+		{
+		    _Btn6 ctrlEnable true;
+		} else {
+		    _Btn6 ctrlEnable false
+		};
+	} else {
+		_Btn6 ctrlSetText localize "STR_vInAct_Unflip";
+		_Btn6 buttonSetAction "life_vInact_curTarget setPos [getPos life_vInact_curTarget select 0, getPos life_vInact_curTarget select 1, (getPos life_vInact_curTarget select 2)+0.5]; closeDialog 0;";
+        if(count crew _curTarget == 0 && {canMove _curTarget}) then 
+	    { 
+			_Btn6 ctrlEnable false;
+		} else {
+		    _Btn6 ctrlEnable true;
+	    };
+    };
+}; 

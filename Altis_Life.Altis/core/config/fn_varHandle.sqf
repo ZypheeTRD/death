@@ -49,6 +49,8 @@ switch (_mode) do
 			case "sand": {"life_inv_sand"};
 			case "glass": {"life_inv_glass"};
 			case "tbacon": {"life_inv_tbacon"};
+            case "handcuffs": {"life_inv_handcuffs"};
+            case "handcuffkeys": {"life_inv_handcuffkeys"};
 			case "lockpick": {"life_inv_lockpick"};
 			case "redgull": {"life_inv_redgull"};
 			case "peach": {"life_inv_peach"};
@@ -105,6 +107,8 @@ switch (_mode) do
 			case "life_inv_glass": {"glass"};
 			case "life_inv_redgull": {"redgull"};
 			case "life_inv_lockpick": {"lockpick"};
+            case "life_inv_handcuffs": {"handcuffs"};
+            case "life_inv_handcuffkeys": {"handcuffkeys"};
 			case "life_inv_tbacon": {"tbacon"};
 			case "life_inv_peach": {"peach"};
 			case "life_inv_diamond": {"diamond"};

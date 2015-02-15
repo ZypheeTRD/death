@@ -2557,6 +2557,22 @@
 			<Portuguese>Você foi solto por %1</Portuguese>
 		</Key>
 	</Package>
+        <Package name="Civ_Strings">
+		<Key ID="STR_Civ_Restrained">
+			<Original>You have been restrained by %1</Original>
+			<German>Du wurdest von %1 festgenommen</German>
+			<French>Vous avez été menotté par %1</French>
+			<Italian>%1 ti ha tolto le manette</Italian>
+			<Portuguese>Você foi solto por %1</Portuguese>
+		</Key>
+		<Key ID="STR_Civ_ExcessiveRestrain">
+			<Original>You have been released automatically for excessive restrainment time</Original>
+			<German>Du wurdest automatisch freigelassen, da die maximale Verhaftungszeit überschritten wurde</German>
+			<French>Vous êtes démenotté automatiquement pour un menottage excessivement long</French>
+			<Italian>Sei stato automaticamente liberato per essere rimasto ammanettato troppo tempo</Italian>
+			<Portuguese>Você foi solto automaticamente, devido ao tempo limite ter expirado.</Portuguese>
+		</Key>
+	</package>
 	<Package name="MISC_Strings">
 		<Key ID="STR_MISC_TooMuch">
 			<Original>You tried to give %1 %2 %3 but they couldn't hold that so it was returned.</Original>
@@ -3210,6 +3226,16 @@
 			<French>Soupe à la Tortue</French>
 			<Italian>Zuppa di Tartaruga</Italian>
 			<Portuguese>Sopa de Tartaruga</Portuguese>
+		</Key>
+         <Key ID="STR_Item_Handcuffs">
+			<Original>Handcuffs</Original>
+			<French>Menottes</French>
+			<German>Handschellen</German>
+		</Key>
+		<Key ID="STR_Item_Handcuffkeys">
+			<Original>Handcuff keys</Original>
+			<French>Clés de menottes</French>
+			<German>Handschellenschlüssel</German>
 		</Key>
 		<Key ID="STR_Item_Donuts">
 			<Original>Donuts</Original>
@@ -4419,7 +4445,10 @@
 			<Italian>Deposita alla Gang</Italian>
 			<Portuguese>Depositar para a Gangue</Portuguese>
 		</Key>
-	</Package>
+        <Key ID="STR_pInAct_Lockpick">
+			<Original>Lockpick</Original>
+			<French>Crocheter</French>
+		</Key>
 		<Package name="Vehicle_Interaction">
 		<Key ID="STR_vInAct_Title">
 			<Original>Vehicle Interaction Menu</Original>
@@ -4461,6 +4490,10 @@
 			<Italian>Ripara Veicolo</Italian>
 			<Portuguese>Concertar Veículo</Portuguese>
 		</Key>
+            <Key ID="STR_vInAct_Lockpick">
+			<Original>Lockpick</Original>
+			<French>Crocheter</French>
+        </Key>
 		<Key ID="STR_vInAct_Registration">
 			<Original>Registration</Original>
 			<English>Registration</English>
