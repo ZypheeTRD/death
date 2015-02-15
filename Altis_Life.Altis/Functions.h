@@ -219,6 +219,8 @@ class Life_Client_Core
 		class saveGear {};
 		class loadGear {};
 		class stripDownPlayer {};
+        class fadeSound {}; //fadesound from arma 3
+
 	};
 	
 	class Network
@@ -373,5 +375,11 @@ class Life_Client_Core
 		class safeFix {};
 		class vehicleGarage {};
 		class gangDeposit {};
+	};
+    
+    	class Cam
+	{
+	   file ="core";
+	   class IntroCam {};
 	};
 };

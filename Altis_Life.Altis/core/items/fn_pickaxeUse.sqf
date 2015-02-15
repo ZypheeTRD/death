@@ -31,6 +31,7 @@ for "_i" from 0 to 2 do
 	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 	waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
 	sleep 2.5;
+    player say3D "pickaxeuse";
 };
 
 if(([true,_mine,_diff] call life_fnc_handleInv)) then

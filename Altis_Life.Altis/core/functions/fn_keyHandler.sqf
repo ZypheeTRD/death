@@ -164,7 +164,8 @@ switch (_code) do
 		
 		if(!_alt && !_ctrlKey) then { [] call life_fnc_radar; };
 	};
-	//Y Player Menu
+	
+    //Y Player Menu
 	case 21:
 	{
 		if(!_alt && !_ctrlKey && !dialog) then
@@ -172,6 +173,16 @@ switch (_code) do
 			[] call life_fnc_p_openMenu;
 		};
 	};
+    
+    //Shift+P = Faded Sound
+    case 25:
+    {
+        if(_shift) then
+        {
+            [] call life_fnc_fadeSound;
+            _handled = true;
+        };
+    };
 	
 	//F Key
 	case 33:
@@ -239,13 +250,15 @@ switch (_code) do
 							[[_veh,0],"life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 						};
 						systemChat localize "STR_MISC_VehUnlock";
-					} else {
+						player say3D "carunlock";
+                    } else {
 						if(local _veh) then {
 							_veh lock 2;
 						} else {
 							[[_veh,2],"life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 						};	
 						systemChat localize "STR_MISC_VehLock";
+                        player say3D "carlock";
 					};
 				};
 			};
