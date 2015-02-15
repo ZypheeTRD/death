@@ -56,25 +56,24 @@ class CfgFunctions
 	class Life_System
 	{
 		tag = "life";
-        class Wanted_Sys
-        {
-            file = "\life_server\Functions\WantedSystem";
-            class wantedFetch {};
-            class wantedPerson {};
-            class wantedBounty {};
-            class wantedRemove {};
-            class wantedAdd {};
-            class wantedCrimes {};
-            class wantedProfUpdate {};
-        };
+		class Wanted_Sys
+		{
+			file = "\life_server\Functions\WantedSystem";
+			class wantedFetch {};
+			class wantedPerson {};
+			class wantedBounty {};
+			class wantedTicket {};
+			class wantedPardon {};
+			class wantedRemove {};
+			class wantedAdd {};
+			class wantedPunish {};
+		};
 		
-        class Jail_Sys
-        {
-          file = "\life_server\Functions\Jail";
-          class jailSys {};
-          class jailTimer {};
-          class jailPlayer {};
-        };
+		class Jail_Sys
+		{
+			file = "\life_server\Functions\Jail";
+			class jailSys {};
+		};
 		
 		class Client_Code
 		{
@@ -106,12 +105,6 @@ class CfgFunctions
 			class cleanupRequest {};
 			class setObjVar {};
 			class keyManagement {};
-		};
-        
-        class Airdrop
-		{
-			file = "\life_server\Functions\airdrop";
-			class generateAirdrop {};
 		};
 		
 		class Housing

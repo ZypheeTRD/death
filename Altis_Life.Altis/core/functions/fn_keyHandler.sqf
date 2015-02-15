@@ -58,26 +58,15 @@ switch (_code) do
 		};
 	};
 	
-    //Map Key
-    case _mapKey:
-    {
-        switch (playerSide) do 
-        {
-            case west: {if(!visibleMap) then {[] spawn life_fnc_copMarkers;}};
-            case independent: {if(!visibleMap) then {[] spawn life_fnc_medicMarkers;}};
-            default {if(!visibleMap) 
-                     then 
-                         {						
-                        _index = [life_my_gang,life_gang_list] call fnc_index;
-                         if(_index != -1) 
-                         then 
-                                {
-                                    [] spawn life_fnc_gangMarkers;
-                                };
-                           };
-                    };
-       };
-    };
+	//Map Key
+	case _mapKey:
+	{
+		switch (playerSide) do 
+		{
+			case west: {if(!visibleMap) then {[] spawn life_fnc_copMarkers;}};
+			case independent: {if(!visibleMap) then {[] spawn life_fnc_medicMarkers;}};
+		};
+	};
 	
 	//Holster / recall weapon.
 	case 35:
@@ -215,18 +204,6 @@ switch (_code) do
 			};
 		};
 	};
-	
-	//Shift+P = Faded Sound
-			case 25:
-		{
-			if(_shift) then
-			{
-				[] call life_fnc_fadeSound;
-				_handled = true;
-			};
-		};
-		
-		
 	//U Key
 	case 22:
 	{

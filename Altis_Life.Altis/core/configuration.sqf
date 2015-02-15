@@ -29,9 +29,6 @@ life_knockout = false;
 life_interrupted = false;
 life_respawned = false;
 life_removeWanted = false;
-life_fadeSound = false;
-life_fatigue = 0.5; //Set the max fatigue limit (50%)
-
 
 //Persistent Saving
 __CONST__(life_save_civ,FALSE); //Save weapons for civs?
@@ -39,7 +36,7 @@ __CONST__(life_save_yinv,FALSE); //Save Y-Inventory for players?
 
 //Revive constant variables.
 __CONST__(life_revive_cops,TRUE); //Set to false if you don't want cops to be able to revive downed players.
-__CONST__(life_revive_fee,550); //Fee for players to pay when revived.
+__CONST__(life_revive_fee,250); //Fee for players to pay when revived.
 
 //House Limit
 __CONST__(life_houseLimit,5); //Maximum amount of houses a player can buy (TODO: Make Tiered licenses).
@@ -56,8 +53,8 @@ life_clothing_purchase = [-1,-1,-1,-1,-1];
 ****** Weight Variables *****
 *****************************
 */
-life_maxWeight = 60; //Identifies the max carrying weight (gets adjusted throughout game when wearing different types of clothing).
-life_maxWeightT = 60; //Static variable representing the players max carrying weight on start.
+life_maxWeight = 24; //Identifies the max carrying weight (gets adjusted throughout game when wearing different types of clothing).
+life_maxWeightT = 24; //Static variable representing the players max carrying weight on start.
 life_carryWeight = 0; //Represents the players current inventory weight (MUST START AT 0).
 
 /*

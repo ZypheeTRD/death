@@ -106,8 +106,6 @@ class Life_Client_Core
 		class robAction {};
 		class captureHideout {};
 		class gather {};
-        class robShops {}; //Rob Gas Station & Shops Script
-
 	};
 	
 	class Housing
@@ -147,7 +145,6 @@ class Life_Client_Core
 		class weaponShopCfg {};
 		class vehicleWeightCfg {};
 		class houseConfig {};
-        class itemIcon {};
 		
 		//Clothing Store Configs
 		class clothing_cop {};
@@ -178,7 +175,6 @@ class Life_Client_Core
 		class updateViewDistance {};
 		class settingsMenu {};
 		class settingsInit {};
-        class wantedAddP {}; //Persistent Wanted System
 	};
 	
 	class Functions
@@ -223,9 +219,6 @@ class Life_Client_Core
 		class saveGear {};
 		class loadGear {};
 		class stripDownPlayer {};
-		class fadeSound {}; // <---------- earplugs
-        class randomRound {}; // <--------- add this
-
 	};
 	
 	class Network
@@ -256,7 +249,6 @@ class Life_Client_Core
 		class removeLicenses {};
 		class demoChargeTimer {};
 		class civLoadout {};
-        class gangMarkers{};
 	};
 	
 	class Vehicle
@@ -301,9 +293,6 @@ class Life_Client_Core
 		class fedCamDisplay {};
 		class copLoadout {};
 		class ticketPaid {};
-		class showArrestDialog {}; //changed
-		class arrestDialog_Arrest {}; //changed
-        class wantedGrab {}; //Persistent Wanted System
 	};
 	
 	class Gangs
@@ -384,24 +373,5 @@ class Life_Client_Core
 		class safeFix {};
 		class vehicleGarage {};
 		class gangDeposit {};
-	};
-    
-    class Market
-	{
-		file = "core\market";
-		
-		class openMarketView;
-		class refreshMarketView;
-		class marketShortView;
-		class marketBuy;
-		class marketSell;
-		class marketGetBuyPrice;
-		class marketGetSellPrice;
-		class marketconfiguration;
-		class marketReset;
-		class marketChange;
-		class marketGetRow;
-		class marketGetPriceRow;
-		class marketSetPriceRow;
 	};
 };

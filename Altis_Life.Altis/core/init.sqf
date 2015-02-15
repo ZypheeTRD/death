@@ -102,8 +102,5 @@ life_fnc_garageRefund = compileFinal
 ";
 
 [] execVM "core\init_survival.sqf";
-[] spawn life_fnc_fatigueReset;
-
 
 __CONST__(life_paycheck,life_paycheck); //Make the paycheck static.
-[[getPlayerUID player,player getVariable["realname",name player]],"life_fnc_wantedProfUpdate",false,false] spawn life_fnc_MP;
