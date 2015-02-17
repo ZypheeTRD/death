@@ -146,6 +146,7 @@ class Life_Client_Core
 		class weaponShopCfg {};
 		class vehicleWeightCfg {};
 		class houseConfig {};
+        class itemIcon {};
 		
 		//Clothing Store Configs
 		class clothing_cop {};
@@ -176,6 +177,18 @@ class Life_Client_Core
 		class updateViewDistance {};
 		class settingsMenu {};
 		class settingsInit {};
+	};
+    
+    class Special
+	{
+		file = "core\special";
+		class openEmpMenu {};
+		class isEmpOperator {};
+		class scanVehicles {};
+		class warnVehicle {};
+		class empVehicle {};
+		class vehicleWarned {};
+		class vehicleEmpd {};
 	};
 	
 	class Functions
@@ -356,6 +369,7 @@ class Life_Client_Core
 		class defuseKit {};
 		class storageBox {};
         class pLockpick {};
+        class CarAlarmSound {};
 	};
 	
 	class Dialog_Controls

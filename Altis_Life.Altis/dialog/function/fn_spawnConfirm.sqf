@@ -64,22 +64,12 @@ if(count life_spawn_point == 0) then
 };
 
 
- if(playerSide == west) then {
-  player say2d "copintro";
-  };
-  if(playerSide == civilian) then {
-  player say2d "civintro";
-  };
-  if(playerSide == independent) then {
-  player say2d "medintro";
-  };
-
-
-//Introcam
-[] spawn life_fnc_IntroCam;
 
 if(life_firstSpawn) then {
 	life_firstSpawn = false;
 	[] call life_fnc_welcomeNotification;
+    [] spawn life_fnc_IntroCam;
 };
+
+
 [] call life_fnc_hudSetup;

@@ -5,9 +5,9 @@ onLoadMission = "Created by Tonic; Altered by Arcadia Life Staff";
 loadScreen = "loadScreen.jpg";
 joinUnassigned = 1;
 respawn = BASE;
-respawndelay = 5;
+respawndelay = 10;
 disabledAI = true;
-disableChannels[]={0,1,2};
+disableChannels[]={1,2};
 enableDebugConsole = 1;
 respawnDialog = 0;
 
@@ -142,13 +142,32 @@ class CfgSounds
     titles[] = {};
 	}; 
        
-    class cuff
+    class cuffs
 	{
-    name = "cuff";
-    sound[] = {"\sounds\cuff.ogg", 1.0, 1};
+    name = "cuffs";
+    sound[] = {"\sounds\cuffs.ogg", 1.0, 1};
     titles[] = {};
 	}; 
-     
+    
+    class caralarm
+  {
+    name = "caralarm";
+    sound[] = {"\sounds\caralarm.ogg", 1, 1};
+    titles[] = {};
+  };
+  
+  class empwarn
+  {
+    name = "empwarn";
+    sound[] = {"\sounds\empwarn.ogg", 1.0, 1};
+    titles[] = {};
+  };
+    class empacsound
+  {
+    name = "empacsound";
+    sound[] = {"sounds\empac.ogg", db-5, 1};
+    titles[] = {};
+  };
 };
 
 class CfgDebriefing

@@ -67,6 +67,16 @@ switch (_code) do
 			case independent: {if(!visibleMap) then {[] spawn life_fnc_medicMarkers;}};
 		};
 	};
+    
+
+//EMP Konsole - K
+    case 37:
+    {
+        if (!_shift && !_alt && !_ctrlKey && (playerSide == west) && (vehicle player != player && (typeOf vehicle player) in ["B_Heli_Light_01_F","B_Heli_Transport_01_F"])) then
+        {
+            [] call life_fnc_openEmpMenu; [_this] call life_fnc_isEmpOperator;
+        };
+    };
 	
 	//Holster / recall weapon.
 	case 35:
@@ -100,7 +110,7 @@ switch (_code) do
 	
 //Restraining (Shift + R)
 case 19:
-{
+	{
     if(_shift) then {_handled = true;};
 	switch (playerSide) do
 	{
@@ -114,13 +124,13 @@ case 19:
 		
 		case civilian:
 		{
-		if(_shift && !(player getVariable["restrained",false]) && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget in [west,civilian,independent]) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && !life_knockout && speed cursorTarget < 1) then
+		if(_shift && !(player getVariable["restrained",false]) && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget in [west,civilian,independent]) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && life_knockout && speed cursorTarget < 1) then
 		    {
 			    [] call life_fnc_civRestrainAction;
 			};
 		};
 	};
-};
+    }; 
 
 //Knock out, this is experimental and yeah...
 case 34:

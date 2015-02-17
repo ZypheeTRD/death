@@ -15,4 +15,11 @@ switch (playerSide) do
 		life_actions = life_actions + [player addAction[localize "STR_pAct_RobPerson",life_fnc_robAction,"",0,false,false,"",'
 		!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && animationState cursorTarget == "Incapacitated" && !(cursorTarget getVariable["robbed",FALSE]) ']];
 	};
+                                                        
+    case west:
+    {
+     // nano EMP Little Bird
+		life_actions = life_actions + [player addAction["<t color='#FF0000'>EMP Operator Console</t>",life_fnc_openEmpMenu,[],8,false,false,"",'[_this] call life_fnc_isEmpOperator']];
+   
+    }
 };

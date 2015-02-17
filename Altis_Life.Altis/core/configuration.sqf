@@ -32,6 +32,8 @@ life_removeWanted = false;
 life_fadeSound = false;
 life_handcuffs = ObjNull;
 life_handcuffkeys = ObjNull;
+nn_last_vehicles = [];
+nn_empInUse = false;
 
 //Persistent Saving
 __CONST__(life_save_civ,FALSE); //Save weapons for civs?

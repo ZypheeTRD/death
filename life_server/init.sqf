@@ -132,3 +132,5 @@ _rsb allowDamage false;
 _dome allowDamage false;
 life_server_isReady = true;
 publicVariable "life_server_isReady";
+[] execVM "\life_server\Functions\airdrop\config.sqf";
+[] execVM "\life_server\Functions\airdrop\fn_generateAirdropAuto.sqf";

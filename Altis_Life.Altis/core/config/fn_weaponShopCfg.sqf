@@ -20,28 +20,656 @@ if(_shop == "") exitWith {closeDialog 0}; //Bad shop type passed.
 
 switch(_shop) do
 {
-	case "cop_basic":
-	{
+    case "cop_basic":
+	   {
 		switch(true) do
 		{
 			case (playerSide != west): {"You are not a cop!"};
-			default
+			case (__GETC__(life_coplevel) == 0): {"You are not a whitelisted officer of the law!"};
+            
+			case (__GETC__(life_coplevel) == 1):
 			{
-				["Altis Cop Shop",
+				["ALPD Equipment",
 					[
-						["arifle_sdar_F","Taser Rifle",20000],
-						["hgun_P07_snds_F","Stun Pistol",2000],
-						["hgun_P07_F",nil,7500],
-						["HandGrenade_Stone","Flashbang",1700],
-						["Binocular",nil,150],
-						["ItemGPS",nil,100],
-						["ToolKit",nil,250],
-						["muzzle_snds_L",nil,650],
-						["FirstAidKit",nil,150],
-						["Medikit",nil,1000],
-						["NVGoggles",nil,2000],
-						["16Rnd_9x21_Mag",nil,50],
-						["20Rnd_556x45_UW_mag","Taser Rifle Magazine",125]
+							["ItemWatch",nil,250],
+						    ["ItemCompass",nil,200],
+							["ItemGPS",nil,100],
+						    ["ItemRadio",nil,125],
+						    ["ItemMap",nil,200],
+							["FirstAidKit",nil,100],
+						    ["Medikit",nil,125],
+						    ["ToolKit",nil,200],
+							["Rangefinder",nil,100],
+						    ["Binocular",nil,125],
+						    ["NVGoggles_OPFOR",nil,200],
+							["Laserdesignator",nil,100],
+						    ["B_UavTerminal",nil,1250],
+							["muzzle_snds_L",nil,1000],
+							["muzzle_snds_H",nil,1000],
+							["muzzle_snds_acp",nil,1000],
+							["muzzle_snds_M",nil,1000],
+							["muzzle_snds_L",nil,1000],
+							["muzzle_snds_B",nil,1000],
+							["acc_flashlight",nil,1000],
+							["acc_pointer_IR",nil,1000],
+							["optic_Yorris",nil,1000],
+							["optic_MRD",nil,1000],
+							["optic_ACO_grn",nil,1000],
+							["optic_Holosight",nil,1000],
+							["optic_Holosight_smg",nil,1000],
+							["optic_MRCO",nil,1000],
+							["optic_Arco",nil,1000],
+							["optic_Hamr",nil,1000],
+							["optic_SOS",nil,1000],
+							["optic_DMS",nil,1000],
+							["optic_LRPS",nil,1000],
+							["optic_NVS",nil,10000],
+							["optic_Nightstalker",nil,100000],
+							["optic_tws",nil,200000],
+							["optic_tws_mg",nil,250000]
+
+					]
+				];
+			};
+            
+			case (__GETC__(life_coplevel) == 1):
+			{
+				["ALPD Cadet Weapons",
+					[
+							["hgun_P07_snds_F","Tazer Gun",250],
+							["16Rnd_9x21_Mag","Tazer Rounds",10],
+						    ["arifle_sdar_F","Taser Rifle",2000],
+						    ["20Rnd_556x45_UW_mag","Taser Rifle Magazine",125]
+
+					]
+				];
+			};
+            
+			case (__GETC__(life_coplevel) == 2):
+			{
+				["ALPD Officer Weapons",
+					[
+							
+							["hgun_Pistol_Signal_F","Flare Gun",100],
+							["6Rnd_GreenSignal_F","Green Flare",10],
+							["hgun_P07_snds_F","Tazer Gun",250],
+							["16Rnd_9x21_Mag","Tazer Rounds",10],
+							["SMG_01_F",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01_tracer_green",nil,10]
+
+					]
+				];
+			};
+            
+			case (__GETC__(life_coplevel) == 3):
+			{
+				["ALPD Sergeant Weapons",
+					[
+							["HandGrenade_Stone","Flashbang",1700],
+							["hgun_Pistol_Signal_F","Flare Gun",100],
+							["6Rnd_GreenSignal_F","Green Flare",10],
+							["hgun_P07_snds_F","Tazer Gun",250],
+							["16Rnd_9x21_Mag","Tazer Rounds",10],
+                            ["hgun_Pistol_heavy_01_F",nil,250],
+							["11Rnd_45ACP_Mag",nil,10],
+							["SMG_01_F",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01_tracer_green",nil,10],
+							["SMG_02_F",nil,10],
+							["30Rnd_9x21_Mag",nil,10],
+							["ClaymoreDirectionalMine_Remote_Mag",nil,10]
+					]
+				];
+			};
+            
+            case (__GETC__(life_coplevel) == 4):
+			{
+				["ALPD Staff Sergeant Weapons",
+					[
+							["HandGrenade_Stone","Flashbang",1700],
+							["hgun_Pistol_Signal_F","Flare Gun",100],
+							["6Rnd_GreenSignal_F","Green Flare",10],
+                            ["hgun_P07_snds_F","Tazer Gun",250],
+							["16Rnd_9x21_Mag","Tazer Rounds",10],
+                            ["hgun_Pistol_heavy_01_F",nil,250],
+							["11Rnd_45ACP_Mag",nil,10],
+							["SMG_01_F",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01_tracer_green",nil,10],
+							["SMG_02_F",nil,10],
+							["30Rnd_9x21_Mag",nil,10],
+							["arifle_Mk20C_F",nil,10],
+							["30Rnd_556x45_Stanag",nil,10],
+							["30Rnd_556x45_Stanag_Tracer_Green",nil,10],
+							["ClaymoreDirectionalMine_Remote_Mag",nil,10]
+
+					]
+				];
+			};  
+            
+            case (__GETC__(life_coplevel) == 5):
+			{
+				["ALPD 2nd Lieutenant Weapons",
+					[
+							["HandGrenade_Stone","Flashbang",1700],
+							["hgun_Pistol_Signal_F","Flare Gun",100],
+							["6Rnd_GreenSignal_F","Green Flare",10],
+                            ["hgun_P07_snds_F","Tazer Gun",250],
+							["16Rnd_9x21_Mag","Tazer Rounds",10],
+                            ["hgun_Pistol_heavy_01_F",nil,250],
+							["11Rnd_45ACP_Mag",nil,10],
+							["SMG_01_F",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01_tracer_green",nil,10],
+							["SMG_02_F",nil,10],
+							["30Rnd_9x21_Mag",nil,10],
+							["arifle_Mk20C_F",nil,10],
+							["30Rnd_556x45_Stanag",nil,10],
+							["30Rnd_556x45_Stanag_Tracer_Green",nil,10],
+							["arifle_MXC_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MX_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["ClaymoreDirectionalMine_Remote_Mag",nil,10]
+
+					]
+				];
+			};
+            
+            case (__GETC__(life_coplevel) == 6):
+			{
+				["ALPD 1st Lieutenant Weapons",
+					[
+							["HandGrenade_Stone","Flashbang",1700],
+							["hgun_Pistol_Signal_F","Flare Gun",100],
+							["6Rnd_GreenSignal_F","Green Flare",10],
+                            ["hgun_P07_snds_F","Tazer Gun",250],
+							["16Rnd_9x21_Mag","Tazer Rounds",10],
+                            ["hgun_Pistol_heavy_01_F",nil,250],
+							["11Rnd_45ACP_Mag",nil,10],
+							["SMG_01_F",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01_tracer_green",nil,10],
+							["SMG_02_F",nil,10],
+							["30Rnd_9x21_Mag",nil,10],
+							["arifle_Mk20C_F",nil,10],
+							["30Rnd_556x45_Stanag",nil,10],
+							["30Rnd_556x45_Stanag_Tracer_Green",nil,10],
+							["arifle_MXC_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MX_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MX_SW_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["ClaymoreDirectionalMine_Remote_Mag",nil,10]
+                        
+					]
+				];
+			};
+            
+			case (__GETC__(life_coplevel) == 7):
+			{
+				["ALPD Captain Weapons",
+					[
+							["HandGrenade_Stone","Flashbang",1700],
+							["hgun_Pistol_Signal_F","Flare Gun",100],
+							["6Rnd_GreenSignal_F","Green Flare",10],
+                            ["hgun_P07_snds_F","Tazer Gun",250],
+							["16Rnd_9x21_Mag","Tazer Rounds",10],
+                            ["hgun_Pistol_heavy_01_F",nil,250],
+							["11Rnd_45ACP_Mag",nil,10],
+							["SMG_01_F",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01_tracer_green",nil,10],
+							["SMG_02_F",nil,10],
+							["30Rnd_9x21_Mag",nil,10],
+							["arifle_Mk20C_F",nil,10],
+							["30Rnd_556x45_Stanag",nil,10],
+							["30Rnd_556x45_Stanag_Tracer_Green",nil,10],
+							["arifle_MXC_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MX_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MX_SW_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MXM_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["ClaymoreDirectionalMine_Remote_Mag",nil,10]
+					]
+				];
+			};
+            
+			case (__GETC__(life_coplevel) >= 8):
+			{
+				["ALPD SWAT Weapons",
+					[
+							["HandGrenade_Stone","Flashbang",1700],
+							["hgun_Pistol_Signal_F","Flare Gun",100],
+							["6Rnd_GreenSignal_F","Green Flare",10],
+                            ["hgun_P07_snds_F","Tazer Gun",250],
+							["16Rnd_9x21_Mag","Tazer Rounds",10],
+                            ["hgun_Pistol_heavy_01_F",nil,250],
+							["11Rnd_45ACP_Mag",nil,10],
+							["SMG_01_F",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01_tracer_green",nil,10],
+							["SMG_02_F",nil,10],
+							["30Rnd_9x21_Mag",nil,10],
+							["arifle_Mk20C_F",nil,10],
+							["30Rnd_556x45_Stanag",nil,10],
+							["30Rnd_556x45_Stanag_Tracer_Green",nil,10],
+							["arifle_MXC_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MX_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MX_SW_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MXM_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["100Rnd_65x39_caseless_mag",nil,10],
+							["100Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MXM_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10]],
+							["arifle_MX_GL_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["1Rnd_HE_Grenade_shell",nil,10],
+							["1Rnd_Smoke_Grenade_shell",nil,10],
+							["3Rnd_Smoke_Grenade_shell",nil,10],
+							["UGL_FlareWhite_F",nil,10],
+							["UGL_FlareRed_F",nil,10],
+							["UGL_FlareCIR_F",nil,10],
+							["srifle_EBR_F",nil,10],
+							["20Rnd_762x51_Mag",nil,10],
+							["ClaymoreDirectionalMine_Remote_Mag",nil,10]
+					]
+				];
+			};
+            
+            case (__GETC__(life_coplevel) == 9):
+			{
+				["ALPD Assistant Chief Weapons",
+					[
+							["HandGrenade_Stone","Flashbang",1700],
+							["hgun_Pistol_Signal_F","Flare Gun",100],
+							["6Rnd_GreenSignal_F","Green Flare",10],
+                            ["hgun_P07_snds_F","Tazer Gun",250],
+							["16Rnd_9x21_Mag","Tazer Rounds",10],
+                            ["hgun_Pistol_heavy_01_F",nil,250],
+							["11Rnd_45ACP_Mag",nil,10],
+							["SMG_01_F",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01_tracer_green",nil,10],
+							["SMG_02_F",nil,10],
+							["30Rnd_9x21_Mag",nil,10],
+							["arifle_Mk20C_F",nil,10],
+							["30Rnd_556x45_Stanag",nil,10],
+							["30Rnd_556x45_Stanag_Tracer_Green",nil,10],
+							["arifle_MXC_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MX_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MX_SW_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MXM_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["100Rnd_65x39_caseless_mag",nil,10],
+							["100Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MXM_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10]],
+							["arifle_MX_GL_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["1Rnd_HE_Grenade_shell",nil,10],
+							["1Rnd_Smoke_Grenade_shell",nil,10],
+							["3Rnd_Smoke_Grenade_shell",nil,10],
+							["UGL_FlareWhite_F",nil,10],
+							["UGL_FlareRed_F",nil,10],
+							["UGL_FlareCIR_F",nil,10],
+							["srifle_EBR_F",nil,10],
+							["20Rnd_762x51_Mag",nil,10],
+							["ClaymoreDirectionalMine_Remote_Mag",nil,10]
+					]
+				];
+			};
+            
+            case (__GETC__(life_coplevel) == 10):
+			{
+				["ALPD Chief Weapons",
+					[
+							["HandGrenade_Stone","Flashbang",1700],
+							["hgun_Pistol_Signal_F","Flare Gun",100],
+							["6Rnd_GreenSignal_F","Green Flare",10],
+                            ["hgun_P07_snds_F","Tazer Gun",250],
+							["16Rnd_9x21_Mag","Tazer Rounds",10],
+                            ["hgun_Pistol_heavy_01_F",nil,250],
+							["11Rnd_45ACP_Mag",nil,10],
+							["SMG_01_F",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01_tracer_green",nil,10],
+							["SMG_02_F",nil,10],
+							["30Rnd_9x21_Mag",nil,10],
+							["arifle_Mk20C_F",nil,10],
+							["30Rnd_556x45_Stanag",nil,10],
+							["30Rnd_556x45_Stanag_Tracer_Green",nil,10],
+							["arifle_MXC_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MX_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MX_SW_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MXM_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["100Rnd_65x39_caseless_mag",nil,10],
+							["100Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MXM_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10]],
+							["arifle_MX_GL_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["1Rnd_HE_Grenade_shell",nil,10],
+							["1Rnd_Smoke_Grenade_shell",nil,10],
+							["3Rnd_Smoke_Grenade_shell",nil,10],
+							["UGL_FlareWhite_F",nil,10],
+							["UGL_FlareRed_F",nil,10],
+							["UGL_FlareCIR_F",nil,10],
+							["3Rnd_HE_Grenade_shell",nil,10],
+							["srifle_EBR_F",nil,10],
+							["20Rnd_762x51_Mag",nil,10],
+							["srifle_GM6_F",nil,10],
+							["5Rnd_127x108_Mag",nil,10],
+							["5Rnd_127x108_APDS_Mag",nil,10],
+							["launch_B_Titan_F",nil,10],
+							["Titan_AA",nil,10],
+							["ClaymoreDirectionalMine_Remote_Mag",nil,10]
+					]
+				];
+			};
+            
+            case (__GETC__(life_coplevel) == 11):
+			{
+				["ALPD Assistant Commissioner Weapons",
+					[
+							["HandGrenade_Stone","Flashbang",1700],
+							["hgun_Pistol_Signal_F","Flare Gun",100],
+							["6Rnd_GreenSignal_F","Green Flare",10],
+                            ["hgun_P07_snds_F","Tazer Gun",250],
+							["16Rnd_9x21_Mag","Tazer Rounds",10],
+                            ["hgun_Pistol_heavy_01_F",nil,250],
+							["11Rnd_45ACP_Mag",nil,10],
+							["SMG_01_F",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01_tracer_green",nil,10],
+							["SMG_02_F",nil,10],
+							["30Rnd_9x21_Mag",nil,10],
+							["arifle_Mk20C_F",nil,10],
+							["30Rnd_556x45_Stanag",nil,10],
+							["30Rnd_556x45_Stanag_Tracer_Green",nil,10],
+							["arifle_MXC_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MX_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MX_SW_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MXM_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["100Rnd_65x39_caseless_mag",nil,10],
+							["100Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MXM_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10]],
+							["arifle_MX_GL_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["1Rnd_HE_Grenade_shell",nil,10],
+							["1Rnd_Smoke_Grenade_shell",nil,10],
+							["3Rnd_Smoke_Grenade_shell",nil,10],
+							["UGL_FlareWhite_F",nil,10],
+							["UGL_FlareRed_F",nil,10],
+							["UGL_FlareCIR_F",nil,10],
+							["3Rnd_HE_Grenade_shell",nil,10],
+							["srifle_EBR_F",nil,10],
+							["20Rnd_762x51_Mag",nil,10],
+							["srifle_GM6_F",nil,10],
+							["5Rnd_127x108_Mag",nil,10],
+							["5Rnd_127x108_APDS_Mag",nil,10],
+							["launch_B_Titan_F",nil,10],
+							["Titan_AA",nil,10],
+							["launch_B_Titan_short_F",nil,10],
+							["Titan_AT",nil,10],
+							["Titan_AP",nil,10],
+							["ClaymoreDirectionalMine_Remote_Mag",nil,10]
+					]
+				];
+			};
+            
+            case (__GETC__(life_coplevel) == 12):
+			{
+				["ALPD Deputy Commissioner Weapons",
+					[
+							["HandGrenade_Stone","Flashbang",1700],
+							["hgun_Pistol_Signal_F","Flare Gun",100],
+							["6Rnd_GreenSignal_F","Green Flare",10],
+                            ["hgun_P07_snds_F","Tazer Gun",250],
+							["16Rnd_9x21_Mag","Tazer Rounds",10],
+                            ["hgun_Pistol_heavy_01_F",nil,250],
+							["11Rnd_45ACP_Mag",nil,10],
+							["SMG_01_F",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01_tracer_green",nil,10],
+							["SMG_02_F",nil,10],
+							["30Rnd_9x21_Mag",nil,10],
+							["arifle_Mk20C_F",nil,10],
+							["30Rnd_556x45_Stanag",nil,10],
+							["30Rnd_556x45_Stanag_Tracer_Green",nil,10],
+							["arifle_MXC_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MX_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MX_SW_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MXM_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["100Rnd_65x39_caseless_mag",nil,10],
+							["100Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MXM_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10]],
+							["arifle_MX_GL_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["1Rnd_HE_Grenade_shell",nil,10],
+							["1Rnd_Smoke_Grenade_shell",nil,10],
+							["3Rnd_Smoke_Grenade_shell",nil,10],
+							["UGL_FlareWhite_F",nil,10],
+							["UGL_FlareRed_F",nil,10],
+							["UGL_FlareCIR_F",nil,10],
+							["3Rnd_HE_Grenade_shell",nil,10],
+							["srifle_EBR_F",nil,10],
+							["20Rnd_762x51_Mag",nil,10],
+							["srifle_GM6_F",nil,10],
+							["5Rnd_127x108_Mag",nil,10],
+							["5Rnd_127x108_APDS_Mag",nil,10],
+							["launch_B_Titan_F",nil,10],
+							["Titan_AA",nil,10],
+							["launch_B_Titan_short_F",nil,10],
+							["Titan_AT",nil,10],
+							["Titan_AP",nil,10],
+							["LMG_Mk200_F",nil,10],
+							["200Rnd_65x39_cased_Box",nil,10],
+							["200Rnd_65x39_cased_Box_Tracer",nil,10],
+							["ClaymoreDirectionalMine_Remote_Mag",nil,10]
+					]
+				];
+			};
+            
+            case (__GETC__(life_coplevel) == 13):
+			{
+				["ALPD Commissioner Weapons",
+				[
+							["HandGrenade_Stone","Flashbang",1700],
+							["hgun_Pistol_Signal_F","Flare Gun",100],
+							["6Rnd_GreenSignal_F","Green Flare",10],
+                            ["hgun_P07_snds_F","Tazer Gun",250],
+							["16Rnd_9x21_Mag","Tazer Rounds",10],
+                            ["hgun_Pistol_heavy_01_F",nil,250],
+							["11Rnd_45ACP_Mag",nil,10],
+							["SMG_01_F",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01_tracer_green",nil,10],
+							["SMG_02_F",nil,10],
+							["30Rnd_9x21_Mag",nil,10],
+							["arifle_Mk20C_F",nil,10],
+							["30Rnd_556x45_Stanag",nil,10],
+							["30Rnd_556x45_Stanag_Tracer_Green",nil,10],
+							["arifle_MXC_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MX_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MX_SW_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MXM_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["100Rnd_65x39_caseless_mag",nil,10],
+							["100Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MXM_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10]],
+							["arifle_MX_GL_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["1Rnd_HE_Grenade_shell",nil,10],
+							["1Rnd_Smoke_Grenade_shell",nil,10],
+							["3Rnd_Smoke_Grenade_shell",nil,10],
+							["UGL_FlareWhite_F",nil,10],
+							["UGL_FlareRed_F",nil,10],
+							["UGL_FlareCIR_F",nil,10],
+							["3Rnd_HE_Grenade_shell",nil,10],
+							["srifle_EBR_F",nil,10],
+							["20Rnd_762x51_Mag",nil,10],
+							["srifle_GM6_F",nil,10],
+							["5Rnd_127x108_Mag",nil,10],
+							["5Rnd_127x108_APDS_Mag",nil,10],
+							["launch_B_Titan_F",nil,10],
+							["Titan_AA",nil,10],
+							["launch_B_Titan_short_F",nil,10],
+							["Titan_AT",nil,10],
+							["Titan_AP",nil,10],
+							["LMG_Mk200_F",nil,10],
+							["200Rnd_65x39_cased_Box",nil,10],
+							["200Rnd_65x39_cased_Box_Tracer",nil,10],
+							["ClaymoreDirectionalMine_Remote_Mag",nil,10]
+                ]
+				];
+			};
+            
+			case (__GETC__(life_coplevel) == 14):
+			{
+				["ALPD NATO Weapons",
+					[
+							["HandGrenade_Stone","Flashbang",1700],
+							["hgun_Pistol_Signal_F","Flare Gun",100],
+							["6Rnd_GreenSignal_F","Green Flare",10],
+                            ["hgun_P07_snds_F","Tazer Gun",250],
+							["16Rnd_9x21_Mag","Tazer Rounds",10],
+                            ["hgun_Pistol_heavy_01_F",nil,250],
+							["11Rnd_45ACP_Mag",nil,10],
+							["SMG_01_F",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01",nil,10],
+							["30Rnd_45ACP_Mag_SMG_01_tracer_green",nil,10],
+							["SMG_02_F",nil,10],
+							["30Rnd_9x21_Mag",nil,10],
+							["arifle_Mk20C_F",nil,10],
+							["30Rnd_556x45_Stanag",nil,10],
+							["30Rnd_556x45_Stanag_Tracer_Green",nil,10],
+							["arifle_MXC_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MX_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MX_SW_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MXM_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["100Rnd_65x39_caseless_mag",nil,10],
+							["100Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["arifle_MXM_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10]],
+							["arifle_MX_GL_Black_F",nil,10],
+							["30Rnd_65x39_caseless_mag",nil,10],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
+							["1Rnd_HE_Grenade_shell",nil,10],
+							["1Rnd_Smoke_Grenade_shell",nil,10],
+							["3Rnd_Smoke_Grenade_shell",nil,10],
+							["UGL_FlareWhite_F",nil,10],
+							["UGL_FlareRed_F",nil,10],
+							["UGL_FlareCIR_F",nil,10],
+							["3Rnd_HE_Grenade_shell",nil,10],
+							["srifle_EBR_F",nil,10],
+							["20Rnd_762x51_Mag",nil,10],
+							["srifle_GM6_F",nil,10],
+							["5Rnd_127x108_Mag",nil,10],
+							["5Rnd_127x108_APDS_Mag",nil,10],
+							["launch_B_Titan_F",nil,10],
+							["Titan_AA",nil,10],
+							["launch_B_Titan_short_F",nil,10],
+							["Titan_AT",nil,10],
+							["Titan_AP",nil,10],
+							["LMG_Mk200_F",nil,10],
+							["200Rnd_65x39_cased_Box",nil,10],
+							["200Rnd_65x39_cased_Box_Tracer",nil,10],
+							["launch_RPG32_F",nil,10],
+							["RPG32_F",nil,10],
+							["RPG32_HE_F",nil,10],
+							["ATMine_Range_Mag",nil,10],
+							["APERSMine_Range_Mag",nil,10],
+							["APERSBoundingMine_Range_Mag",nil,10],
+							["SLAMDirectionalMine_Wire_Mag",nil,10],
+							["APERSTripMine_Wire_Mag",nil,10],
+							["ClaymoreDirectionalMine_Remote_Mag",nil,10],
+							["SatchelCharge_Remote_Mag",nil,10],
+							["DemoCharge_Remote_Mag",nil,10]
 					]
 				];
 			};
@@ -69,56 +697,7 @@ switch(_shop) do
 		};
 	};
 
-	case "cop_patrol":
-	{
-		switch(true) do
-		{
-			case (playerSide != west): {"You are not a cop!"};
-			case (__GETC__(life_coplevel) < 2): {"You are not at a patrol officer rank!"};
-			default
-			{
-				["Altis Patrol Officer Shop",
-					[
-						["arifle_MX_F",nil,35000],
-						["SMG_02_ACO_F",nil,30000],
-						["HandGrenade_Stone","Flashbang",1700],
-						["MineDetector",nil,1000],
-						["acc_flashlight",nil,750],
-						["optic_Holosight",nil,1200],
-						["optic_Arco",nil,2500],
-						["muzzle_snds_H",nil,2750],
-						["30Rnd_65x39_caseless_mag",nil,130],
-						["30Rnd_9x21_Mag",nil,250]
-					]
-				];
-			};
-		};
-	};
 
-	case "cop_sergeant":
-	{
-		switch(true) do
-		{
-			case (playerSide != west): {"You are not a cop!"};
-			case (__GETC__(life_coplevel) < 3): {"You are not at a sergeant rank!"};
-			default
-			{
-				["Altis Sergeant Officer Shop",
-					[
-						["SMG_02_ACO_F",nil,15000],
-						["hgun_ACPC2_F",nil,17500],
-						["HandGrenade_Stone","Flashbang",1700],
-						["arifle_MXC_F",nil,30000],
-						["optic_Arco",nil,2500],
-						["muzzle_snds_H",nil,2750],
-						["30Rnd_65x39_caseless_mag",nil,100],
-						["30Rnd_9x21_Mag",nil,60],
-						["9Rnd_45ACP_Mag",nil,200]
-					]
-				];
-			};
-		};
-	};
 	
 	case "rebel":
 	{

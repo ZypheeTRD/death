@@ -18,3 +18,14 @@ format["Welcome %1, Please read the following as it is important!",profileName] 
 	that means you can pick it up!."
 ];
 	
+
+
+ if(playerSide == west) then {
+  player say2d "copintro";
+  };
+  if(playerSide == civilian) then {
+  player say2d "civintro";
+  };
+  if(playerSide == independent) then {
+  player say2d "medintro";
+  };

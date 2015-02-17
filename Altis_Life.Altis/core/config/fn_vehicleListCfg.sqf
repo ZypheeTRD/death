@@ -148,6 +148,9 @@ switch (_shop) do
 			["B_SDV_01_F",100000]
 		];
 	};
+    
+
+
 };
 
 _return;
