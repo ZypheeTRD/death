@@ -107,6 +107,11 @@ class Life_Client_Core
 		class captureHideout {};
 		class gather {};
         class civRestrainAction {};
+        class robShops {}; //Rob Gas Station & Shops Script
+        class useToilet {}; //toilet
+        class surrender {}; //surrender
+        class suicideBomb {}; //suicide vest
+        class takeOrgans {};
 	};
 	
 	class Housing
@@ -147,6 +152,7 @@ class Life_Client_Core
 		class vehicleWeightCfg {};
 		class houseConfig {};
         class itemIcon {};
+	   class seizeCfg {};
 		
 		//Clothing Store Configs
 		class clothing_cop {};
@@ -233,7 +239,15 @@ class Life_Client_Core
 		class saveGear {};
 		class loadGear {};
 		class stripDownPlayer {};
+		class globalSound {};
+		class globalSoundClient {};
         class fadeSound {}; //fadesound from arma 3
+        class fatigueReset {}; //Add this line.    
+        class playSound {};
+        class civSeizeGear {};
+        class UnLockCarSound {};
+		class LockCarSound {};
+        class emptyFuel {};
 
 	};
 	
@@ -267,6 +281,8 @@ class Life_Client_Core
 		class civLoadout {};
         class civInteractionMenu {};
         class civRestrain {};
+        class hasOrgan {};
+
 	};
 	
 	class Vehicle
@@ -313,6 +329,9 @@ class Life_Client_Core
 		class fedCamDisplay {};
 		class copLoadout {};
 		class ticketPaid {};
+        class copOpener {};
+        class seizePlayerWeapon {};
+        class seizePlayerWeaponAction {};
 	};
 	
 	class Gangs
@@ -330,6 +349,7 @@ class Life_Client_Core
 		class gangInvite {};
 		class gangDisband {};
 		class gangDisbanded {};
+		class gangMarkers {};
 	};
 	
 	class Shops
@@ -370,6 +390,9 @@ class Life_Client_Core
 		class storageBox {};
         class pLockpick {};
         class CarAlarmSound {};
+        class shrooms {};
+        class weed {};
+        class speedBomb {};
 	};
 	
 	class Dialog_Controls

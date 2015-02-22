@@ -3059,6 +3059,14 @@
 			<Italian>Cocaina</Italian>
 			<Portuguese>Cocaína</Portuguese>
 		</Key>
+		<Key ID="STR_Item_Shrooms">
+			<Original>Funtime Fungus</Original>
+			<English>Funtime Fungus</English>
+			<German>Funtime Fungus</German>
+			<French>Funtime Fungus</French>
+			<Italian>Funtime Fungus</Italian>
+			<Portuguese>Funtime Fungus</Portuguese>
+		</Key>
 		<Key ID="STR_Item_Heroin">
 			<Original>Heroin</Original>
 			<English>Heroin</English>
@@ -3075,6 +3083,20 @@
 			<Italian>Olio</Italian>
 			<Portuguese>Petróleo</Portuguese>
 		</Key>
+        <Key ID="STR_Item_Diaper">
+            <Original>Diaper</Original>
+            <German>Windel</German>
+            <French>Couche</French>
+            <Italian>Pannolone</Italian>
+            <Portuguese>Fralda</Portuguese>
+        </Key>
+        <Key ID="STR_Item_Dirtydiaper">
+            <Original>Dirty Diaper</Original>
+            <German>Benutzte Windel</German>
+            <French>Couche Sale</French>
+            <Italian>Dirty Diaper</Italian>
+            <Portuguese>Dirty Diaper</Portuguese>
+        </Key>
 		<Key ID="STR_Item_Peach">
 			<Original>Peach</Original>
 			<English>Peach</English>
@@ -3332,6 +3354,38 @@
 			<French>Verre</French>
 			<Italian>Vetro</Italian>
 			<Portuguese>Vidro</Portuguese>
+		</Key>
+		<Key ID="STR_Item_Kidney">
+			<Original>Kidney</Original>
+			<English>Kidney</English>
+			<German>Kidney</German>
+			<French>Kidney</French>
+			<Italian>Kidney</Italian>
+			<Portuguese>Kidney</Portuguese>
+		</Key>
+		<Key ID="STR_Item_Scalpel">
+			<Original>Scalpel</Original>
+			<English>Scalpel</English>
+			<German>Scalpel</German>
+			<French>Scalpel</French>
+			<Italian>Scalpel</Italian>
+			<Portuguese>Scalpel</Portuguese>
+		</Key>
+		<Key ID="STR_Item_SpeedBomb">
+			<Original>Speed Bomb</Original>
+			<English>Speed Bomb</English>
+			<German>Speed Bomb</German>
+			<French>Speed Bomb</French>
+			<Italian>Speed Bomb</Italian>
+			<Portuguese>Speed Bomb</Portuguese>
+		</Key>
+		<Key ID="STR_Item_OrganCooler">
+			<Original>Dirty Beer Cooler</Original>
+			<English>Dirty Beer Cooler</English>
+			<German>Dirty Beer Cooler</German>
+			<French>Dirty Beer Cooler</French>
+			<Italian>Dirty Beer Cooler</Italian>
+			<Portuguese>Dirty Beer Cooler</Portuguese>
 		</Key>
 		<Key ID="STR_Item_DiamondC">
 			<Original>Diamond Cut</Original>
@@ -4076,6 +4130,14 @@
 			<French>Récolte de la Cocaine</French>
 			<Italian>Raccogli Cocaina</Italian>
 			<Portuguese>Colher Cocaina</Portuguese>
+		</Key>
+		<Key ID="STR_Gather_Shrooms">
+			<Original>Gather Fungus</Original>
+			<English>Gather Fungus</English>
+			<German>Fungus sammeln</German>
+			<French>Récolte de la Fungus</French>
+			<Italian>Raccogli Fungus</Italian>
+			<Portuguese>Colher Fungus</Portuguese>
 		</Key>
 	</Package>
 	<Package name="Medical_Strings">

@@ -22,7 +22,8 @@ switch(_type) do
 	case "261A": {_type = ["Attempted Rape",3000]};
 	case "215": {_type = ["Attempted Auto Theft",2000]};
 	case "213": {_type = ["Use of illegal explosives",10000]};
-	case "211": {_type = ["Robbery",1000]};
+	case "211": {_type = ["Robbery",5000]};
+	case "211A": {_type = ["Attempted Robbery",1000]};
 	case "207": {_type = ["Kidnapping",3500]};
 	case "207A": {_type = ["Attempted Kidnapping",2000]};
 	case "487": {_type = ["Grand Theft",1500]};
@@ -34,6 +35,8 @@ switch(_type) do
 	case "459": {_type = ["Burglary",6500]};
     case "485": {_type = ["Tried to lockpick handcuffs",2500]};
 	case "486": {_type = ["Lockpicked handcuffs",5000]};
+    case "919": {_type = ["Organ Theft",20000]};
+    case "919A": {_type = ["Organ Theft",15000]};
 	default {_type = [];};
 };
 

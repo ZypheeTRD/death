@@ -27,6 +27,13 @@ if([false,_food,1] call life_fnc_handleInv) then {
 		case "tbacon": {_val = 40};
 		case "peach": {_val = 10};
 	};
+    
+    life_toilet = life_toilet - (round  (_val/2) );
+if(life_toilet <= 0) then {
+life_toilet = 100;
+player setFatigue 1;
+parseText format["<t color='#ffff00'>You just peed your pants! That's exhausting. And disgusting. Maybe you should buy a diaper next time?</t>"];
+};
 
 	_sum = life_hunger + _val;
 	if(_sum > 100) then {_sum = 100; player setFatigue 1; hint "You have over eaten, you are now feeling fatigued.";};

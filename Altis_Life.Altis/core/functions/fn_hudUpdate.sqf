@@ -5,7 +5,7 @@
 	Description:
 	Updates the HUD when it needs to.
 */
-private["_ui","_food","_water","_health"];
+private["_ui","_food","_water","_health","_toilet"];
 disableSerialization;
 
 _ui = uiNameSpace getVariable ["playerHUD",displayNull];
@@ -13,6 +13,7 @@ if(isNull _ui) then {[] call life_fnc_hudSetup;};
 _food = _ui displayCtrl 23500;
 _water = _ui displayCtrl 23510;
 _health = _ui displayCtrl 23515;
+_toilet = _ui displayCtrl 23520;
 
 //Update food
 _food ctrlSetPosition [safeZoneX+safeZoneW-0.090,safeZoneY+safeZoneH-0.548];
@@ -26,3 +27,7 @@ _water ctrlCommit 0;
 _health ctrlSetPosition [safeZoneX+safeZoneW-0.090,safeZoneY+safeZoneH-0.456];
 _health ctrlSetText format["%1", round((1 - (damage player)) * 100)];
 _health ctrlCommit 0;
+//Update Toilet
+_toilet ctrlSetPosition [safeZoneX+safeZoneW-0.090,safeZoneY+safeZoneH-0.40];
+_toilet ctrlSetText format["%1", life_toilet];
+_toilet ctrlCommit 0

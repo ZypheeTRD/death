@@ -25,10 +25,9 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != west): {"You are not a cop!"};
-			case (__GETC__(life_coplevel) == 0): {"You are not a whitelisted officer of the law!"};
-            
-			case (__GETC__(life_coplevel) == 1):
-			{
+			case (__GETC__(life_coplevel) < 1): {"You are not a whitelisted officer of the law!"};
+            default
+                        {
 				["ALPD Equipment",
 					[
 							["ItemWatch",nil,250],
@@ -68,12 +67,22 @@ switch(_shop) do
 							["optic_tws",nil,200000],
 							["optic_tws_mg",nil,250000]
 
-					]
-				];
-			};
+					 ]
+                                ];
+                        };
+                };
+        };
+    
             
-			case (__GETC__(life_coplevel) == 1):
-			{
+            
+             case "cop_cadet":
+	   {
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a cop!"};
+			case (__GETC__(life_coplevel) < 1): {"You are not high enough rank"};
+            default
+                        {
 				["ALPD Cadet Weapons",
 					[
 							["hgun_P07_snds_F","Tazer Gun",250],
@@ -81,12 +90,20 @@ switch(_shop) do
 						    ["arifle_sdar_F","Taser Rifle",2000],
 						    ["20Rnd_556x45_UW_mag","Taser Rifle Magazine",125]
 
-					]
-				];
-			};
+					   ]
+                                ];
+                        };
+                };
+        };
             
-			case (__GETC__(life_coplevel) == 2):
-			{
+             case "cop_officer":
+	   {
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a cop!"};
+			case (__GETC__(life_coplevel) < 2): {"You are not high enough rank"};
+            default
+                        {
 				["ALPD Officer Weapons",
 					[
 							
@@ -98,12 +115,21 @@ switch(_shop) do
 							["30Rnd_45ACP_Mag_SMG_01",nil,10],
 							["30Rnd_45ACP_Mag_SMG_01_tracer_green",nil,10]
 
-					]
-				];
-			};
-            
-			case (__GETC__(life_coplevel) == 3):
-			{
+			   ]
+                                ];
+                        };
+                };
+        };
+    
+    
+    case "cop_sergeant":
+	   {
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a cop!"};
+			case (__GETC__(life_coplevel) < 3): {"You are not high enough rank"};
+			default
+                        {
 				["ALPD Sergeant Weapons",
 					[
 							["HandGrenade_Stone","Flashbang",1700],
@@ -119,12 +145,20 @@ switch(_shop) do
 							["SMG_02_F",nil,10],
 							["30Rnd_9x21_Mag",nil,10],
 							["ClaymoreDirectionalMine_Remote_Mag",nil,10]
-					]
-				];
-			};
+					  ]
+                                ];
+                        };
+                };
+        };
             
-            case (__GETC__(life_coplevel) == 4):
-			{
+                case "cop_ssergeant":
+	   {
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a cop!"};
+			case (__GETC__(life_coplevel) < 4): {"You are not high enough rank"};
+            default
+                        {
 				["ALPD Staff Sergeant Weapons",
 					[
 							["HandGrenade_Stone","Flashbang",1700],
@@ -144,12 +178,20 @@ switch(_shop) do
 							["30Rnd_556x45_Stanag_Tracer_Green",nil,10],
 							["ClaymoreDirectionalMine_Remote_Mag",nil,10]
 
-					]
-				];
-			};  
-            
-            case (__GETC__(life_coplevel) == 5):
-			{
+					  ]
+                                ];
+                        };
+                };
+        };
+    
+    case "cop_2lieutenant":
+	   {
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a cop!"};
+			case (__GETC__(life_coplevel) < 5): {"You are not high enough rank"};
+           default
+                        {
 				["ALPD 2nd Lieutenant Weapons",
 					[
 							["HandGrenade_Stone","Flashbang",1700],
@@ -175,12 +217,20 @@ switch(_shop) do
 							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
 							["ClaymoreDirectionalMine_Remote_Mag",nil,10]
 
-					]
-				];
-			};
-            
-            case (__GETC__(life_coplevel) == 6):
-			{
+					  ]
+                                ];
+                        };
+                };
+        };
+    
+            case "cop_1lieutenant":
+	   {
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a cop!"};
+			case (__GETC__(life_coplevel) < 6): {"You are not high enough rank"};
+            default
+                        {
 				["ALPD 1st Lieutenant Weapons",
 					[
 							["HandGrenade_Stone","Flashbang",1700],
@@ -209,12 +259,20 @@ switch(_shop) do
 							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
 							["ClaymoreDirectionalMine_Remote_Mag",nil,10]
                         
-					]
-				];
-			};
-            
-			case (__GETC__(life_coplevel) == 7):
-			{
+					  ]
+                                ];
+                        };
+                };
+        };
+    
+            case "cop_captain":
+	   {
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a cop!"};
+			case (__GETC__(life_coplevel) < 7): {"You are not high enough rank"};
+			default
+                        {
 				["ALPD Captain Weapons",
 					[
 							["HandGrenade_Stone","Flashbang",1700],
@@ -246,11 +304,18 @@ switch(_shop) do
 							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
 							["ClaymoreDirectionalMine_Remote_Mag",nil,10]
 					]
-				];
-			};
-            
-			case (__GETC__(life_coplevel) >= 8):
-			{
+                                ];
+                        };
+                };
+        };
+              case "cop_swat":
+	   {
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a cop!"};
+			case (__GETC__(life_coplevel) < 8): {"You are not high enough rank"};
+			default
+                        {
 				["ALPD SWAT Weapons",
 					[
 							["HandGrenade_Stone","Flashbang",1700],
@@ -284,7 +349,7 @@ switch(_shop) do
 							["100Rnd_65x39_caseless_mag_Tracer",nil,10],
 							["arifle_MXM_Black_F",nil,10],
 							["30Rnd_65x39_caseless_mag",nil,10],
-							["30Rnd_65x39_caseless_mag_Tracer",nil,10]],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
 							["arifle_MX_GL_Black_F",nil,10],
 							["30Rnd_65x39_caseless_mag",nil,10],
 							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
@@ -298,11 +363,18 @@ switch(_shop) do
 							["20Rnd_762x51_Mag",nil,10],
 							["ClaymoreDirectionalMine_Remote_Mag",nil,10]
 					]
-				];
-			};
-            
-            case (__GETC__(life_coplevel) == 9):
-			{
+                                ];
+                        };
+                };
+        };
+             case "cop_achief":
+	   {
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a cop!"};
+			case (__GETC__(life_coplevel) < 9): {"You are not high enough rank"};
+			default
+                        {
 				["ALPD Assistant Chief Weapons",
 					[
 							["HandGrenade_Stone","Flashbang",1700],
@@ -336,7 +408,7 @@ switch(_shop) do
 							["100Rnd_65x39_caseless_mag_Tracer",nil,10],
 							["arifle_MXM_Black_F",nil,10],
 							["30Rnd_65x39_caseless_mag",nil,10],
-							["30Rnd_65x39_caseless_mag_Tracer",nil,10]],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
 							["arifle_MX_GL_Black_F",nil,10],
 							["30Rnd_65x39_caseless_mag",nil,10],
 							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
@@ -349,12 +421,20 @@ switch(_shop) do
 							["srifle_EBR_F",nil,10],
 							["20Rnd_762x51_Mag",nil,10],
 							["ClaymoreDirectionalMine_Remote_Mag",nil,10]
-					]
-				];
-			};
-            
-            case (__GETC__(life_coplevel) == 10):
-			{
+				 ]
+                                ];
+                        };
+                };
+        };
+    
+             case "cop_chief":
+	   {
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a cop!"};
+			case (__GETC__(life_coplevel) < 10): {"You are not high enough rank"};
+			default
+                        {
 				["ALPD Chief Weapons",
 					[
 							["HandGrenade_Stone","Flashbang",1700],
@@ -388,7 +468,7 @@ switch(_shop) do
 							["100Rnd_65x39_caseless_mag_Tracer",nil,10],
 							["arifle_MXM_Black_F",nil,10],
 							["30Rnd_65x39_caseless_mag",nil,10],
-							["30Rnd_65x39_caseless_mag_Tracer",nil,10]],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
 							["arifle_MX_GL_Black_F",nil,10],
 							["30Rnd_65x39_caseless_mag",nil,10],
 							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
@@ -408,11 +488,19 @@ switch(_shop) do
 							["Titan_AA",nil,10],
 							["ClaymoreDirectionalMine_Remote_Mag",nil,10]
 					]
-				];
-			};
+                                ];
+                        };
+                };
+        };
             
-            case (__GETC__(life_coplevel) == 11):
-			{
+             case "cop_acommissioner":
+	   {
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a cop!"};
+			case (__GETC__(life_coplevel) < 11): {"You are not high enough rank"};
+			default
+                        {
 				["ALPD Assistant Commissioner Weapons",
 					[
 							["HandGrenade_Stone","Flashbang",1700],
@@ -446,7 +534,7 @@ switch(_shop) do
 							["100Rnd_65x39_caseless_mag_Tracer",nil,10],
 							["arifle_MXM_Black_F",nil,10],
 							["30Rnd_65x39_caseless_mag",nil,10],
-							["30Rnd_65x39_caseless_mag_Tracer",nil,10]],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
 							["arifle_MX_GL_Black_F",nil,10],
 							["30Rnd_65x39_caseless_mag",nil,10],
 							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
@@ -468,12 +556,20 @@ switch(_shop) do
 							["Titan_AT",nil,10],
 							["Titan_AP",nil,10],
 							["ClaymoreDirectionalMine_Remote_Mag",nil,10]
-					]
-				];
-			};
-            
-            case (__GETC__(life_coplevel) == 12):
-			{
+					 ]
+                                ];
+                        };
+                };
+        };
+    
+            case "cop_dcommissioner":
+	   {
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a cop!"};
+			case (__GETC__(life_coplevel) < 12): {"You are not high enough rank"};
+			default
+                        {
 				["ALPD Deputy Commissioner Weapons",
 					[
 							["HandGrenade_Stone","Flashbang",1700],
@@ -507,7 +603,7 @@ switch(_shop) do
 							["100Rnd_65x39_caseless_mag_Tracer",nil,10],
 							["arifle_MXM_Black_F",nil,10],
 							["30Rnd_65x39_caseless_mag",nil,10],
-							["30Rnd_65x39_caseless_mag_Tracer",nil,10]],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
 							["arifle_MX_GL_Black_F",nil,10],
 							["30Rnd_65x39_caseless_mag",nil,10],
 							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
@@ -532,12 +628,19 @@ switch(_shop) do
 							["200Rnd_65x39_cased_Box",nil,10],
 							["200Rnd_65x39_cased_Box_Tracer",nil,10],
 							["ClaymoreDirectionalMine_Remote_Mag",nil,10]
-					]
-				];
-			};
-            
-            case (__GETC__(life_coplevel) == 13):
-			{
+					 ]
+                                ];
+                        };
+                };
+        };
+             case "cop_commissioner":
+	   {
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a cop!"};
+			case (__GETC__(life_coplevel) < 12): {"You are not high enough rank"};
+			default
+                        {
 				["ALPD Commissioner Weapons",
 				[
 							["HandGrenade_Stone","Flashbang",1700],
@@ -571,7 +674,7 @@ switch(_shop) do
 							["100Rnd_65x39_caseless_mag_Tracer",nil,10],
 							["arifle_MXM_Black_F",nil,10],
 							["30Rnd_65x39_caseless_mag",nil,10],
-							["30Rnd_65x39_caseless_mag_Tracer",nil,10]],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
 							["arifle_MX_GL_Black_F",nil,10],
 							["30Rnd_65x39_caseless_mag",nil,10],
 							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
@@ -597,12 +700,19 @@ switch(_shop) do
 							["200Rnd_65x39_cased_Box_Tracer",nil,10],
 							["ClaymoreDirectionalMine_Remote_Mag",nil,10]
                 ]
-				];
-			};
-            
-			case (__GETC__(life_coplevel) == 14):
-			{
-				["ALPD NATO Weapons",
+                                ];
+                        };
+                };
+        };
+             case "cop_nato":
+	   {
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a cop!"};
+			case (__GETC__(life_coplevel) < 12): {"You are not high enough rank"};
+			default
+                        {
+				["Arcadia Defense NATO Weapons",
 					[
 							["HandGrenade_Stone","Flashbang",1700],
 							["hgun_Pistol_Signal_F","Flare Gun",100],
@@ -635,7 +745,7 @@ switch(_shop) do
 							["100Rnd_65x39_caseless_mag_Tracer",nil,10],
 							["arifle_MXM_Black_F",nil,10],
 							["30Rnd_65x39_caseless_mag",nil,10],
-							["30Rnd_65x39_caseless_mag_Tracer",nil,10]],
+							["30Rnd_65x39_caseless_mag_Tracer",nil,10],
 							["arifle_MX_GL_Black_F",nil,10],
 							["30Rnd_65x39_caseless_mag",nil,10],
 							["30Rnd_65x39_caseless_mag_Tracer",nil,10],

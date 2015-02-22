@@ -17,6 +17,9 @@ switch (_item) do
 	case "heroinp": {4};
 	case "cannabis": {4};
 	case "marijuana": {3};
+	case "cocaine": {6};
+	case "cocainep": {4};
+	case "shrooms": {1};
 	case "apple": {1};
 	case "water": {1};
 	case "rabbit": {1};
@@ -47,8 +50,6 @@ switch (_item) do
 	case "glass": {1};
 	case "diamond": {4};
 	case "diamondc": {2};
-	case "cocaine": {6};
-	case "cocainep": {4};
 	case "spikeStrip": {15};
 	case "rock": {6};
 	case "cement": {5};
@@ -58,5 +59,10 @@ switch (_item) do
 	case "defusekit": {2};
 	case "storagesmall": {5};
 	case "storagebig": {10};
+    case "debitcard": {0};
+    case "speedbomb": {10};
+    case "kidney": {15};//15 is the weight
+	case "scalpel": {1};
+	case "organcooler": {2};
 	default {1};
 };

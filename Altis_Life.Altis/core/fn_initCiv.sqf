@@ -24,3 +24,36 @@ if(life_is_arrested) then
 	waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
 };
 player addRating 9999999;
+
+
+[] spawn
+{
+while {true} do
+{
+waitUntil {uniform player == "U_C_Poloshirt_salmon"};
+player setObjectTextureGlobal [0,"textures\civilian\outfits\extermination.jpg"];
+waitUntil {uniform player != "U_C_Poloshirt_salmon"};
+	};
+};
+
+[] spawn
+{
+while {true} do
+{
+waitUntil {uniform player == "U_C_Poloshirt_blue"};
+player setObjectTextureGlobal [0,"textures\civilian\outfits\futurama1.jpg"];
+waitUntil {uniform player != "U_C_Poloshirt_blue"};
+	};
+};
+
+[] spawn
+{
+while {true} do
+{
+waitUntil {uniform player == "U_C_Poloshirt_burgundy"};
+player setObjectTextureGlobal [0,"textures\civilian\outfits\futurama2.jpg"];
+waitUntil {uniform player != "U_C_Poloshirt_burgundy"};
+	};
+};
+
+

@@ -33,3 +33,4 @@ player addItem "ItemGPS";
 player assignItem "ItemGPS";
 
 [] call life_fnc_saveGear;
+[player] execVM "scripts\fn_cop_skin.sqf";

@@ -34,14 +34,16 @@ life_handcuffs = ObjNull;
 life_handcuffkeys = ObjNull;
 nn_last_vehicles = [];
 nn_empInUse = false;
+life_fatigue = 0.5;
+life_toilet = 100;
 
 //Persistent Saving
-__CONST__(life_save_civ,FALSE); //Save weapons for civs?
+__CONST__(life_save_civ,TRUE); //Save weapons for civs?
 __CONST__(life_save_yinv,FALSE); //Save Y-Inventory for players?
 
 //Revive constant variables.
 __CONST__(life_revive_cops,TRUE); //Set to false if you don't want cops to be able to revive downed players.
-__CONST__(life_revive_fee,250); //Fee for players to pay when revived.
+__CONST__(life_revive_fee,1250); //Fee for players to pay when revived.
 
 //House Limit
 __CONST__(life_houseLimit,5); //Maximum amount of houses a player can buy (TODO: Make Tiered licenses).
@@ -84,6 +86,8 @@ __CONST__(life_impound_boat,250);
 __CONST__(life_impound_air,850);
 life_istazed = false;
 life_my_gang = ObjNull;
+life_isSuicide = false;
+
 
 life_vehicles = [];
 bank_robber = [];
@@ -120,6 +124,7 @@ life_inv_items =
 	"life_inv_heroinp",
 	"life_inv_cannabis",
 	"life_inv_marijuana",
+	"life_inv_shrooms",
 	"life_inv_apple",
 	"life_inv_rabbit",
 	"life_inv_salema",
@@ -163,7 +168,14 @@ life_inv_items =
 	"life_inv_boltcutter",
 	"life_inv_defusekit",
 	"life_inv_storagesmall",
-	"life_inv_storagebig"
+	"life_inv_storagebig",
+    "life_inv_debitcard",
+    "life_inv_speedbomb",
+    "life_inv_diaper",
+    "life_inv_dirtydiaper",
+    "life_inv_scalpel",
+    "life_inv_kidney",
+    "life_inv_organcooler"
 ];
 
 //Setup variable inv vars.
@@ -201,7 +213,7 @@ life_licenses =
 
 life_dp_points = ["dp_1","dp_2","dp_3","dp_4","dp_5","dp_6","dp_7","dp_8","dp_9","dp_10","dp_11","dp_12","dp_13","dp_14","dp_15","dp_15","dp_16","dp_17","dp_18","dp_19","dp_20","dp_21","dp_22","dp_23","dp_24","dp_25"];
 //[shortVar,reward]
-life_illegal_items = [["heroinu",1200],["heroinp",2500],["cocaine",1500],["cocainep",3500],["marijuana",2000],["turtle",3000],["blastingcharge",10000],["boltcutter",500],["handcuffs",200],["handcuffkeys",100]];
+life_illegal_items = [["heroinu",1200],["heroinp",2500],["cocaine",1500],["cocainep",3500],["marijuana",2000],["turtle",3000],["blastingcharge",10000],["boltcutter",500],["handcuffs",200],["handcuffkeys",100],["speedbomb",50000],["organcooler",500],["scalpel",500],["kidney",25000]];
 
 
 /*
@@ -212,6 +224,7 @@ sell_array =
 	["apple",50],
 	["heroinu",1850],
 	["heroinp",2650],
+    ["shrooms",500],
 	["salema",45],
 	["ornate",40],
 	["mackerel",175],
@@ -244,7 +257,12 @@ sell_array =
 	["cement",1950],
 	["goldbar",95000],
     ["handcuffs",200],
-    ["handcuffkeys",100]
+    ["handcuffkeys",100],
+    ["speedbomb",500000],
+    ["debitcard",0],
+    ["kidney",75000],
+    ["scalpel",0],
+    ["organcooler",0]
 ];
 __CONST__(sell_array,sell_array);
 
@@ -268,6 +286,7 @@ buy_array =
 	["pickaxe",1200],
 	["redgull",1500],
 	["fuelF",850],
+    ["shrooms",1500],
 	["peach",68],
 	["spikeStrip",2500],
 	["blastingcharge",35000],
@@ -276,7 +295,14 @@ buy_array =
 	["storagesmall",75000],
 	["storagebig",150000],
     ["handcuffs",500],
-    ["handcuffkeys",300]
+    ["handcuffkeys",300],
+    ["speedbomb",800000],
+    ["debitcard",5000],
+    ["diaper",100],
+    ["kidney",100000],
+    ["scalpel",2500],
+    ["organcooler",5000]
+
 ];
 __CONST__(buy_array,buy_array);
 
@@ -289,7 +315,6 @@ life_weapon_shop_array =
 	["ToolKit",75],
 	["FirstAidKit",65],
 	["Medikit",450],
-	["NVGoggles",980],
 	["16Rnd_9x21_Mag",15],
 	["20Rnd_556x45_UW_mag",35],
 	["ItemMap",35],

@@ -18,3 +18,24 @@ if((__GETC__(life_medicLevel)) < 1) exitWith {
 [] call life_fnc_spawnMenu;
 waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
 waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
+
+
+[] spawn
+{
+while {true} do
+{
+waitUntil {uniform player == "U_Rangemaster"};
+player setObjectTextureGlobal [0,"textures\medic\outfits\medic_uniform.jpg"];
+waitUntil {uniform player != "U_Rangemaster"};
+	};
+};
+
+[] spawn
+{
+while {true} do
+{
+waitUntil {backpackContainer player == "B_FieldPack_ocamo"};
+player setObjectTextureGlobal [0,"textures\medic\outfits\medic_bag.jpg"];
+waitUntil {backpackContainer player != "B_FieldPack_ocamo"};
+	};
+};

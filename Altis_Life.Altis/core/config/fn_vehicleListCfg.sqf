@@ -25,6 +25,7 @@ switch (_shop) do
 	{
 		_return = [
 			["C_Offroad_01_F",10000],
+			["C_SUV_01_F",10000],
 			["I_Truck_02_medical_F",25000],
 			["O_Truck_03_medical_F",45000],
 			["B_Truck_01_medical_F",60000]
@@ -46,6 +47,7 @@ switch (_shop) do
 			["C_Hatchback_01_F",9500],
 			["C_Offroad_01_F",12500],
 			["C_SUV_01_F",35000],
+			["C_Hatchback_01_sport_F",65000],
 			["C_Van_01_transport_F",40000]
 		];
 	};
@@ -86,9 +88,13 @@ switch (_shop) do
 	case "cop_car":
 	{
 		_return pushBack
+		["C_Hatchback_01_F",5000];
+		_return pushBack
 		["C_Offroad_01_F",5000];
 		_return pushBack
 		["C_SUV_01_F",20000];
+		_return pushBack
+		["C_Hatchback_01_sport_F",20000];
 		if(__GETC__(life_coplevel) > 2) then
 		{
 			_return pushBack

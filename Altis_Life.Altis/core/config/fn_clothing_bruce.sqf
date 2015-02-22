@@ -18,20 +18,22 @@ switch (_filter) do
 	case 0:
 	{
 		[
-		["U_C_Poloshirt_blue","Poloshirt Blue",250],
-		["U_C_Poloshirt_burgundy","Poloshirt Burgundy",275],
-		["U_C_Poloshirt_redwhite","Poloshirt Red/White",150],
-		["U_C_Poloshirt_salmon","Poloshirt Salmon",175],
-		["U_C_Poloshirt_stripped","Poloshirt stripped",125],
-		["U_C_Poloshirt_tricolour","Poloshirt Tricolor",350],
 		["U_C_Poor_2","Rag tagged clothes",250],
+		["U_C_Poloshirt_blue","Zoidberg",250],
+		["U_C_Poloshirt_burgundy","Bender",375],
+		["U_C_Poloshirt_redwhite","Red and White",550],
+		["U_C_Poloshirt_salmon","Extermination",665],
+		["U_C_Poloshirt_stripped","Striped Shirt",725],
+		["U_C_Poloshirt_tricolour","Tricolour Shirt",850],
 		["U_IG_Guerilla2_2","Green stripped shirt & Pants",650],
 		["U_IG_Guerilla3_1","Brown Jacket & Pants",735],
 		["U_IG_Guerilla2_3","The Outback Rangler",1200],
 		["U_C_HunterBody_grn","The Hunters Look",1500],
+		["U_C_Journalist","Journalist",2000],
 		["U_C_WorkerCoveralls","Mechanic Coveralls",2500],
 		["U_OrestesBody","Surfing On Land",1100],
-		["U_NikosAgedBody","Casual Wears",5000]
+		["U_I_G_Story_Protagonist_F","Combat Vet",7500],
+		["U_NikosAgedBody","Business Man",10000]
 		];
 	};
 	
@@ -87,6 +89,7 @@ switch (_filter) do
 	case 3:
 	{
 		[
+			["V_Press_F",nil,2500]
 		];
 	};
 	

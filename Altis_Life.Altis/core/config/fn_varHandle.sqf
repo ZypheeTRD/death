@@ -22,6 +22,7 @@ switch (_mode) do
 			case "heroinp": {"life_inv_heroinp"};
 			case "cannabis": {"life_inv_cannabis"};
 			case "marijuana": {"life_inv_marijuana"};
+			case "shrooms": {"life_inv_shrooms"};
 			case "apple": {"life_inv_apple"};
 			case "water": {"life_inv_water"};
 			case "rabbit": {"life_inv_rabbit"};
@@ -67,6 +68,14 @@ switch (_mode) do
 			case "defusekit": {"life_inv_defusekit"};
 			case "storagesmall": {"life_inv_storagesmall"};
 			case "storagebig": {"life_inv_storagebig"};
+            case "debitcard": {"life_inv_debitcard"};
+            case "speedbomb": {"life_inv_speedbomb"};
+            case "diaper": {"life_inv_diaper"};
+            case "dirtydiaper": {"life_inv_dirtydiaper"};
+            case "kidney": {"life_inv_kidney"};
+            case "scalpel": {"life_inv_scalpel"};
+            case "organcooler": {"life_inv_organcooler"};
+
 		};
 	};
 	
@@ -80,6 +89,7 @@ switch (_mode) do
 			case "life_inv_heroinp": {"heroinp"};
 			case "life_inv_cannabis": {"cannabis"};
 			case "life_inv_marijuana": {"marijuana"};
+			case "life_inv_shrooms": {"shrooms"};
 			case "life_inv_apple": {"apple"};
 			case "life_inv_water": {"water"};
 			case "life_inv_rabbit": {"rabbit"};
@@ -125,6 +135,14 @@ switch (_mode) do
 			case "life_inv_defusekit": {"defusekit"};
 			case "life_inv_storagesmall": {"storagesmall"};
 			case "life_inv_storagebig": {"storagebig"};
+            case "life_inv_debitcard": {"debitcard"};
+            case "life_inv_speedbomb": {"speedbomb"};
+            case "life_inv_diaper": {"diaper"};
+            case "life_inv_dirtydiaper": {"dirtydiaper"};      
+            case "life_inv_kidney": {"kidney"};   
+            case "life_inv_scalpel": {"scalpel"};   
+            case "life_inv_organcooler": {"organcooler"}; 
+
 		};
 	};
 };

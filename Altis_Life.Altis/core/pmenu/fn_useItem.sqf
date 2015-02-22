@@ -57,6 +57,33 @@ switch (true) do
 		};
 	};
 	
+	case (_item == "cocainep"):
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			life_thirst = 100;
+			player setFatigue 0;
+			[] spawn
+			{
+				life_redgull_effect = time;
+                [[0,format["Somebody just buried their face into a bag of cocaine. PARTY PARTY PARTY!"]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+				titleText[localize "STR_ISTR_RedGullEffect","PLAIN"];
+				player enableFatigue false;
+				waitUntil {!alive player OR ((time - life_redgull_effect) > (5 * 60))};
+				player enableFatigue true;
+			};
+		};
+	};
+	
+    case (_item == "diaper"): {
+        if(([false,_item,1] call life_fnc_handleInv)) then
+        {
+        life_toilet = 100;
+        [true,"dirtydiaper",1] call life_fnc_handleInv;
+        hint "You put a new diaper on, and you just let it flow. Now you have a dirty diaper - you should better get rid of it before questions get asked.";
+        };
+    };
+    
 	case (_item == "spikeStrip"):
 	{
 		if(!isNull life_spikestrip) exitWith {hint localize "STR_ISTR_SpikesDeployment"};
@@ -65,6 +92,22 @@ switch (true) do
 			[] spawn life_fnc_spikeStrip;
 		};
 	};
+    
+    case (_item == "marijuana"):
+{
+    if(([false,_item,1] call life_fnc_handleInv)) then
+    {
+        [] spawn life_fnc_weed;
+    };
+};
+    
+    case (_item == "shrooms"):
+{
+    if(([false,_item,1] call life_fnc_handleInv)) then
+    {
+        [] spawn life_fnc_shrooms;
+    };
+};
 	
 	case (_item == "fuelF"):
 	{
@@ -85,6 +128,22 @@ switch (true) do
 	case (_item == "pickaxe"):
 	{
 		[] spawn life_fnc_pickAxeUse;
+	};
+    
+    case (_item == "speedbomb"):
+	{
+		[] spawn life_fnc_speedBomb;
+	};
+    
+    case (_item == "kidney"):
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			player setVariable["missingOrgan",false,true];
+			life_thirst = 100;
+			life_hunger = 100;
+			player setFatigue .5;
+		};
 	};
 	
 	default

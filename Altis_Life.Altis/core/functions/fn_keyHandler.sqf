@@ -65,6 +65,7 @@ switch (_code) do
 		{
 			case west: {if(!visibleMap) then {[] spawn life_fnc_copMarkers;}};
 			case independent: {if(!visibleMap) then {[] spawn life_fnc_medicMarkers;}};
+            case civilian: {if(!visibleMap) then {[] spawn life_fnc_gangMarkers;}}; // ADD THIS
 		};
 	};
     
@@ -145,6 +146,27 @@ case 34:
 	};
 };
 	 
+    
+    //surrender
+    
+    case 15:
+	{
+		if(_shift) then {_handled = true;};
+
+		if (_shift) then
+		{
+			if (vehicle player == player && !(player getVariable ["restrained", false]) && (animationState player) != "Incapacitated" && !life_istazed) then
+			{
+				if (player getVariable ["surrender", false]) then
+				{
+					player setVariable ["surrender", false, true];
+				} else
+				{
+					[] spawn life_fnc_surrender;
+				};
+			};
+		};
+	};
 
 	//T Key (Trunk)
 	case 20:
@@ -275,7 +297,7 @@ case 34:
 							[[_veh,0],"life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 						};
 						systemChat localize "STR_MISC_VehUnlock";
-						player say3D "carunlock";
+					[[_veh],"life_fnc_UnLockCarSound",nil,true] spawn life_fnc_MP;
                     } else {
 						if(local _veh) then {
 							_veh lock 2;
@@ -283,10 +305,62 @@ case 34:
 							[[_veh,2],"life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 						};	
 						systemChat localize "STR_MISC_VehLock";
-                        player say3D "carlock";
+					[[_veh],"life_fnc_LockCarSound",nil,true] spawn life_fnc_MP;
 					};
 				};
 			};
+		};
+	};
+    
+    //Takwondo(Traditional Martial arts in korea)(Shift + Num 1)
+case 79:
+{
+	if(_shift) then {_handled = true;};
+		if ((_shift) && (vehicle player == player)) then
+		{
+			cutText [format["Takwondo!!!"], "PLAIN DOWN"];
+			player playMove "AmovPercMstpSnonWnonDnon_exerciseKata";
+		};
+};
+
+//Kneebend Slow(Shift + Num 2)
+case 80:
+{
+	if(_shift) then {_handled = true;};
+		if ((_shift) && (vehicle player == player)) then
+		{
+			cutText [format["KneeBend Slow baby~"], "PLAIN DOWN"];
+			player playMove "AmovPercMstpSnonWnonDnon_exercisekneeBendA";
+		};
+};
+
+//Kneebend Fast(Shift + Num 3)
+case 81:
+{
+	if(_shift) then {_handled = true;};
+		if ((_shift) && (vehicle player == player)) then
+		{
+			cutText [format["KneeBend more Hard!!!Move!!Move!!"], "PLAIN DOWN"];
+			player playMove "AmovPercMstpSnonWnonDnon_exercisekneeBendB";
+		};
+};
+
+//Pushup(Shift + Num 4)
+case 75:
+{
+	if(_shift) then {_handled = true;};
+		if ((_shift) && (vehicle player == player)) then
+		{
+			cutText [format["Pushup!!!!!!"], "PLAIN DOWN"];
+			player playMove "AmovPercMstpSnonWnonDnon_exercisePushup";
+		};
+};
+    
+     // O, police gate opener
+        case 24:
+	{
+		if (!_shift && !_alt && !_ctrlKey && (playerSide == west) && (vehicle player != player)) then {
+			[] call life_fnc_copOpener;
 		};
 	};
 };

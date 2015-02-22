@@ -21,7 +21,6 @@ if(_isVehicle && _vehicle in life_vehicles) exitWith {hint localize "STR_ISTR_Lo
 
 _title = format[localize "STR_ISTR_Lock_Process",_displayName];
 life_action_inUse = true; //Lock out other actions
-[[_curTarget],"life_fnc_CarAlarmSound",nil,true] spawn life_fnc_MP;
 
 //Setup the progress bar
 disableSerialization;
@@ -72,12 +71,11 @@ if(_dice < 30) then
 {
 	titleText[localize "STR_ISTR_Lock_Success","PLAIN"];
 	life_vehicles pushBack _vehicle;
-    [[_curTarget],"life_fnc_CarAlarmSound",nil,true] spawn life_fnc_MP;
 	[[getPlayerUID player,profileName,"487"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 	sleep 90;
-    [[_curTarget],"life_fnc_CarAlarmSound",nil,true] spawn life_fnc_MP;
 } else {
 	[[getPlayerUID player,profileName,"215"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+    [[_curTarget],"life_fnc_CarAlarmSound",nil,true] spawn life_fnc_MP;
 	[[0,"STR_ISTR_Lock_FailedNOTF",true,[profileName]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 	titleText[localize "STR_ISTR_Lock_Failed","PLAIN"];
     

@@ -20,13 +20,15 @@ switch (_filter) do
 	case 0:
 	{
 		_ret pushBack ["U_Rangemaster","Cop Uniform",25];
-		if(__GETC__(life_coplevel) > 3) then
+		if(__GETC__(life_coplevel) > 1) then
 		{
-			_ret pushBack ["U_B_CombatUniform_mcam_tshirt","Pilot Uniform",550];
+			_ret pushBack ["U_O_Wetsuit",nil,10000];
 		};
 		if(__GETC__(life_coplevel) > 5) then
 		{
 			_ret pushBack ["U_B_CombatUniform_mcam_worn","Swat",550];
+			_ret pushBack ["U_I_GhillieSuit",nil,550];
+			_ret pushBack ["U_IG_Guerilla2_3",nil,550];
 		};
 		if(__GETC__(life_coplevel) > 7) then
 		{
@@ -39,25 +41,25 @@ switch (_filter) do
 	{
 		if(__GETC__(life_coplevel) > 1) then
 		{
-			_ret pushBack ["H_Cap_khaki_specops_UK",nil,120];
+			_ret pushBack ["H_Booniehat_mcamo",nil,120];
+			_ret pushBack ["H_Cap_blk",nil,120];
+
 		};
-		
-		if(__GETC__(life_coplevel) > 3) then
-		{
-			_ret pushBack ["H_Booniehat_mcamo",nil,100];
-		};
-        
 		if(__GETC__(life_coplevel) > 5) then
 		{
-			_ret pushBack ["H_HelmetB_plain_mcamo",nil,75];
+			_ret pushBack ["H_HelmetB_plain_mcamo",nil,100];
 		};
-        
 		if(__GETC__(life_coplevel) > 7) then
-		{
+		{	
 			_ret pushBack ["H_MilCap_mcamo",nil,100];
 			_ret pushBack ["H_Watchcap_blk",nil,100];
+		};
+		if(__GETC__(life_coplevel) > 12) then
+		{	
+			_ret pushBack ["H_Beret_02",nil,100];
 			_ret pushBack ["H_Beret_ocamo",nil,100];
 			_ret pushBack ["H_Beret_Colonel",nil,100];
+			_ret pushBack ["H_CrewHelmetHeli_B",nil,100];
 		};
 	};
 	
@@ -75,7 +77,9 @@ switch (_filter) do
 			["G_Aviator",nil,75],
 			["G_Squares",nil,10],
 			["G_Lowprofile",nil,30],
-			["G_Combat",nil,55]
+			["G_Combat",nil,55],
+			["G_Balaclava_combat",nil,55],
+			["G_Balaclava_lowprofile",nil,55]
 		];
 	};
 	
@@ -85,29 +89,37 @@ switch (_filter) do
 		_ret pushBack ["V_Rangemaster_belt",nil,800];
 		if(__GETC__(life_coplevel) > 1) then
 		{
-			_ret pushBack ["V_PlateCarrier2_rgr",nil,1500];
+			_ret pushBack ["V_TacVest_blk_POLICE",nil,1500];
 		};
-		if(__GETC__(life_coplevel) > 5) then
+		if(__GETC__(life_coplevel) > 8) then
 		{
-			_ret pushBack ["V_PlateCarrierL_CTRG",nil,1500];
-		};
-		if(__GETC__(life_coplevel) > 7) then
-		{
-			_ret pushBack ["V_PlateCarrierH_CTRG",nil,1500];
+			_ret pushBack ["V_TacVestIR_blk",nil,100];
 		};
 	};
 	
 	//Backpacks
 	case 4:
 	{
-		_ret =
-		[
-			["B_Kitbag_cbr",nil,800],
-			["B_FieldPack_cbr",nil,500],
-			["B_AssaultPack_cbr",nil,700],
-			["B_Bergen_sgg",nil,2500],
-			["B_Carryall_cbr",nil,3500]
-		];
+		if(__GETC__(life_coplevel) > 1) then
+		{
+			_ret pushBack ["B_Kitbag_cbr",nil,800];
+			_ret pushBack ["B_FieldPack_cbr",nil,500];
+			_ret pushBack ["B_AssaultPack_cbr",nil,700];
+		};
+		if(__GETC__(life_coplevel) > 2) then
+		{
+			_ret pushBack ["B_Bergen_sgg","Police Bag",2500];
+			_ret pushBack ["B_FieldPack_blk",nil,2500];
+		};	
+		if(__GETC__(life_coplevel) > 3) then
+		{
+			_ret pushBack ["B_AssaultPack_blk",nil,2500];
+			_ret pushBack ["B_Carryall_cbr","Swat Bag",3500];
+		};
+			if(__GETC__(life_coplevel) > 6) then
+		{
+			_ret pushBack ["B_UAV_01_backpack_F",nil,30000];
+		};
 	};
 };
 

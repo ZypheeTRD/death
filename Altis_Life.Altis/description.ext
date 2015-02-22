@@ -42,7 +42,7 @@ class CfgFunctions
 
 class CfgSounds
 {
-	sounds[] = {};
+	sounds[] = {};	
     
 	class SirenLong
 	{
@@ -54,7 +54,7 @@ class CfgSounds
     class MedicSirenLong
 	{
 		name = "MedicSirenLong";
-		sound[] = {"\sounds\Medic_Siren_Long.ogg", 1.0, 1};
+		sound[] = {"\sounds\Siren_Long.ogg", 1.0, 1};
 		titles[] = {};
 	};
 	
@@ -62,6 +62,13 @@ class CfgSounds
 	{
 		name = "Tazersound";
 		sound[] = {"\sounds\tazer.ogg", 0.25, 1};
+		titles[] = {};
+	};
+	
+	class purchase
+	{
+		name = "purchase";
+		sound[] = {"\sounds\purchase.ogg", 0.25, 1};
 		titles[] = {};
 	};
 	
@@ -111,6 +118,27 @@ class CfgSounds
 	{
     name = "stare";
     sound[] = {"\sounds\stare.ogg", 1.0, 1};
+    titles[] = {};
+	}; 
+    
+    class bombarm
+  {
+    name = "bombarm";
+    sound[] = {"\sounds\bombarm.ogg", 1.0, 1};
+    titles[] = {};
+  }; 
+    
+	class weed
+	{
+    name = "weed";
+    sound[] = {"\sounds\weed.ogg", 1.0, 1};
+    titles[] = {};
+	}; 
+    
+	class shrooms
+	{
+    name = "shrooms";
+    sound[] = {"\sounds\shrooms.ogg", 1.0, 1};
     titles[] = {};
 	}; 
     
@@ -168,6 +196,45 @@ class CfgSounds
     sound[] = {"sounds\empac.ogg", db-5, 1};
     titles[] = {};
   };
+  class dog_whine
+	{
+		name = "dog_whine";
+		sound[] = {"sounds\dog_whine.ogg", 1, 1};
+		titles[] = {};
+	};
+	class dog_growl
+	{
+		name = "dog_growl";
+		sound[] = {"sounds\dog_growl.ogg", 1, 1};
+		titles[] = {};
+	};
+	class dog_ruff
+	{
+		name = "dog_ruff";
+		sound[] = {"sounds\dog_ruff.ogg", 1, 1};
+		titles[] = {};
+	};
+	
+	class whistle
+	{
+		name = "whistle";
+		sound[] = {"sounds\whistle.ogg", 1, 1};
+		titles[] = {};
+	};
+
+	class dog_close
+	{
+		name = "dog_close";
+		sound[] = {"sounds\dog_close.ogg", 1, 1};
+		titles[] = {};
+	};
+	
+	class dog_one
+	{
+		name = "dog_one";
+		sound[] = {"sounds\dog_one.ogg", 1, 1};
+		titles[] = {};
+        };
 };
 
 class CfgDebriefing

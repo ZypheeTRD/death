@@ -69,6 +69,8 @@ switch (playerSide) do
 player setVariable["restrained",false,true];
 player setVariable["Escorting",false,true];
 player setVariable["transporting",false,true];
+player setVariable["missingOrgan",false,true];//sets variables to false on start
+player setVariable["hasOrgan",false,true];
 diag_log "Past Settings Init";
 [] execFSM "core\fsm\client.fsm";
 diag_log "Executing client.fsm";
@@ -104,3 +106,4 @@ life_fnc_garageRefund = compileFinal
 [] execVM "core\init_survival.sqf";
 
 __CONST__(life_paycheck,life_paycheck); //Make the paycheck static.
+[] spawn life_fnc_fatigueReset;
