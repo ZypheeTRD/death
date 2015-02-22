@@ -56,4 +56,14 @@ waitUntil {uniform player != "U_C_Poloshirt_burgundy"};
 	};
 };
 
+[] spawn
+{
+while {true} do
+{
+waitUntil {uniform player == "U_C_Poloshirt_stripped"};
+player setObjectTextureGlobal [0,"textures\civilian\outfits\chumlee.jpg"];
+waitUntil {uniform player != "U_C_Poloshirt_stripped"};
+	};
+};
+
 

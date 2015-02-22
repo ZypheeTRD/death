@@ -23,7 +23,7 @@ switch (_filter) do
 		["U_C_Poloshirt_burgundy","Bender",375],
 		["U_C_Poloshirt_redwhite","Red and White",550],
 		["U_C_Poloshirt_salmon","Extermination",665],
-		["U_C_Poloshirt_stripped","Striped Shirt",725],
+		["U_C_Poloshirt_stripped","Chumleeee",725],
 		["U_C_Poloshirt_tricolour","Tricolour Shirt",850],
 		["U_IG_Guerilla2_2","Green stripped shirt & Pants",650],
 		["U_IG_Guerilla3_1","Brown Jacket & Pants",735],

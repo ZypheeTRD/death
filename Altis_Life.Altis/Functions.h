@@ -183,6 +183,7 @@ class Life_Client_Core
 		class updateViewDistance {};
 		class settingsMenu {};
 		class settingsInit {};
+        class p_prisionbreak {};
 	};
     
     class Special
@@ -248,6 +249,8 @@ class Life_Client_Core
         class UnLockCarSound {};
 		class LockCarSound {};
         class emptyFuel {};
+        class prisionbreak {};
+		class progressBaren {};
 
 	};
 	
