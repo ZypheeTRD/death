@@ -41,7 +41,8 @@ if(count _data == 0) then {_veh setVariable["Trunk",[[],0],true]; _data = [];} e
 		if(_val > 0) then
 		{
 			_pInv lbAdd format["[%1] - %2",_val,_str];
-			_pInv lbSetData [(lbSize _pInv)-1,_shrt,_icon];
+			_pInv lbSetData [(lbSize _pInv)-1,_shrt];
+			_pInv lbSetPicture [(lbSize _pInv)-1,_icon];
 		};
 	}
 		else
