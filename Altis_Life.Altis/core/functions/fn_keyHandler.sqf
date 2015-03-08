@@ -151,9 +151,7 @@ case 34:
     
     case 15:
 	{
-		if(_shift) then {_handled = true;};
-
-		if (_shift) then
+		if(!_alt && !_ctrlKey && !_shift) then
 		{
 			if (vehicle player == player && !(player getVariable ["restrained", false]) && (animationState player) != "Incapacitated" && !life_istazed) then
 			{
@@ -169,7 +167,7 @@ case 34:
 	};
 
 	//T Key (Trunk)
-	case 20:
+case 20:
 	{
 		if(!_alt && !_ctrlKey) then
 		{
@@ -177,16 +175,19 @@ case 34:
 			{
 				if((vehicle player) in life_vehicles) then
 				{
-					[vehicle player] call life_fnc_openInventory;
+					[vehicle player] spawn life_fnc_openInventory;
 				};
 			}
 				else
 			{
-				if((cursorTarget isKindOf "Car" OR cursorTarget isKindOf "Air" OR cursorTarget isKindOf "Ship" OR cursorTarget isKindOf "House_F") && player distance cursorTarget < 7 && vehicle player == player && alive cursorTarget) then
+				if((cursorTarget isKindOf "Land_Wreck_Traw_F" OR cursorTarget isKindOf "Land_Wreck_Traw2_F" OR cursorTarget isKindOf "Car" OR cursorTarget isKindOf "Air" OR cursorTarget isKindOf "Ship" OR cursorTarget isKindOf "House_F") && player distance cursorTarget < 10 && vehicle player == player && alive cursorTarget) then
 				{
 					if(cursorTarget in life_vehicles OR {!(cursorTarget getVariable ["locked",true])}) then
 					{
-						[cursorTarget] call life_fnc_openInventory;
+						[cursorTarget] spawn life_fnc_openInventory;
+					};
+					if (cursorTarget isKindOf "Land_Wreck_Traw_F" OR cursorTarget isKindOf "Land_Wreck_Traw2_F") then {
+						[cursorTarget] spawn life_fnc_openInventory;
 					};
 				};
 			};
@@ -355,6 +356,7 @@ case 75:
 			player playMove "AmovPercMstpSnonWnonDnon_exercisePushup";
 		};
 };
+    
     
      // O, police gate opener
         case 24:

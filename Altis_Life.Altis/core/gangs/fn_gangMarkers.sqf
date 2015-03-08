@@ -5,7 +5,7 @@
 	Description:
 	Marks cops on the map for other cops. Only initializes when the actual map is open.
 */
-private["_markers","_gangMembers "];
+private["_markers","_gangMembers"];
 _markers = [];
 _gangMembers  = [];
 

@@ -34,7 +34,7 @@ if(!isServer && (!isNil "life_adminlevel" OR !isNil "life_coplevel" OR !isNil "l
 life_cash = parseNumber (_this select 2);
 life_atmcash = parseNumber (_this select 3);
 __CONST__(life_adminlevel,parseNumber(_this select 4));
-__CONST__(life_donator,0);
+__CONST__(life_donatorlvl,parseNumber(_this select 5));
 
 //Loop through licenses
 if(count (_this select 6) > 0) then {
@@ -49,13 +49,21 @@ switch(playerSide) do {
 	case west: {
 		__CONST__(life_coplevel, parseNumber(_this select 7));
 		__CONST__(life_medicLevel,0);
+        __CONST__(life_adaclevel,0); //ADD THIS
 		life_blacklisted = _this select 9;
 	};
 	
+	case east: {
+		__CONST__(life_adaclevel, parseNumber(_this select 7));
+		__CONST__(life_coplevel,0);
+		__CONST__(life_medicLevel,0);
+	};
+    
 	case civilian: {
 		life_is_arrested = _this select 7;
 		__CONST__(life_coplevel, 0);
 		__CONST__(life_medicLevel, 0);
+        __CONST__(life_adaclevel,0); //ADD THIS
 		life_houses = _this select 9;
 		{
 			_house = nearestBuilding (call compile format["%1", _x select 0]);
@@ -72,6 +80,7 @@ switch(playerSide) do {
 	case independent: {
 		__CONST__(life_medicLevel, parseNumber(_this select 7));
 		__CONST__(life_coplevel,0);
+        __CONST__(life_adaclevel,0); //ADD THIS
 	};
 };
 

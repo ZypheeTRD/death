@@ -24,6 +24,7 @@ _unit = owner _unit;
 _side = switch(_side) do
 {
 	case west:{"cop"};
+    case east: {"adac"};
 	case civilian: {"civ"};
 	case independent: {"med"};
 	default {"Error"};

@@ -26,6 +26,9 @@ if(count _itemArray == 0) exitWith
         case independent: {
             [] call life_fnc_medicLoadout;
         };
+           case east: {
+			[] call life_fnc_adacLoadout;
+		};
     };
 };
 
@@ -60,12 +63,12 @@ if(_backpack != "") then {_handle = [_backpack,true,false,false,false] spawn lif
 {(vestContainer player) addItemCargoGlobal [_x,1];} foreach (_vMags);
 {player addItemToBackpack _x;} foreach (_bItems);
 {(backpackContainer player) addItemCargoGlobal [_x,1];} foreach (_bMags);
-life_maxWeight = 100;
+life_maxWeight = 120;
 {
     _item = [_x,1] call life_fnc_varHandle;
     [true,_item,1] call life_fnc_handleInv;
 } foreach (_yItems);
-life_maxWeight = 24;
+life_maxWeight = 40;
 
 //Primary & Secondary (Handgun) should be added last as magazines do not automatically load into the gun.
 if(_prim != "") then {_handle = [_prim,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};};

@@ -106,12 +106,12 @@ class Life_cell_phone {
 			h = 0.05;
 		};
 		
-		class AdminMsgAllButton : life_RscButtonMenu 
+		class AdacRequest : life_RscButtonMenu 
 		{
 			idc = 3021;
-			text = "Text All";
+			text = "Text ADAC";
 			colorBackground[] = {0,0.23,1,0.48};
-			onButtonClick = "[] call TON_fnc_cell_adminmsgall";
+			onButtonClick = "[] call TON_fnc_cell_adacrequest";
 			
 			x = 0.775;
 			y = 0.8;

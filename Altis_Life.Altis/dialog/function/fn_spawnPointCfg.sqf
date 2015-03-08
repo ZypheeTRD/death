@@ -28,10 +28,10 @@ switch (_side) do
 	case civilian:
 	{
 		_return = [
-			["civ_spawn_1","Agios Dionysios","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+			["civ_spawn_1","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+			["civ_spawn_2","Neochori","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 			["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+			["civ_spawn_4","Panagia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 		];
 		
 		if(count life_houses > 0) then {
@@ -47,9 +47,15 @@ switch (_side) do
 	
 	case independent: {
 		_return = [
-			["medic_spawn_1","Medical Outpost","\a3\ui_f\data\map\MapControl\hospital_ca.paa"],
 			["medic_spawn_2","Athira Regional","\a3\ui_f\data\map\MapControl\hospital_ca.paa"],
 			["medic_spawn_3","Pygros Hospital","\a3\ui_f\data\map\MapControl\hospital_ca.paa"]
+		];
+	};
+    
+    case east: 
+	{
+		_return = [
+			["adac_headquarters","ADAC Headquarters","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 		];
 	};
 };

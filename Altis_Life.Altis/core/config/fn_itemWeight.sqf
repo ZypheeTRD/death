@@ -64,5 +64,28 @@ switch (_item) do
     case "kidney": {15};//15 is the weight
 	case "scalpel": {1};
 	case "organcooler": {2};
+    case "uwsl": {5};
+	case "rye": {2};
+	case "hops": {2};
+	case "potato": {2};
+	case "agave": {2};
+	case "grapes": {2};
+	case "yeast": {2};
+	case "cornmeal": {2};
+	case "mash": {2};
+	case "wort": {2};
+	case "whiskey": {4};
+	case "wine": {3};
+	case "vodka": {4};
+	case "tequila": {4};
+	case "beerp": {4};
+	case "moonshine": {5};
+	case "bottledwhiskey": {5};
+	case "bottledtequila": {5};
+	case "bottledvodka": {5};
+	case "bottledbeer": {5};
+	case "bottledshine": {5};
+	case "bottledwine": {4};
+	case "bottles": {1};
 	default {1};
 };

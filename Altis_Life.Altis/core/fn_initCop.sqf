@@ -67,14 +67,13 @@ waitUntil {uniform player != "U_B_CombatUniform_mcam_worn"};
 	};
 };
 
-
 [] spawn
 {
 while {true} do
 {
-waitUntil {uniform player == "U_IG_Guerilla2_3"};
-player setObjectTextureGlobal [0,"textures\police\outfits\ig_guerrilla2_3_co.jpg"];
-waitUntil {uniform player != "U_IG_Guerilla2_3"};
+waitUntil {uniform player == "U_B_CombatUniform_mcam_vest"};
+player setObjectTextureGlobal [0,"textures\police\outfits\sniper_shirt.jpg"];
+waitUntil {uniform player != "U_B_CombatUniform_mcam_vest"};
 	};
 };
 

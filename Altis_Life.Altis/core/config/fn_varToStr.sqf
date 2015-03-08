@@ -65,7 +65,7 @@ switch (_var) do
     case "life_inv_speedbomb": {(localize "STR_Item_SpeedBomb")};//English/Anglais
     case "life_inv_kidney": {(localize "STR_Item_Kidney")}; 
     case "life_inv_scalpel": {(localize "STR_Item_Scalpel")}; 
-    case "life_inv_organcooler": {(localize "STR_Item_OrganCooler")}; 
+    case "life_inv_organcooler": {(localize "STR_Item_OrganCooler")};
     
     //other
     
@@ -76,7 +76,31 @@ switch (_var) do
     case "life_inv_debitcard": {"Debit Card"};
     case "life_inv_diaper": {(localize "STR_Item_Diaper")};
     case "life_inv_dirtydiaper": {(localize "STR_Item_Dirtydiaper")};
+    case "life_inv_uwsl": {"Underwater Blasting Charge"}; //RENAME IT TO ANYTHING YOU LIKE
 
+    //alochol
+    case "life_inv_mash": {"Grain Mash Mixture"};
+    case "life_inv_wort": {"Wort Mixture"};
+	case "life_inv_yeast": {"Yeast"};
+	case "life_inv_rye": {"Rye"};
+	case "life_inv_hops": {"Hops"};
+	case "life_inv_grapes": {"Grapes"};
+	case "life_inv_agave": {"Agave"};
+	case "life_inv_potato": {"Poh-tae=toe"};
+	case "life_inv_whiskey": {"Distilled Whiskey"};
+	case "life_inv_wine": {"Unfermented Wine"};
+	case "life_inv_vodka": {"Distilled Vodka"};
+	case "life_inv_tequila": {"Distilled Tequila"};
+	case "life_inv_beerp": {"Fermented Beer"};
+	case "life_inv_bottles": {"Glass Bottles"};
+	case "life_inv_cornmeal": {"Cornmeal Grains"};
+	case "life_inv_bottledwhiskey": {"Lucky 27 Whiskey"};
+	case "life_inv_bottledwine": {"QQ Wine"};
+	case "life_inv_bottledvodka": {"FLORR Vodka"};
+	case "life_inv_bottledtequila": {"Gatos en Fuego Tequila"};
+	case "life_inv_bottledbeer": {"Dudweiser Beer"};
+	case "life_inv_bottledshine": {"Heisenberg Moonshine"};
+	case "life_inv_moonshine": {"Distilled Moonshine"};
     
         
     //fish
@@ -101,6 +125,9 @@ switch (_var) do
 	case "license_civ_dive": {(localize "STR_License_Diving")};
 	case "license_civ_gun": {(localize "STR_License_Firearm")};
 	case "license_civ_home": {(localize "STR_License_Home")};
+	case "license_civ_medmarijuana": {(localize "STR_License_MedMarijuana")};
+	case "license_civ_taxi": {(localize "STR_License_Taxi")};
+	case "license_civ_attorney": {(localize "STR_License_Attorney")};
     
     
     //civ legal vehicles licenses
@@ -134,5 +161,13 @@ switch (_var) do
     //med licenses
 	case "license_med_air": {(localize "STR_License_Pilot")};
     
+    //adac licenses
+	case "license_adac_air": {(localize "STR_License_Pilot")};
+	case "license_adac_car": {(localize "STR_License_Driver")};
+	case "license_adac_assassin": {(localize "STR_License_Assassin")};
     
+    //alcohol license block
+	case "license_civ_stiller": {"Distiller's License"};
+	case "license_civ_liquor": {"Liquor License"};
+	case "license_civ_bottler": {"Bottling License"};
 };

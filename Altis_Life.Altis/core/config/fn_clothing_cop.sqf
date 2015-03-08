@@ -28,7 +28,6 @@ switch (_filter) do
 		{
 			_ret pushBack ["U_B_CombatUniform_mcam_worn","Swat",550];
 			_ret pushBack ["U_I_GhillieSuit",nil,550];
-			_ret pushBack ["U_IG_Guerilla2_3",nil,550];
 		};
 		if(__GETC__(life_coplevel) > 7) then
 		{
@@ -43,6 +42,7 @@ switch (_filter) do
 		{
 			_ret pushBack ["H_Booniehat_mcamo",nil,120];
 			_ret pushBack ["H_Cap_blk",nil,120];
+			_ret pushBack ["H_Cap_police",nil,120];
 
 		};
 		if(__GETC__(life_coplevel) > 5) then
@@ -77,6 +77,7 @@ switch (_filter) do
 			["G_Aviator",nil,75],
 			["G_Squares",nil,10],
 			["G_Lowprofile",nil,30],
+			["G_Diving",nil,50],
 			["G_Combat",nil,55],
 			["G_Balaclava_combat",nil,55],
 			["G_Balaclava_lowprofile",nil,55]
@@ -87,6 +88,7 @@ switch (_filter) do
 	case 3:
 	{
 		_ret pushBack ["V_Rangemaster_belt",nil,800];
+		_ret pushBack ["V_RebreatherB",nil,2800];
 		if(__GETC__(life_coplevel) > 1) then
 		{
 			_ret pushBack ["V_TacVest_blk_POLICE",nil,1500];

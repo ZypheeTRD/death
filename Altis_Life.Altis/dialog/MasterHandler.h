@@ -26,3 +26,5 @@
 #include "federalReserve.h"
 #include "emp_menu.hpp"
 #include "prision_list.hpp"
+#include "blackjack.hpp"
+#include "slot_machine.hpp"

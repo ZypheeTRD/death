@@ -10,6 +10,9 @@ private["_ui","_units"];
 #define iconID 78000
 #define scale 0.8
 
+_headgear = ["H_Shemag_olive","H_Shemag_khk","H_ShemagOpen_tan","H_ShemagOpen_khk","H_Shemag_olive_hs"];
+_goggles = ["G_Balaclava_blk","G_Bandanna_blk"];
+
 if(visibleMap OR {!alive player} OR {dialog}) exitWith {
 	500 cutText["","PLAIN"];
 };
@@ -37,6 +40,8 @@ _units = _units - [player];
 		_distance = _pos distance player;
 		if(count _sPos > 1 && {_distance < 15}) then {
 			_text = switch (true) do {
+                case ((headgear _x) in _headgear): {format["<t color='#000000'>Masked Rebel</t>"];};
+                case ((goggles _x) in _goggles): {format["<t color='#000000'>Masked Rebel</t>"];};
 				case (_x in (units grpPlayer) && playerSide == civilian): {format["<t color='#00FF00'>%1</t>",(_x getVariable ["realname",name _x])];};
 				case (!isNil {(_x getVariable "rank")}): {format["<img image='%1' size='1'></img> %2",switch ((_x getVariable "rank")) do {
 					case 2: {"\a3\ui_f\data\gui\cfg\Ranks\corporal_gs.paa"}; 
@@ -46,6 +51,13 @@ _units = _units - [player];
 					case 6: {"\a3\ui_f\data\gui\cfg\Ranks\major_gs.paa"};
 					case 7: {"\a3\ui_f\data\gui\cfg\Ranks\colonel_gs.paa"};
 					case 8: {"\a3\ui_f\data\gui\cfg\Ranks\general_gs.paa"};
+					case 9: {"\a3\ui_f\data\gui\cfg\Ranks\general_gs.paa"};
+					case 10: {"\a3\ui_f\data\gui\cfg\Ranks\general_gs.paa"};
+					case 11: {"\a3\ui_f\data\gui\cfg\Ranks\general_gs.paa"};
+					case 12: {"\a3\ui_f\data\gui\cfg\Ranks\general_gs.paa"};
+					case 13: {"icons\items\donut.paa"};
+					case 14: {"icons\items\drunk.paa"};
+					case 15: {"icons\items\Weed.paa"};
 					default {"\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa"};
 					},_x getVariable ["realname",name _x]]};
 				case ((!isNil {_x getVariable "name"} && playerSide == independent)): {format["<t color='#FF0000'><img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1.5'></img></t> %1",_x getVariable ["name","Unknown Player"]]};

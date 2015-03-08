@@ -5,7 +5,7 @@
 private["_packet","_array","_flag"];
 _packet = [getPlayerUID player,(profileName),playerSide,life_cash,life_atmcash];
 _array = [];
-_flag = switch(playerSide) do {case west: {"cop"}; case civilian: {"civ"}; case independent: {"med"};};
+_flag = switch(playerSide) do {case west: {"cop"}; case east: {"adac"}; case civilian: {"civ"}; case independent: {"med"};};
 {
 	if(_x select 1 == _flag) then
 	{

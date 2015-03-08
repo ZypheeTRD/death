@@ -22,7 +22,7 @@ switch (_type) do
 	case "cg": {8000}; //Coast guard license cost
 	case "heroin": {25000}; //Heroin processing license cost
 	case "marijuana": {19500}; //Marijuana processing license cost
-	case "medmarijuana": {1500}; //Medical Marijuana processing license cost
+	case "medmarijuana": {150000}; //Medical Marijuana processing license cost
 	case "gang": {10000}; //Gang license cost
 	case "rebel": {75000}; //Rebel license cost
 	case "truck": {20000}; //Truck license cost
@@ -35,4 +35,15 @@ switch (_type) do
 	case "cement": {6500};
 	case "mair": {15000};
 	case "home": {75000};
+	case "attorney": {75000};
+	case "taxi": {45000};
+	case "bhunter": {485000};
+	case "adacair": {5000};
+	case "adaccar": {2500};
+	case "adacassassin": {2500000};
+    case "stiller":{50000};
+    case "liquor":{100000};
+    case "bottler":{100000};
+    case "mash":{100000};
+
 };

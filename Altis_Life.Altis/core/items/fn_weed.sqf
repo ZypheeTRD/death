@@ -11,7 +11,7 @@ closeDialog 0;
 
 //Little hint then wait a litle before starting drugs effects
 hint "Time to Relax!";
-player say3D "weed_song";
+player say3D "weed";
 sleep 3;
 
 //Activate ppEffects we need

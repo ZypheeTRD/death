@@ -28,12 +28,12 @@ removeHeadGear player;
     player removeItem _x;
 } foreach (assignedItems player);
 
-_uniform = [_itemArray,0,"",[""]] call BIS_fnc_param;
-_vest = [_itemArray,1,"",[""]] call BIS_fnc_param;
-_backpack = [_itemArray,2,"",[""]] call BIS_fnc_param;
-_goggles = [_itemArray,3,"",[""]] call BIS_fnc_param;
-_headgear = [_itemArray,4,"",[""]] call BIS_fnc_param;
-_items = [_itemArray,5,[],[[]]] call BIS_fnc_param;
+//_uniform = [_itemArray,0,"",[""]] call BIS_fnc_param;
+//_vest = [_itemArray,1,"",[""]] call BIS_fnc_param;
+//_backpack = [_itemArray,2,"",[""]] call BIS_fnc_param;
+//_goggles = [_itemArray,3,"",[""]] call BIS_fnc_param;
+//_headgear = [_itemArray,4,"",[""]] call BIS_fnc_param;
+//_items = [_itemArray,5,[],[[]]] call BIS_fnc_param;
 _prim = [_itemArray,6,"",[""]] call BIS_fnc_param;
 _seco = [_itemArray,7,"",[""]] call BIS_fnc_param;
 _uItems = [_itemArray,8,[],[[]]] call BIS_fnc_param;

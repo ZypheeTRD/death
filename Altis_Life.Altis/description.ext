@@ -131,7 +131,7 @@ class CfgSounds
 	class weed
 	{
     name = "weed";
-    sound[] = {"\sounds\weed.ogg", 1.0, 1};
+    sound[] = {"\sounds\weed_song.ogg", 1.0, 1};
     titles[] = {};
 	}; 
     
@@ -235,6 +235,20 @@ class CfgSounds
 		sound[] = {"sounds\dog_one.ogg", 1, 1};
 		titles[] = {};
         };
+    
+    class spin
+	{
+		name = "spin";
+		sound[] = {"\sounds\spin.ogg", 1.0, 1};
+		titles[] = {};
+	};
+    
+	class win
+	{
+		name = "win";
+		sound[] = {"\sounds\win.ogg", 1.0, 1};
+		titles[] = {};
+	};
 };
 
 class CfgDebriefing
@@ -339,6 +353,15 @@ class CfgNotifications
 	{
 		title = "Admin Message";
 		iconPicture = "icons\messageadmin.paa";
+		description = "%1";
+		duration = 10;
+		priority = 5;
+	};
+    
+    class AdacMessage
+	{
+		title = "ADAC Message";
+		iconPicture = "icons\messagenew.paa";
 		description = "%1";
 		duration = 10;
 		priority = 5;

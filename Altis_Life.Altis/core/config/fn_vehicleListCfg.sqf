@@ -12,6 +12,47 @@ if(_shop == "") exitWith {[]};
 _return = [];
 switch (_shop) do
 {
+    
+case "vip_vehicles1":
+	{if(__GETC__(life_donatorlvl) > 1) then
+		{
+				            _return pushBack["B_Quadbike_01_F",1850];
+                            _return pushBack["C_Hatchback_01_F",8000];
+                            _return pushBack["C_Offroad_01_F",10000];
+                            _return pushBack["C_SUV_01_F",25000];
+                            _return pushBack["C_Hatchback_01_sport_F",45000];
+                            _return pushBack["C_Van_01_transport_F",35000];
+                            _return pushBack["C_Van_01_box_F",60000];
+                            _return pushBack["I_Truck_02_transport_F",55000];
+                            _return pushBack["I_Truck_02_covered_F",75000];
+                            _return pushBack["B_Truck_01_transport_F",175000];
+                            _return pushBack["O_Truck_03_transport_F",150000];
+                            _return pushBack["O_Truck_03_covered_F",125000];
+                            _return pushBack["B_Truck_01_box_F",310000];
+                            _return pushBack["O_Truck_03_device_F",320000];
+		};
+    };
+    
+case "vip_vehicles2":
+	{
+        if(__GETC__(life_coplevel) > 2) then
+		{
+				            _return pushBack["B_Quadbike_01_F",1850];
+                            _return pushBack["C_Hatchback_01_F",8000];
+                            _return pushBack["C_Offroad_01_F",10000];
+                            _return pushBack["C_SUV_01_F",25000];
+                            _return pushBack["C_Hatchback_01_sport_F",45000];
+                            _return pushBack["C_Van_01_transport_F",35000];
+                            _return pushBack["C_Van_01_box_F",60000];
+                            _return pushBack["I_Truck_02_transport_F",55000];
+                            _return pushBack["I_Truck_02_covered_F",75000];
+                            _return pushBack["B_Truck_01_transport_F",175000];
+                            _return pushBack["O_Truck_03_transport_F",150000];
+                            _return pushBack["O_Truck_03_covered_F",125000];
+                            _return pushBack["B_Truck_01_box_F",310000];
+                            _return pushBack["O_Truck_03_device_F",320000];
+		};
+        };
 	case "kart_shop":
 	{
 		_return = [
@@ -35,7 +76,8 @@ switch (_shop) do
 	case "med_air_hs": {
 		_return = [
 			["B_Heli_Light_01_F",50000],
-			["O_Heli_Light_02_unarmed_F",75000]
+			["O_Heli_Light_02_unarmed_F",75000],
+			["O_Heli_Transport_04_medevac_F",100000]
 		];
 	};
 	
@@ -57,13 +99,13 @@ switch (_shop) do
 		_return =
 		[
 			["C_Van_01_box_F",60000],
-			["I_Truck_02_transport_F",75000],
-			["I_Truck_02_covered_F",100000],
-			["B_Truck_01_transport_F",275000],
-			["O_Truck_03_transport_F",200000],
-			["O_Truck_03_covered_F",250000],
-			["B_Truck_01_box_F",350000],
-			["O_Truck_03_device_F",450000]
+			["I_Truck_02_transport_F",105000],
+			["I_Truck_02_covered_F",150000],
+			["B_Truck_01_transport_F",375000],
+			["O_Truck_03_transport_F",400000],
+			["O_Truck_03_covered_F",650000],
+			["B_Truck_01_box_F",850000],
+			["O_Truck_03_device_F",1500000]
 		];	
 	};
 	
@@ -74,8 +116,7 @@ switch (_shop) do
 		[
 			["B_Quadbike_01_F",2500],
 			["B_G_Offroad_01_F",15000],
-			["O_MRAP_02_F",150000],
-			["B_Heli_Light_01_F",325000]
+			["O_MRAP_02_F",1500000]
 		];
 		
 		if(license_civ_rebel) then
@@ -85,6 +126,14 @@ switch (_shop) do
 		};
 	};
 	
+	case "reb_air":
+	{
+		_return =
+		[
+			["B_Heli_Light_01_F",325000]
+		];
+	};
+    
 	case "cop_car":
 	{
 		_return pushBack
@@ -107,7 +156,13 @@ switch (_shop) do
 		_return =
 		[
 			["B_Heli_Light_01_F",253000],
-			["O_Heli_Light_02_unarmed_F",750000]
+			["c_heli_light_01_civil_f",353000],
+			["O_Heli_Light_02_unarmed_F",750000],
+			["I_Heli_Transport_02_F",1400000],
+			["I_Heli_light_03_unarmed_F",1800000],
+			["B_Heli_Transport_03_unarmed_F",6000000],
+			["O_Heli_Transport_04_F",7000000],
+			["O_Heli_Transport_04_box_F",8000000]
 		];
 	};
 	
@@ -119,7 +174,13 @@ switch (_shop) do
 		{
 			_return pushBack
 			["B_Heli_Transport_01_F",200000];
-		};
+            
+        };
+		if(__GETC__(life_coplevel) > 4) then
+		{
+            _return pushBack
+			["B_Heli_Light_01_armed_F",200000];
+        };
 	};
 	
 	case "cop_airhq":
@@ -155,6 +216,34 @@ switch (_shop) do
 		];
 	};
     
+	case "adac_air":
+	{
+		_return pushBack
+		["B_Heli_Light_01_F",75000];
+		if(__GETC__(life_adaclevel) > 2) then
+		{
+			_return pushBack
+			["B_Heli_Transport_01_F",200000];
+			_return pushBack
+			["B_MRAP_01_hmg_F",750000];
+		};
+	};
+	case "adac_car":
+	{
+		_return pushBack
+		["C_Hatchback_01_F",5000];
+		_return pushBack
+		["C_Offroad_01_F",5000];
+		_return pushBack
+		["C_SUV_01_F",20000];
+		_return pushBack
+		["C_Hatchback_01_sport_F",20000];
+		if(__GETC__(life_adaclevel) > 2) then
+		{
+			_return pushBack
+			["B_MRAP_01_F",100000];
+		};
+	};
 
 
 };

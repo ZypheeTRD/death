@@ -6,7 +6,7 @@
 	Main functionality for gathering.
 */
 private["_gather","_itemWeight","_diff","_itemName","_val","_resourceZones","_zone"];
-_resourceZones = ["apple_1","apple_2","apple_3","apple_4","peaches_1","peaches_2","peaches_3","peaches_4","heroin_1","cocaine_1","weed_1","shrooms_1","shrooms_2"];
+_resourceZones = ["grapes_1","potato_1","agave_1","rye_1","hops_1","yeast_1","apple_1","apple_2","apple_3","apple_4","peaches_1","peaches_2","peaches_3","peaches_4","heroin_1","cocaine_1","weed_1","shrooms_1","shrooms_2"];
 _zone = "";
 
 if(life_action_inUse) exitWith {}; //Action is in use, exit to prevent spamming.
@@ -27,7 +27,13 @@ switch(true) do {
 	case (_zone in ["heroin_1"]): {_gather = "heroinu"; _val = 1;};
 	case (_zone in ["cocaine_1"]): {_gather = "cocaine"; _val = 1;};
 	case (_zone in ["weed_1"]): {_gather = "cannabis"; _val = 1;};
-	case (_zone in ["shrooms_1","shrooms_2"]): {_gather = "shrooms"; _val = 3;};
+	case (_zone in ["shrooms_1","shrooms_2"]): {_gather = "shrooms"; _val = 3;};	
+    case (_zone in ["rye_1"]): {_gather = "rye"; _val = 2;};
+	case (_zone in ["yeast_1"]): {_gather = "yeast"; _val = 2;};
+	case (_zone in ["hops_1"]): {_gather = "hops"; _val = 2;}; 	
+    case (_zone in ["grapes_1"]): {_gather = "grapes"; _val = 2;};
+	case (_zone in ["potato_1"]): {_gather = "potato"; _val = 2;};
+	case (_zone in ["agave_1"]): {_gather = "agave"; _val = 2;}; 
 	default {""};
 };
 //gather check??

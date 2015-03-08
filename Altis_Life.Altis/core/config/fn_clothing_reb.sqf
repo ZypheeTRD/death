@@ -21,18 +21,14 @@ switch (_filter) do
 			["U_IG_Guerilla1_1",nil,5000],
 			["U_IG_Guerilla2_1",nil,5000],
 			["U_IG_Guerilla2_3",nil,7500],
-			["U_IG_Guerilla1_1",nil,5000],
-			["U_I_G_resistanceLeader_F",nil,11500],
-			["U_O_SpecopsUniform_ocamo",nil,13500],
-			["U_O_PilotCoveralls",nil,15610],
-			["U_O_OfficerUniform_ocamo",nil,15340],
-			["U_O_GhillieSuit",nil,18000],
-			["U_O_CombatUniform_oucamo",nil,21500],
+			["U_I_G_resistanceLeader_F",nil,35000],
+			["U_O_SpecopsUniform_ocamo",nil,35000],
+			["U_O_PilotCoveralls",nil,35000],
+			["U_O_OfficerUniform_ocamo",nil,35000],
+			["U_O_GhillieSuit",nil,80000],
+			["U_O_CombatUniform_oucamo",nil,50000],
 			["U_OG_leader",nil,25000],
 			["U_O_SpecopsUniform_blk",nil,100000],
-			["U_I_Protagonist_VR",nil,1000000],
-			["U_B_Protagonist_VR",nil,1000000],
-			["U_O_Protagonist_VR",nil,1000000],
 			["U_NikosBody","Im a Millionaire",1000000]
 		];
 	};
@@ -41,14 +37,13 @@ switch (_filter) do
 	case 1:
 	{
 		[
-			["H_ShemagOpen_tan",nil,850],
-			["H_Shemag_olive",nil,850],
-			["H_ShemagOpen_khk",nil,800],
-			["H_HelmetO_ocamo",nil,2500],
-			["H_MilCap_oucamo",nil,1200],
-			["H_Bandanna_camo",nil,650],
+			["H_ShemagOpen_tan",nil,8500],
+			["H_Shemag_olive",nil,8500],
+			["H_ShemagOpen_khk",nil,8000],
+			["H_HelmetO_ocamo",nil,25000],
+			["H_MilCap_oucamo",nil,12000],
+			["H_Bandanna_camo",nil,6500],
 			["H_Watchcap_blk",nil,15000],
-			["H_Beret_blk",nil,25000],
 			["H_PilotHelmetFighter_O",nil,45000]
 		];
 	};
@@ -57,27 +52,26 @@ switch (_filter) do
 	case 2:
 	{
 		[
-			["G_Shades_Black",nil,25],
-			["G_Shades_Blue",nil,20],
-			["G_Sport_Blackred",nil,20],
-			["G_Sport_Checkered",nil,20],
-			["G_Sport_Blackyellow",nil,20],
-			["G_Sport_BlackWhite",nil,20],
-			["G_Squares",nil,10],
-			["G_Lowprofile",nil,30],
-			["G_Combat",nil,55],
-			["G_Balaclava_blk",nil,55],
-			["G_Balaclava_combat",nil,55],
-			["G_Balaclava_lowprofile",nil,55],
-			["G_Balaclava_oli",nil,55],
-			["G_Bandanna_aviator",nil,55],
-			["G_Bandanna_tan",nil,55],
-			["G_Bandanna_sport",nil,55],
-			["G_Bandanna_blk",nil,55],
-			["G_Bandanna_oli",nil,55],
-			["G_Bandanna_shades",nil,55],
-			["G_Bandanna_beast",nil,55],
-			["G_Goggles_VR",nil,1000000]
+			["G_Shades_Black",nil,250],
+			["G_Shades_Blue",nil,200],
+			["G_Sport_Blackred",nil,200],
+			["G_Sport_Checkered",nil,200],
+			["G_Sport_Blackyellow",nil,200],
+			["G_Sport_BlackWhite",nil,200],
+			["G_Squares",nil,100],
+			["G_Lowprofile",nil,300],
+			["G_Combat",nil,550],
+			["G_Balaclava_blk",nil,550],
+			["G_Balaclava_combat",nil,1550],
+			["G_Balaclava_lowprofile",nil,1550],
+			["G_Balaclava_oli",nil,1550],
+			["G_Bandanna_aviator",nil,1550],
+			["G_Bandanna_tan",nil,1550],
+			["G_Bandanna_sport",nil,1550],
+			["G_Bandanna_blk",nil,1550],
+			["G_Bandanna_oli",nil,1550],
+			["G_Bandanna_shades",nil,1550],
+			["G_Bandanna_beast",nil,1550]
 		];
 	};
 	
@@ -86,8 +80,8 @@ switch (_filter) do
 	{
 		[
 			["V_TacVest_khk",nil,12500],
-			["V_BandollierB_cbr",nil,4500],
-			["V_HarnessO_brn",nil,7500],
+			["V_BandollierB_cbr",nil,14500],
+			["V_HarnessO_brn",nil,17500],
 			["V_HarnessOGL_gry",nil,1000000]
 		];
 	};
@@ -96,14 +90,14 @@ switch (_filter) do
 	case 4:
 	{
 		[
-			["B_AssaultPack_cbr",nil,2500],
-			["B_Kitbag_mcamo",nil,4500],
-			["B_TacticalPack_oli",nil,3500],
-			["B_FieldPack_ocamo",nil,3000],
-			["B_Bergen_sgg",nil,4500],
-			["B_Kitbag_cbr",nil,4500],
-			["B_Carryall_oli",nil,5000],
-			["B_Carryall_khk",nil,5000]
+			["B_AssaultPack_cbr",nil,12500],
+			["B_Kitbag_mcamo",nil,14500],
+			["B_TacticalPack_oli",nil,13500],
+			["B_FieldPack_ocamo",nil,13000],
+			["B_Bergen_sgg",nil,14500],
+			["B_Kitbag_cbr",nil,14500],
+			["B_Carryall_oli",nil,15000],
+			["B_Carryall_khk",nil,15000]
 		];
 	};
 };

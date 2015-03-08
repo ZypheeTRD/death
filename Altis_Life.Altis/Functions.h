@@ -42,6 +42,7 @@ class Life_Client_Core
 		class initCiv {};
 		class initCop {};
 		class initMedic {};
+        class initAdac {}; //ADD THIS
 		class welcomeNotification {};
 	};
 	
@@ -71,6 +72,7 @@ class Life_Client_Core
 		class medicSirenLights {};
 		class medicLights {};
 		class medicSiren {};
+        class newLifeRule {};
 	};
 	
 	class Actions
@@ -160,6 +162,9 @@ class Life_Client_Core
 		class clothing_reb {};
 		class clothing_dive {};
 		class clothing_kart {};
+		class clothing_vip1 {}; 
+		class clothing_vip2 {};//ADD THIS
+		class clothing_adac {}; //ADD THIS
 	};
 
 	class Player_Menu
@@ -304,6 +309,7 @@ class Life_Client_Core
 		class addVehicle2Chain {};
         class civVInteractionMenu {};
         class medVInteractionMenu {};
+		class adacVInteractionMenu {}; //ADD THIS
 	};
 	
 	class Cop
@@ -335,6 +341,14 @@ class Life_Client_Core
         class copOpener {};
         class seizePlayerWeapon {};
         class seizePlayerWeaponAction {};
+		class breathalyzer {};
+
+	};
+    
+      class Adac
+	{
+		file = "core\adac";
+		class adacLoadout {};
 	};
 	
 	class Gangs
@@ -377,6 +391,12 @@ class Life_Client_Core
 		class chopShopMenu {};
 		class chopShopSelection {};
 		class chopShopSell {};
+        class blackjack {};
+        class BJbet {};
+        class BJhit {};
+        class BJstay {};
+        class slotmachine {};
+        class slotSpin {};
 	};
 	
 	class Items
@@ -396,6 +416,12 @@ class Life_Client_Core
         class shrooms {};
         class weed {};
         class speedBomb {};
+		class drinkbeer {};
+		class drinkmoonshine {};
+		class drinkwhiskey {};
+		class drinkwine {};
+		class drinkvodka {};
+		class drinktequila {};
 	};
 	
 	class Dialog_Controls
