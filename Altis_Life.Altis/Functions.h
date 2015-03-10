@@ -90,6 +90,7 @@ class Life_Client_Core
 		class getDPMission {};
 		class postBail {};
 		class processAction {};
+		class processMultipleItems {};
 		class arrestAction {};
 		class escortAction {};
 		class impoundAction {};
@@ -109,6 +110,7 @@ class Life_Client_Core
 		class captureHideout {};
 		class gather {};
         class civRestrainAction {};
+        class adacRestrainAction {};
         class robShops {}; //Rob Gas Station & Shops Script
         class useToilet {}; //toilet
         class surrender {}; //surrender
@@ -349,6 +351,8 @@ class Life_Client_Core
 	{
 		file = "core\adac";
 		class adacLoadout {};
+        class adacRestrain {};
+		class adacMarkers {};
 	};
 	
 	class Gangs

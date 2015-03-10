@@ -36,6 +36,15 @@ life_atmcash = parseNumber (_this select 3);
 __CONST__(life_adminlevel,parseNumber(_this select 4));
 __CONST__(life_donatorlvl,parseNumber(_this select 5));
 
+switch(__GETC__(life_donatorlvl)) do
+{
+	case 1: {life_paycheck = life_paycheck + 1500;};
+	case 2: {life_paycheck = life_paycheck + 3500;};
+	case 3: {life_paycheck = life_paycheck + 5500;};
+	case 4: {life_paycheck = life_paycheck + 7500;};
+	case 5: {life_paycheck = life_paycheck + 9500;};
+};
+
 //Loop through licenses
 if(count (_this select 6) > 0) then {
 	{missionNamespace setVariable [(_x select 0),(_x select 1)];} foreach (_this select 6);

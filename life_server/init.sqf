@@ -138,7 +138,3 @@ publicVariable "life_server_isReady";
 [] execVM "\life_server\Functions\airdrop\config.sqf";
 [] execVM "\life_server\Functions\airdrop\fn_generateAirdropAuto.sqf";
 [] execVM "\life_server\Functions\Schiffswrack\fn_generateschiffwrackAuto.sqf";
-
-
-
-["hunting_zone",30] spawn TON_fnc_huntingZone;

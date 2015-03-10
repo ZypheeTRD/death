@@ -112,77 +112,127 @@ while {_modeChanged && !isNil "_veh" && !isNull _veh && _veh getVariable ["light
 
     switch(_type) do
     {
-        case "C_Offroad_01_F":
-        {
-            [false, "red", [-0.44, 0.0, 0.525]] call _attachLight;
-            [true, "blue", [0.345, 0.0, 0.525]] call _attachLight;
+case "I_Quadbike_01_F":
+		{
+			[true, "blue", [-0.07, 1, -0.7]] call _attachLight;
+			[false, "red", [0.07, 1, -0.7]] call _attachLight;
+		};
+		case "C_Offroad_01_F":
+		{
+			[false, "red", [-0.44, 0.0, 0.525]] call _attachLight;
+			[true, "blue", [0.345, 0.0, 0.525]] call _attachLight;
+			if(_extraLights) then {
+				[true, "blue", [0.17, 2.655, -0.49]] call _attachLight;
+				[false, "red", [-0.25, 2.655, -0.49]] call _attachLight;
 
-            [false, "white", [0.61, 2.2825, -0.355]] call _attachLight;
-            [true, "white", [-0.695, 2.2825, -0.355]] call _attachLight;
+				[false, "white", [0.61, 2.2825, -0.355]] call _attachLight;
+				[true, "white", [-0.695, 2.2825, -0.355]] call _attachLight;
 
-            if(_extraLights) then {
-                [true, "blue", [0.17, 2.655, -0.49]] call _attachLight;
-                [false, "red", [-0.25, 2.655, -0.49]] call _attachLight;
+				[false, "red", [-0.905, -2.875, -0.225]] call _attachLight;
+				[true, "blue", [0.825, -2.875, -0.225]] call _attachLight;
 
-                [false, "red", [-0.905, -2.875, -0.225]] call _attachLight;
-                [true, "blue", [0.825, -2.875, -0.225]] call _attachLight;
+				[true, "blue", [-0.645, -2.95, -0.77]] call _attachLight;
+				[false, "red", [0.575, -2.95, -0.77]] call _attachLight;
+			} else {
+				[false, "red", [-0.44, 0.0, 0.525]] call _attachLight;
+				[true, "blue", [0.345, 0.0, 0.525]] call _attachLight;
+			};
+		};
+		case "C_SUV_01_F":
+		{
+			[true, "white", [0.79, 1.95, -0.48]] call _attachLight;
+			[false, "white", [-0.80, 1.95, -0.48]] call _attachLight;
+			if(_extraLights) then {
+				[true, "red", [-0.39, 2.28, -0.52]] call _attachLight;
+				[false, "blue", [0.38, 2.28, -0.52]] call _attachLight;
 
-                [true, "blue", [-0.645, -2.95, -0.77]] call _attachLight;
-                [false, "red", [0.575, -2.95, -0.77]] call _attachLight;
-            };
-        };
-        case "C_SUV_01_F":
-        {
-            [true, "white", [0.79, 1.95, -0.48]] call _attachLight;
-            [false, "white", [-0.80, 1.95, -0.48]] call _attachLight;
+				[false, "blue", [-0.6, -2.925, -0.24]] call _attachLight;
+				[true, "red", [0.59, -2.925, -0.24]] call _attachLight;
 
-            [true, "red", [-0.86, -2.75, -0.18]] call _attachLight;
-            [false, "blue", [0.86, -2.75, -0.18]] call _attachLight;
+				[true, "red", [-0.86, -2.75, -0.18]] call _attachLight;
+				[false, "blue", [0.86, -2.75, -0.18]] call _attachLight;
+			} else {
+				[true, "red", [-0.5, -1, 0.37]] call _attachLight;
+			};
+		};
+		case "C_Hatchback_01_sport_F":
+		{
+			[true, "blue", [-0.03, -0, 0.2]] call _attachLight;
+			[false, "red", [-0.03, -0, 0.2]] call _attachLight;
+			if(_extraLights) then {
+				[false, "white", [0.75, 1.615, -0.52]] call _attachLight;
+				[true, "white", [-0.8, 1.615, -0.525]] call _attachLight;
 
-            if(_extraLights) then {
-                [true, "red", [-0.39, 2.28, -0.52]] call _attachLight;
-                [false, "blue", [0.38, 2.28, -0.52]] call _attachLight;
+				[true, "blue", [0.20, 2.15, -0.61]] call _attachLight;
+				[false, "red", [-0.25, 2.15, -0.61]] call _attachLight;
 
-                [false, "blue", [-0.6, -2.925, -0.24]] call _attachLight;
-                [true, "red", [0.59, -2.925, -0.24]] call _attachLight;
-            };
-        };
-        case "C_Hatchback_01_sport_F":
-        {
-            [true, "blue", [-0.03, 0, 0.2]] call _attachLight;
-            [false, "red", [-0.03, 0, 0.2]] call _attachLight;
+				[true, "blue", [0.78, -2.25, -0.3]] call _attachLight;
+				[false, "red", [-0.8, -2.25, -0.3]] call _attachLight;
 
-            [true, "blue", [-0.55, -2.46, -0.3]] call _attachLight;
-            [false, "red", [0.48, -2.46, -0.3]] call _attachLight;
+				[true, "blue", [-0.55, -2.46, -0.3]] call _attachLight;
+				[false, "red", [0.48, -2.46, -0.3]] call _attachLight;
+			};
+		};
+		case "B_MRAP_01_F":
+		{
+			[true, "blue", [-0.5, 1.5, -0.7]] call _attachLight;
+			[false, "red", [0.5, 1.5, -0.7]] call _attachLight;
 
-            if(_extraLights) then {
-                [false, "white", [0.75, 1.615, -0.52]] call _attachLight;
-                [true, "white", [-0.8, 1.615, -0.525]] call _attachLight;
+			[false, "blue", [-0.4, -1.2, 0.55]] call _attachLight;
+			[true, "red", [0.4, -1.2, 0.55]] call _attachLight;
 
-                [true, "blue", [0.20, 2.15, -0.61]] call _attachLight;
-                [false, "red", [-0.25, 2.15, -0.61]] call _attachLight;
+			if(_extraLights) then {
+				[true, "red", [-0.8, -0.6, -1.3]] call _attachLight;
+				[false, "blue", [0.8, -0.6, -1.3]] call _attachLight;
 
-                [true, "blue", [0.78, -2.25, -0.3]] call _attachLight;
-                [false, "red", [-0.8, -2.25, -0.3]] call _attachLight;
-            };
-        };
-        case "I_MRAP_03_F":
-        {
-            [true, "red", [-0.87, 2.2, -0.75]] call _attachLight;
-            [false, "blue", [0.87, 2.2, -0.75]] call _attachLight;
+				[false, "red", [0.8, -2.5, -1.3]] call _attachLight;
+				[true, "blue", [-0.8, -2.5, -1.3]] call _attachLight;
 
-            [true, "red", [-0.725, -3.15, 0.025]] call _attachLight;
-            [false, "blue", [0.725, -3.15, 0.025]] call _attachLight;
+				[true, "red", [-0.95, -4.25, -0.75]] call _attachLight;
+				[false, "blue", [0.95, -4.25, -0.75]] call _attachLight;
+			};
+		};
+		case "I_MRAP_03_F":
+		{
+			[true, "red", [-0.87, 2.2, -0.75]] call _attachLight;
+			[false, "blue", [0.87, 2.2, -0.75]] call _attachLight;
 
-            if(_extraLights) then {
-                [false, "white", [-1.05, 2.25, -0.3]] call _attachLight;
-                [true, "white", [1.05, 2.25, -0.3]] call _attachLight;
+			[false, "blue", [1.10, -0.55, 0.5]] call _attachLight;
+			[true, "red", [-1.10, -0.55, 0.5]] call _attachLight;
 
-                [true, "red", [1.225, -2.845, -0.71]] call _attachLight;
-                [false, "blue", [-1.225, -2.845, -0.7]] call _attachLight;
-            };
-        };
-    };
+			if(_extraLights) then {
+				[false, "white", [-1.05, 2.25, -0.3]] call _attachLight;
+				[true, "white", [1.05, 2.25, -0.3]] call _attachLight;
+
+				[true, "red", [1.225, -2.845, -0.71]] call _attachLight;
+				[true, "red", [-0.725, -3.15, 0.025]] call _attachLight;
+
+				[false, "blue", [-1.225, -2.845, -0.7]] call _attachLight;
+				[false, "blue", [0.725, -3.15, 0.025]] call _attachLight;
+			};
+		};
+		case "O_MRAP_02_F":
+		{
+			[false, "blue", [1.175, -1.5, 0.365]] call _attachLight;
+			[true, "red", [-1.175, -1.5, 0.365]] call _attachLight;
+
+			[false, "red", [0.4325, -1.5, 0.6275]] call _attachLight;
+			[true, "blue", [0.4325, -1.5, 0.6275]] call _attachLight;
+
+			if(_extraLights) then {
+				[true, "red", [-0.2, 1.575, -1.125]] call _attachLight;
+				[false, "blue", [0.2, 1.575, -1.125]] call _attachLight;
+
+				[false, "white", [-0.775, 1.475, -1]] call _attachLight;
+				[true, "white", [0.775, 1.475, -1]] call _attachLight;
+
+				[true, "red", [0.525, -4.5, -1.3]] call _attachLight;
+				[false, "blue", [-0.525, -4.5, -1.3]] call _attachLight;
+
+				[true, "red", [-0.4, -4.95, 0.155]] call _attachLight;
+				[false, "blue", [0.4, -4.95, 0.155]] call _attachLight;
+			};
+		};
 
     _modeChanged = false;
 

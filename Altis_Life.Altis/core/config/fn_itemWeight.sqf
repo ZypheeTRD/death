@@ -66,6 +66,7 @@ switch (_item) do
 	case "organcooler": {2};
     case "uwsl": {5};
 	case "rye": {2};
+	case "corn": {2};
 	case "hops": {2};
 	case "potato": {2};
 	case "agave": {2};
@@ -74,6 +75,7 @@ switch (_item) do
 	case "cornmeal": {2};
 	case "mash": {2};
 	case "wort": {2};
+	case "corn": {2};
 	case "whiskey": {4};
 	case "wine": {3};
 	case "vodka": {4};

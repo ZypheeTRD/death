@@ -64,6 +64,7 @@ switch (_code) do
 		switch (playerSide) do 
 		{
 			case west: {if(!visibleMap) then {[] spawn life_fnc_copMarkers;}};
+			case east: {if(!visibleMap) then {[] spawn life_fnc_adacMarkers;}};
 			case independent: {if(!visibleMap) then {[] spawn life_fnc_medicMarkers;}};
             case civilian: {if(!visibleMap) then {[] spawn life_fnc_gangMarkers;}}; // ADD THIS
 		};
@@ -73,7 +74,7 @@ switch (_code) do
 //EMP Konsole - K
     case 37:
     {
-        if (!_shift && !_alt && !_ctrlKey && (playerSide == west) && (vehicle player != player && (typeOf vehicle player) in ["B_Heli_Light_01_F","B_Heli_Transport_01_F"])) then
+        if (!_shift && !_alt && !_ctrlKey && (playerSide == west) && (playerSide == east) && (vehicle player != player && (typeOf vehicle player) in ["B_Heli_Light_01_F","B_Heli_Transport_01_F"])) then
         {
             [] call life_fnc_openEmpMenu; [_this] call life_fnc_isEmpOperator;
         };
@@ -117,15 +118,23 @@ case 19:
 	{
 	    case west:
 		{
-		if(_shift && !(player getVariable["restrained",false]) && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget in [civilian,independent]) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && !life_knockout && speed cursorTarget < 1) then
+		if(_shift && !(player getVariable["restrained",false]) && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget in [west,civilian,independent,east]) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && !life_knockout && speed cursorTarget < 1) then
 		    {
 			    [] call life_fnc_restrainAction;
 			};
 		};
 		
+        case east:
+		{
+		if(_shift && !(player getVariable["restrained",false]) && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget in [west,civilian,independent,east]) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && life_knockout && speed cursorTarget < 1) then
+		    {
+			    [] call life_fnc_adacRestrainAction;
+			};
+		};
+        
 		case civilian:
 		{
-		if(_shift && !(player getVariable["restrained",false]) && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget in [west,civilian,independent]) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && life_knockout && speed cursorTarget < 1) then
+		if(_shift && !(player getVariable["restrained",false]) && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget in [west,civilian,independent,east]) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && life_knockout && speed cursorTarget < 1) then
 		    {
 			    [] call life_fnc_civRestrainAction;
 			};
@@ -229,6 +238,30 @@ case 20:
         {
             [] call life_fnc_fadeSound;
             _handled = true;
+        };
+    };
+    
+     
+    case 48: // B Key = "Move Bitch" Chirp for Cop & EMS
+    {
+        if (!_shift && !_alt && !_ctrlKey) then
+        {
+            _veh = vehicle player;
+            if(playerSide in [west,independent] && _veh != player && !life_chirp_active && ((driver _veh) == player)) then
+            {
+                [] spawn
+                {
+                    life_chirp_active = true;
+                    uiSleep 0.5;
+                    life_chirp_active = false;
+                };
+                if(playerSide == west) then
+                {
+                    [[_veh],"life_fnc_copChirp",true,false] spawn life_fnc_MP;
+                } else {
+                    [[_veh],"life_fnc_copChirp",true,false] spawn life_fnc_MP;
+                };
+            };
         };
     };
 	

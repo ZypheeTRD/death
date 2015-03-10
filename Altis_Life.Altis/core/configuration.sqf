@@ -38,6 +38,8 @@ life_fatigue = 0.5;
 life_toilet = 100;
 life_request_timer = false;
 life_drink = 0;
+life_TankLaster = 1; //able to load anything?
+
 
 
 //Persistent Saving
@@ -49,7 +51,7 @@ __CONST__(life_revive_cops,TRUE); //Set to false if you don't want cops to be ab
 __CONST__(life_revive_fee,1250); //Fee for players to pay when revived.
 
 //House Limit
-__CONST__(life_houseLimit,5); //Maximum amount of houses a player can buy (TODO: Make Tiered licenses).
+__CONST__(life_houseLimit,3); //Maximum amount of houses a player can buy (TODO: Make Tiered licenses).
 
 //Gang related stuff?
 __CONST__(life_gangPrice,75000); //Price for creating a gang (They're all persistent so keep it high to avoid 345345345 gangs).
@@ -196,6 +198,7 @@ life_inv_items =
     "life_inv_organcooler",
     "life_inv_uwsl",
 	"life_inv_cornmeal",
+	"life_inv_corn",
 	"life_inv_beerp",
 	"life_inv_whiskey",
 	"life_inv_rye",
@@ -213,9 +216,19 @@ life_inv_items =
 	"life_inv_bottledtequila",
 	"life_inv_moonshine",
 	"life_inv_wine",
+	"life_inv_ethanol",
+	"life_inv_redphos",
+	"life_inv_hydroacid",
+	"life_inv_kroku",
+	"life_inv_krokp",
+	"life_inv_cocaineleaf",
 	"life_inv_tequila",
 	"life_inv_vodka",
 	"life_inv_mash",
+	"life_inv_ephedra",
+	"life_inv_fertilizer",
+	"life_inv_methu",
+	"life_inv_methp",
 	"life_inv_wort"
 
 ];
@@ -273,7 +286,8 @@ life_illegal_items = [["heroinu",5200],["heroinp",6500],["cocaine",4500],["cocai
 */
 sell_array = 
 [
-	["apple",100],
+	["apple",150],
+	["corn",175],
     ["shrooms",500],
 	["salema",1450],
 	["ornate",1400],
@@ -333,7 +347,7 @@ sell_array =
     ["hops",1800], 
     ["potato",200], 
     ["yeast",2000], 
-    ["cornmeal",200], 
+    ["cornmeal",400], 
     ["bottles",75]
 ];
 __CONST__(sell_array,sell_array);
@@ -342,6 +356,7 @@ buy_array =
 [
 	["apple",265],
 	["grapes",265],
+	["corn",265],
 	["agave",265],
 	["potato",265],
 	["rabbit",275],

@@ -83,8 +83,10 @@ switch (_var) do
     case "life_inv_wort": {"Wort Mixture"};
 	case "life_inv_yeast": {"Yeast"};
 	case "life_inv_rye": {"Rye"};
+	case "life_inv_corn": {"Corn"};
 	case "life_inv_hops": {"Hops"};
 	case "life_inv_grapes": {"Grapes"};
+	case "life_inv_corn": {"Corn"};
 	case "life_inv_agave": {"Agave"};
 	case "life_inv_potato": {"Poh-tae=toe"};
 	case "life_inv_whiskey": {"Distilled Whiskey"};

@@ -98,6 +98,7 @@ switch (_mode) do
 			case "tequila": {"life_inv_tequila"};
 			case "mash": {"life_inv_mash"};
 			case "wort": {"life_inv_wort"};
+			case "corn": {"life_inv_corn"};
 
 
 		};
@@ -176,6 +177,8 @@ switch (_mode) do
 			case "life_inv_potato": {"potato"};
 			case "life_inv_hops": {"hops"};
 			case "life_inv_whiskey": {"whiskey"};
+			case "life_inv_vodka": {"vodka"};
+			case "life_inv_tequila": {"tequila"};
 			case "life_inv_beerp": {"beerp"};
 			case "life_inv_bottles": {"bottles"};
 			case "life_inv_cornmeal": {"cornmeal"};
@@ -186,6 +189,8 @@ switch (_mode) do
 			case "life_inv_bottledshine": {"bottledshine"};
 			case "life_inv_bottledwine": {"bottledwine"};
 			case "life_inv_moonshine": {"moonshine"};
+			case "life_inv_wine": {"wine"};
+			case "life_inv_corn": {"corn"};
 
 		};
 	};

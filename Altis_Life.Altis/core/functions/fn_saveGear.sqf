@@ -148,6 +148,14 @@ if(count (handGunItems player) > 0) then
     };
 } forEach [
     ["life_inv_apple", life_inv_apple],
+    ["life_inv_corn", life_inv_corn],
+    ["life_inv_bottles", life_inv_bottles],
+    ["life_inv_yeast", life_inv_yeast],
+    ["life_inv_hops", life_inv_hops],
+    ["life_inv_grapes", life_inv_grapes],
+    ["life_inv_agave", life_inv_agave],
+    ["life_inv_potato", life_inv_potato],
+    ["life_inv_rye", life_inv_rye],
     ["life_inv_rabbit", life_inv_rabbit],
     ["life_inv_salema", life_inv_salema],
     ["life_inv_ornate", life_inv_ornate],
