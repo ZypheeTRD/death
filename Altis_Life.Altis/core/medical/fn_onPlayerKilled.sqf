@@ -101,6 +101,20 @@ if(side _killer == west && playerSide != west) then {
 	};
 };
 
+//Killed cop BS...
+if(side _killer == west && playerSide == east) then {
+life_ADACRecieve = _killer;
+life_atmcash = life_atmcash - (life_ADACAmount);
+titleText[format["You were killed by the police, $%1 was taken from your account! GET YOUR SHIT TOGETHER!",(life_copAmount)],"PLAIN"];
+};
+
+//Killed cop BS...
+if(side _killer == east && playerSide == west) then {
+life_copRecieve = _killer;
+life_atmcash = life_atmcash - (life_copAmount);
+titleText[format["You were killed by the police, $%1 was taken from your account! GET YOUR SHIT TOGETHER!",(life_copAmount)],"PLAIN"];
+};
+
 if(!isNull _killer && {_killer != _unit}) then {
 	life_removeWanted = true;
 };

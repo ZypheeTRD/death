@@ -4,6 +4,8 @@
 	Description:
 	Called upon first spawn selection and welcomes our player.
 */
+
+[] spawn life_fnc_IntroCam;
 format["Welcome %1, Please read the following as it is important!",profileName] hintC
 [
 	"Welcome to the server! A few things have changed with Altis Life RPG that you need to be aware of!",

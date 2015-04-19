@@ -47,3 +47,4 @@ removeAllWeapons player;
 
 [[player,_bad],"life_fnc_jailSys",false,false] spawn life_fnc_MP;
 [5] call SOCK_fnc_updatePartial;
+[] call life_fnc_inJail;

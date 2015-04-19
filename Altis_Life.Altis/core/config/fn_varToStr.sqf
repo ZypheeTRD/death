@@ -26,6 +26,7 @@ switch (_var) do
     //food
 	case "life_inv_apple": {(localize "STR_Item_Apple")};
 	case "life_inv_peach": {(localize "STR_Item_Peach")};
+	case "life_inv_banana": {(localize "STR_Item_Banana")};
 	case "life_inv_rabbit": {(localize "STR_Item_RabbitMeat")};
 	case "life_inv_water": {(localize "STR_Item_WaterBottle")};
 	case "life_inv_coffee": {(localize "STR_Item_Coffee")};
@@ -39,10 +40,13 @@ switch (_var) do
 	case "life_inv_fuelE": {(localize "STR_Item_FuelE")};
 	case "life_inv_fuelF": {(localize "STR_Item_FuelF")};
 	case "life_inv_pickaxe": {(localize "STR_Item_Pickaxe")};
+	case "life_inv_ptools": {(localize "STR_Item_PTools")};
+	case "life_inv_shovel": {(localize "STR_Item_Shovel")};
 	case "life_inv_copperore": {(localize "STR_Item_CopperOre")};
 	case "life_inv_ironore": {(localize "STR_Item_IronOre")};
 	case "life_inv_ironr": {(localize "STR_Item_IronIngot")};
 	case "life_inv_copperr": {(localize "STR_Item_CopperIngot")};
+	case "life_inv_dirt": {(localize "STR_Item_Dirt")};
 	case "life_inv_sand": {(localize "STR_Item_Sand")};
 	case "life_inv_rock": {(localize "STR_Item_Rock")};
 	case "life_inv_cement": {(localize "STR_Item_CementBag")};
@@ -53,6 +57,16 @@ switch (_var) do
     //jewels
 	case "life_inv_diamond": {(localize "STR_Item_DiamondU")};
 	case "life_inv_diamondr": {(localize "STR_Item_DiamondC")};
+	case "life_inv_ruby": {(localize "STR_Item_RubyU")};
+	case "life_inv_rubyr": {(localize "STR_Item_RubyC")};
+	case "life_inv_emerald": {(localize "STR_Item_EmeraldU")};
+	case "life_inv_emeraldr": {(localize "STR_Item_EmeraldC")};
+	case "life_inv_sapphire": {(localize "STR_Item_SapphireU")};
+	case "life_inv_sapphirer": {(localize "STR_Item_SapphireC")};
+	case "life_inv_topaz": {(localize "STR_Item_TopazU")};
+	case "life_inv_topazr": {(localize "STR_Item_TopazC")};
+	case "life_inv_garnet": {(localize "STR_Item_GarnetU")};
+	case "life_inv_garnetr": {(localize "STR_Item_GarnetC")};
     
     //cop and illegal items
     case "life_inv_handcuffs": {(localize "STR_Item_Handcuffs")};
@@ -79,7 +93,7 @@ switch (_var) do
     case "life_inv_uwsl": {"Underwater Blasting Charge"}; //RENAME IT TO ANYTHING YOU LIKE
 
     //alochol
-    case "life_inv_mash": {"Grain Mash Mixture"};
+    case "life_inv_mash": {"Cornmeal Mash"};
     case "life_inv_wort": {"Wort Mixture"};
 	case "life_inv_yeast": {"Yeast"};
 	case "life_inv_rye": {"Rye"};
@@ -116,10 +130,13 @@ switch (_var) do
 	case "life_inv_turtle": {(localize "STR_Item_TurtleMeat")};
 	case "life_inv_turtlesoup": {(localize "STR_Item_TurtleSoup")};
     
-    
+    //slave
+	case "life_inv_tobacco": {(localize "STR_Item_Tobacco")};
+	case "life_inv_cigarettes": {(localize "STR_Item_Cigarettes")};
     
     //fed
 	case "life_inv_goldbar": {(localize "STR_Item_GoldBar")};
+	case "life_inv_goldnugget": {(localize "STR_Item_GoldNugget")};
 	
 	//License Block
     

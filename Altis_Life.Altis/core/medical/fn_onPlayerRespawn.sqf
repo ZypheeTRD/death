@@ -27,5 +27,17 @@ _unit setVariable["hasOrgan",FALSE,TRUE];
 _unit addRating 9999999999999999; //Set our rating to a high value, this is for a ARMA engine thing.
 player playMoveNow "amovppnemstpsraswrfldnon";
 
+//Rebel reward
+if(!isNil "life_ADACRecieve") then {
+[[life_ADACRecieve,life_ADACAmount],"TON_fnc_ADACReward",false,false] spawn life_fnc_MP;
+life_rebRecieve = nil;
+};
+
+//Rebel reward
+if(!isNil "life_copRecieve") then {
+[[life_copRecieve,life_ADACAmount],"TON_fnc_copReward",false,false] spawn life_fnc_MP;
+life_rebRecieve = nil;
+};
+
 [] call life_fnc_setupActions;
 [[_unit,life_sidechat,playerSide],"TON_fnc_managesc",false,false] spawn life_fnc_MP;

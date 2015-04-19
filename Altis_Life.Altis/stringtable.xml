@@ -3185,6 +3185,21 @@
 			<Italian>Carne di coniglio</Italian>
 			<Portuguese>Carne de Coelho</Portuguese>
 		</Key>
+		<Key ID="STR_Item_Tobacco">
+			<Original>Tobacco</Original>
+			<English>Tobacco</English>
+			<German>Tobacco</German>
+		</Key>
+		<Key ID="STR_Item_Cigarettes">
+			<Original>Pack of Cigarettes</Original>
+			<English>Pack of Cigarettes</English>
+			<German>Pack of Cigarettes</German>
+		</Key>
+		<Key ID="STR_Item_Banana">
+			<Original>Bunch of Bananas</Original>
+			<English>Bunch of Bananas</English>
+			<German>Bunch of Bananas</German>
+		</Key>
 		<Key ID="STR_Item_SalemaMeat">
 			<Original>Salema Meat</Original>
 			<English>Salema Meat</English>
@@ -4390,6 +4405,14 @@
 			<French>Menu Interaction du Joueur</French>
 			<Italian>Menu d'interazione Giocatore</Italian>
 			<Portuguese>Menu de Interação do Jogador</Portuguese>
+		</Key>
+            <Key ID="STR_pInAct_RemoveWeapons">
+			<Original>Seize Illegal Weapons</Original>
+			<English>Seize Illegal Weapons</English>
+			<German>Seize Illegal Weapons</German>
+			<French>Seize Illegal Weapons</French>
+			<Italian>Seize Illegal Weapons</Italian>
+			<Portuguese>Seize Illegal Weapons</Portuguese>
 		</Key>
 		<Key ID="STR_pInAct_PutInCar">
 			<Original>Put in vehicle</Original>

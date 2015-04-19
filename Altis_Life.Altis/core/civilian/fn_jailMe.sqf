@@ -49,34 +49,34 @@ while {true} do
 };
 
 
+
 switch (true) do
 {
-	case (_bail) :
-	{
+	case (_bail): {
 		life_is_arrested = false;
 		life_bail_paid = false;
 		hint localize "STR_Jail_Paid";
 		serv_wanted_remove = [player];
 		player setPos (getMarkerPos "jail_release");
-		[[getPlayerUID player],"life_fnc_wantedRemove",false,false] spawn life_fnc_MP;
+		[[getPlayerUID player],"life_fnc_wantedRemove",false,false] call life_fnc_MP;
+		[] call life_fnc_outOfJail;
 		[5] call SOCK_fnc_updatePartial;
 	};
 	
-	case (_esc) :
-	{
+	case (_esc): {
 		life_is_arrested = false;
 		hint localize "STR_Jail_EscapeSelf";
-		[[0,format[localize "STR_Jail_EscapeNOTF",profileName]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
-		[[getPlayerUID player,profileName,"901"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+		[[0,"STR_Jail_EscapeNOTF",true,[profileName]],"life_fnc_broadcast",nil,false] call life_fnc_MP;
+		[[getPlayerUID player,profileName,"901"],"life_fnc_wantedAdd",false,false] call life_fnc_MP;
 		[5] call SOCK_fnc_updatePartial;
 	};
 	
-	case (alive player && !_esc && !_bail) :
-	{
+	case (alive player && !_esc && !_bail): {
 		life_is_arrested = false;
 		hint localize "STR_Jail_Released";
-		[[getPlayerUID player],"life_fnc_wantedRemove",false,false] spawn life_fnc_MP;
+		[[getPlayerUID player],"life_fnc_wantedRemove",false,false] call life_fnc_MP;
 		player setPos (getMarkerPos "jail_release");
+		[] call life_fnc_outOfJail;
 		[5] call SOCK_fnc_updatePartial;
 	};
 };

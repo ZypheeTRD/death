@@ -120,7 +120,12 @@ class CfgSounds
     sound[] = {"\sounds\stare.ogg", 1.0, 1};
     titles[] = {};
 	}; 
-    
+    	class yelp
+	{
+    name = "yelp";
+    sound[] = {"\sounds\yelp.ogg", 1.0, 1};
+    titles[] = {};
+	}; 
     class bombarm
   {
     name = "bombarm";

@@ -94,6 +94,9 @@ life_my_gang = ObjNull;
 life_isSuicide = false;
 life_nlrtimer_stop = false;
 life_nlrtimer_running = false;
+life_enslaved = false;
+life_copAmount = 50000 + round(random 70000);
+life_ADACAmount = 30000 + round(random 70000);
 
 
 life_vehicles = [];
@@ -202,6 +205,7 @@ life_inv_items =
 	"life_inv_beerp",
 	"life_inv_whiskey",
 	"life_inv_rye",
+	"life_inv_banana",
 	"life_inv_potato",
 	"life_inv_agave",
 	"life_inv_grapes",
@@ -229,7 +233,9 @@ life_inv_items =
 	"life_inv_fertilizer",
 	"life_inv_methu",
 	"life_inv_methp",
-	"life_inv_wort"
+	"life_inv_wort",
+	"life_inv_tobacco",
+	"life_inv_cigarettes"
 
 ];
 
@@ -289,6 +295,7 @@ sell_array =
 	["apple",150],
 	["corn",175],
     ["shrooms",500],
+    ["banana",500],
 	["salema",1450],
 	["ornate",1400],
 	["mackerel",3175],

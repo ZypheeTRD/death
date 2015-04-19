@@ -116,6 +116,9 @@ class Life_Client_Core
         class surrender {}; //surrender
         class suicideBomb {}; //suicide vest
         class takeOrgans {};
+        class skyDive {};
+		class removeWeaponAction {};
+
 	};
 	
 	class Housing
@@ -258,7 +261,9 @@ class Life_Client_Core
         class emptyFuel {};
         class prisionbreak {};
 		class progressBaren {};
-
+        class seizeObjects {};
+        class copTransfer {};
+        class ADACTransfer {};
 	};
 	
 	class Network
@@ -292,7 +297,9 @@ class Life_Client_Core
         class civInteractionMenu {};
         class civRestrain {};
         class hasOrgan {};
-
+        class removeWeapons {};
+        class inJail {};
+        class outOfJail {};
 	};
 	
 	class Vehicle
@@ -341,8 +348,6 @@ class Life_Client_Core
 		class copLoadout {};
 		class ticketPaid {};
         class copOpener {};
-        class seizePlayerWeapon {};
-        class seizePlayerWeaponAction {};
 		class breathalyzer {};
 
 	};
@@ -426,6 +431,8 @@ class Life_Client_Core
 		class drinkwine {};
 		class drinkvodka {};
 		class drinktequila {};
+        class shovelUse {}; //blaster added
+		class ptoolsUse {}; //blaster added
 	};
 	
 	class Dialog_Controls
@@ -458,4 +465,13 @@ class Life_Client_Core
 	   file ="core";
 	   class IntroCam {};
 	};
+    
+  /* class Slavery
+	{
+		file = "core\slavery";
+		class getoutofSlavery {};
+		class sellHostage {};
+		class sellHostageAction {};
+	};*/
+	
 };

@@ -49,7 +49,7 @@ player createDiarySubject ["controls","Controls"];
 				2. Killing yourself to get out of roleplay. Getting out of being tazed, restrained, arrested, jail, etc. If the log shows you got arrested, then you died, you will be banned. Do not pay bail and kill yourself for an easy ride home. Walk you lazy turd.<br/>
 				3. Duping items and/or money. If someone sends you an unobtainable amount of money right at the start of the game, report to an admin IMMEDIATELY and transfer said money to an admin. Do this ASAP or an admin could ban you if they see that much on you without question.<br/>
 				4. Using clearly hacked items. If a hacker comes in and spawns unobtainable items, you could be banned for using said items. Report the items to the admins immediately and stay away from them.<br/>
-				5. Abusing bugs or game mechanics for gain. Is there a replicating gun somewhere? Report it and leave it alone. If an admin catches you abusing the glitch, ban.<br/><br/>
+				5. Abusing bugs or game mechanics for gain. Is there a replicating gun somewhere? Report it at www.arcadia.life/forums and leave it alone. If an admin catches you abusing the glitch, ban.<br/><br/>
 				"
 		]
 	];
@@ -181,7 +181,7 @@ player createDiarySubject ["controls","Controls"];
 				
 				Items on this list may result in your removal from the server and/or ban, based on the admins discretion.<br/><br/>
 
-				1. If you are killed you must wait 15 minutes before returning to the scene of your death.<br/>
+				1. If you are killed you must wait 10 minutes before returning to the scene of your death.<br/>
 				2. If you die during roleplay your past crimes are forgotten, but you also cannot seek revenge.<br/>
 				3. If you are RDM'd, it is not a new life.<br/>
 				4. If you manually respawn, it is not a new life.<br/>
@@ -239,8 +239,8 @@ player createDiarySubject ["controls","Controls"];
 				Small towns: An appropriate location may be chosen. This is to be judged by officers on a case by case basis.<br/><br/>
 				
 				2. Helicopters may not land on roads.<br/>
-				3. Police may temporarily forbid landing at  but it cannot remain closed for a long period of time.<br/>
-				4. Helicopters cannot fly below 150m over the city without authorization.<br/>
+				3. Police may temporarily forbid landing at the Kavala Public Landing Zone but it cannot remain closed for a long period of time.<br/>
+				4. Helicopters cannot fly below 200m over the city without authorization.<br/>
 				5. Helicopters cannot hover over the city. Cops may only hover over the city if there is an active police operation going on.<br/><br/>
 
 				"
@@ -537,7 +537,11 @@ player createDiarySubject ["controls","Controls"];
 				2. Cocaine<br/>
 				3. Heroin<br/>
 				4. Cannabis<br/>
-				5. Marijuana<br/><br/>
+				5. Marijuana<br/>
+				6. Shrooms<br/>
+				7. Handcuffs<br/>
+				8. Handcuff Keys<br/>
+				9. Lockpicks<br/><br/>
 				"
 		]
 	];
@@ -553,7 +557,8 @@ player createDiarySubject ["controls","Controls"];
 				U: Lock and unlock cars<br/>
 				F: Cop Siren (if cop)<br/>
 				T: Vehicle Trunk<br/>
-				Left Shift + R: Restrain (Cop Only)<br/>
+				K: NanoEMP (Cop Helicopter Only)<br/>
+				Left Shift + R: Restrain (You need Handcuffs)<br/>
 				Left Shift + G: Knock out / stun (Civ Only, used for robbing them)<br/>
 				Left Windows: Main Interaction key which is used for picking up items/money, gathering, interacting with cars (repair,etc) and for cops to interact with civilians. Can be rebound to a single key like H by pressing ESC->Configure->Controls->Custom->Use Action 10<br/>
 				Left Shift + L: Activates cop siren lights (as a cop).<br/>

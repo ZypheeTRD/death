@@ -81,7 +81,7 @@ for "_x" from 0 to ((count _inputItems) - 1) do {
 
 //exit if the player doenst have the required items for one process
 if (_productionAmount < 1) exitWith {
-	hint "Du hast nicht genug Materialien dabei";
+	hint "You don't have the right amount of items to request this processing.";
 	life_is_processing = false;
 };
 

@@ -10,7 +10,7 @@ _shop = _this select 0;
 
 switch (_shop) do
 {
-	case "market": {["Altis Market",["cornmeal","bottles","water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","boltcutter","uwsl","storagesmall","storagebig","debitcard","diaper"]]};
+	case "market": {["Altis Market",["cornmeal","bottles","water","rabbit","apple","banana","cigarettes","redgull","tbacon","lockpick","pickaxe","fuelF","peach","boltcutter","uwsl","storagesmall","storagebig","debitcard","diaper"]]};
 	case "rebel": {["Rebel Market",["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","boltcutter","blastingcharge","uwsl","handcuffs","handcuffkeys","scalpel","organcooler","speedbomb","debitcard","diaper"]]};
 	case "gang": {["Gang Market", ["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","blastingcharge","boltcutter","handcuffs","handcuffkeys"]]};
 	case "wongs": {["Wong's Food Cart",["turtlesoup","turtle"]]};
@@ -27,6 +27,7 @@ switch (_shop) do
 	case "gold": {["Gold Buyer",["goldbar"]]};
 	case "medmarijuana": {["Dispensary",["marijuana","cannabis"]]};
     case "blackmarket": {["Black Market",["handcuffs","handcuffkeys","scalpel","organcooler","speedbomb","kidney"]]};
+    case "adac": {["ADAC Market",["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","boltcutter","blastingcharge","uwsl","handcuffs","handcuffkeys","scalpel","organcooler","speedbomb","kidney"]]};
     case "bar": {["The Lounge",["bottledbeer","bottledwine","bottledwhiskey","bottledtequila","bottledvodka"]]};
 	case "speakeasy": {["Speakeasy's",["bottledwhiskey","bottledshine","bottledbeer","moonshine","vodka","tequila","bottledtequila","bottledvodka"]]};
 

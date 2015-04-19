@@ -38,7 +38,7 @@ _toWait = (random (schiffsw_time_max - schiffsw_time_min)) + schiffsw_time_min;
 sleep _toWait;
 
 // schiffsw STARTEN
-[[5,"<br/><t align='center'><t size='6'><img image='textures\schiffswheader.paa'/></t></t><br/><br/><t size='1.4'><t color='#A5DF00'>SHIPWRECK!!</t></t><br/><br/><t size='1'>A shipwreck has been found off the coast of Altis! The area has been marked on your map!  The wreck will be removed by ADAC forces in 60 minutes.  Much luck!</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+[[5,"<br/><t align='center'><t size='6'></t></t><br/><br/><t size='1.4'><t color='#A5DF00'>SHIPWRECK!!</t></t><br/><br/><t size='1'>A shipwreck has been found off the coast of Altis! The area has been marked on your map!  The wreck will be removed by ADAC forces in 60 minutes.  Much luck!</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 _poses = count schiffsw_positions;
 _inArr = floor(random _poses);
 _dest = schiffsw_positions select _inArr;
@@ -96,4 +96,4 @@ _dasWrack setVariable ["Trunk",[_lootArrayFinal,500],true];
 
 sleep 1800;
 
-[[5,"<br/><t align='center'><t size='6'><img image='textures\schiffswheader.paa'/></t></t><br/><br/><t size='1.4'><t color='#A5DF00'>SHIPWRECK</t></t><br/><br/><t size='1'>The wreck was salvaged by ADAC forces, all traces have been removed!</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+[[5,"<br/><t align='center'></t></t><br/><br/><t size='1.4'><t color='#A5DF00'>SHIPWRECK</t></t><br/><br/><t size='1'>The wreck was salvaged by ADAC forces, all traces have been removed!</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;

@@ -111,6 +111,10 @@ if(!((player distance (getMarkerPos "police_hq_1") < 30) OR  (player distance (g
 _Btn7 ctrlSetText localize "STR_pInAct_PutInCar";
 _Btn7 buttonSetAction "[life_pInact_curTarget] call life_fnc_putInCar; closeDialog 0;"; 
 
+//button 8 - seize
+_Btn8 ctrlSetText localize "STR_pInAct_RemoveWeapons";
+_Btn8 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_removeWeaponAction; closeDialog 0;";
+
 //actually the Breathalyser button
 _Btn9 ctrlSetText localize "STR_pInAct_Breathalyzer";
 _Btn9 buttonSetAction "[[player],""life_fnc_breathalyzer"",life_pInact_curTarget,FALSE] spawn life_fnc_MP;closeDialog 0";

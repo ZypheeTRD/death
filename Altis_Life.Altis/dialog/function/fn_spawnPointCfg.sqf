@@ -19,28 +19,43 @@ switch (_side) do
 			["cop_spawn_1","Sheriff Station","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 			["cop_spawn_2","Pyrgos HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
 			["cop_spawn_3","Athira HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
-			["cop_spawn_4","Air HQ","\a3\ui_f\data\map\Markers\NATO\b_air.paa"],
-			["cop_spawn_5","Highway Patrol","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]	
+			["cop_spawn_5","Kavala HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 		];
 		
-	/*	
+            
+            if(__GETC__(life_coplevel) > 3) then {
+			_ret = _ret + [
+							
+                            ["cop_spawn_4","Air HQ","\a3\ui_f\data\map\Markers\NATO\b_air.paa"],
+                            ["cop_spawn_6","Border Patrol","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]
+						  ];
+		};
 		 //SWAT SPAWNS
 		 //You can as many PUID's in here as you want and this could be a gang spawn, or whatever the hell you want!
 		if(__GETC__(life_coplevel) > 5) then {
 			_ret = _ret + [
-							["dea_spawn_1","SWAT OB","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+							
+                            ["cop_spawn_7","Southeast Highway Patrol","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
+                            ["cop_spawn_8","Northwest Highway Patrol","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]
 						  ];
 		};
 		
 		
 		 //PMC SPAWNS
 		 //You can as many PUID's in here as you want and this could be a gang spawn, or whatever the hell you want!
-		if(__GETC__(life_coplevel) == 7) then {
+		if(__GETC__(life_coplevel) > 12) then {
 			_ret = _ret + [
-							["pmc_base_air","ADTF Air Base","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-							["pmc_base","ADTF Central Base","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+							["nato_1","NATO Air Support Base","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+							["nato_2","NATO Ground Support Base","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 						  ];
-		};	*/
+		};
+            
+            		if(__GETC__(life_donatorlvl) > 0) then {
+			_ret = _ret + [
+				["vip_cop","Cop Vacation Home","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]				
+				
+			];
+		};
 	};
 	
 	case civilian:
@@ -51,7 +66,8 @@ switch (_side) do
 		_ret = [
 				["rebel_spawn_1","North Rebel Outpost","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 				["rebel_spawn_2","South Rebel Outpost","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-				["rebel_spawn_3","Southeast Rebel Outpost","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+				["rebel_spawn_3","Southeast Rebel Outpost","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+				["rebel_spawn_4","West Rebel Outpost","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 					
 				];
 		};
@@ -62,7 +78,8 @@ switch (_side) do
 					["civ_spawn_1","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],					
 					["civ_spawn_2","Neochori","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 					["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-					["civ_spawn_4","Panagia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]				
+					["civ_spawn_4","Panagia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+					["civ_spawn_5","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]				
 				];
 		};
 		
@@ -74,12 +91,20 @@ switch (_side) do
 			];
 		};
 		
+		//if trusted, they also get these options
+		if(__GETC__(life_donatorlvl) > 3) then {
+			_ret = _ret + [
+				["vip_compound","VIP Compound","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]				
+				
+			];
+		};
 	/*	if((getPlayerUID player) in [""])then {
 			_ret = _ret + [
 							["666_spawn","JUCO Spawn","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 						  ];
 		};			
 	*/	
+        
 		if(count life_houses > 0) then {
 			{
 				_pos = call compile format["%1",_x select 0];
@@ -102,7 +127,8 @@ switch (_side) do
         case east: 
 	{
 		_ret = [
-			["adac_headquarters","ADAC Headquarters","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+			["adac_headquarters","ADAC Headquarters","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+			["adac_Outpost","ADAC Outpost","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 		];
 	};
 };

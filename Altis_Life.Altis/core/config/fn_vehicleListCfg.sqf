@@ -13,8 +13,9 @@ _return = [];
 switch (_shop) do
 {
     
-case "vip_vehicles1":
-	{if(__GETC__(life_donatorlvl) > 1) then
+case "vip_vehicles":
+	{
+        if(__GETC__(life_donatorlvl) == 1) then
 		{
 				            _return pushBack["B_Quadbike_01_F",1850];
                             _return pushBack["C_Hatchback_01_F",8000];
@@ -31,11 +32,7 @@ case "vip_vehicles1":
                             _return pushBack["B_Truck_01_box_F",310000];
                             _return pushBack["O_Truck_03_device_F",320000];
 		};
-    };
-    
-case "vip_vehicles2":
-	{
-        if(__GETC__(life_donatorlvl) > 2) then
+        if(__GETC__(life_donatorlvl) == 2) then
 		{
 				            _return pushBack["B_Quadbike_01_F",1850];
                             _return pushBack["C_Hatchback_01_F",8000];
@@ -262,8 +259,52 @@ case "vip_vehicles2":
 			["B_MRAP_01_F",100000];
 		};
 	};
-
-
+	case "nato_tank":
+	{
+		if(__GETC__(life_coplevel) > 11) then
+		{
+			_return pushBack
+			["B_APC_Tracked_01_rcws_F",230000];
+			_return pushBack
+			["B_APC_Tracked_01_CRV_F",230000];
+			_return pushBack
+			["B_APC_Tracked_01_AA_F",230000];
+			_return pushBack
+			["O_APC_Tracked_02_cannon_F",430000];
+			_return pushBack
+			["O_APC_Tracked_02_AA_F",430000];
+			_return pushBack
+			["I_APC_tracked_03_cannon_F",430000];
+			_return pushBack
+			["B_MBT_01_cannon_F",1130000];
+			_return pushBack
+			["I_MBT_03_cannon_F",1230000];
+			_return pushBack
+			["O_MBT_02_arty_F",1430000];
+			_return pushBack
+			["O_MBT_02_cannon_F",1530000];
+			_return pushBack
+			["B_MBT_01_mlrs_F",21630000];
+			_return pushBack
+			["B_MBT_01_TUSK_F",3120000];
+			_return pushBack
+			["B_MBT_01_arty_F",3032000];
+		};
+	};
+	case "nato_air":
+	{
+		if(__GETC__(life_coplevel) > 11) then
+		{
+			_return pushBack
+			["B_Plane_CAS_01_F",230000];
+			_return pushBack
+			["I_Plane_Fighter_03_CAS_F",230000];
+			_return pushBack
+			["I_Plane_Fighter_03_AA_F",230000];
+			_return pushBack
+			["O_Plane_CAS_02_F",230000];
+		};
+	};
 };
 
 _return;

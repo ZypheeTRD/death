@@ -61,9 +61,9 @@ player setVariable["rank",(__GETC__(life_coplevel)),true];
 {
 while {true} do
 {
-waitUntil {uniform player == "U_B_CombatUniform_mcam_worn"};
+waitUntil {uniform player == "U_B_CombatUniform_mcam_vest"};
 player setObjectTextureGlobal [0,"textures\police\outfits\sniper_shirt.jpg"];
-waitUntil {uniform player != "U_B_CombatUniform_mcam_worn"};
+waitUntil {uniform player != "U_B_CombatUniform_mcam_vest"};
 	};
 };
 
@@ -71,9 +71,9 @@ waitUntil {uniform player != "U_B_CombatUniform_mcam_worn"};
 {
 while {true} do
 {
-waitUntil {uniform player == "U_B_CombatUniform_mcam_vest"};
+waitUntil {uniform player == "U_B_CombatUniform_mcam_worn"};
 player setObjectTextureGlobal [0,"textures\police\outfits\sniper_shirt.jpg"];
-waitUntil {uniform player != "U_B_CombatUniform_mcam_vest"};
+waitUntil {uniform player != "U_B_CombatUniform_mcam_worn"};
 	};
 };
 

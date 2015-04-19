@@ -227,6 +227,14 @@ switch (true) do
 			player setFatigue .5;
 		};
 	};
+    
+      case (_item == "ptools"): {
+		[] spawn life_fnc_ptoolsUse;
+	};
+	
+	case (_item == "shovel"): {
+		[] spawn life_fnc_shovelUse;
+	}; 
 	
 	default
 	{
