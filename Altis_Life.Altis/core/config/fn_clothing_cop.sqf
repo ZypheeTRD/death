@@ -22,16 +22,17 @@ switch (_filter) do
 		_ret pushBack ["U_Rangemaster","Cop Uniform",25];
 		if(__GETC__(life_coplevel) > 1) then
 		{
-			_ret pushBack ["U_O_Wetsuit",nil,10000];
 		};
-		if(__GETC__(life_coplevel) > 5) then
+		if(__GETC__(life_coplevel) > 3) then
 		{
-			_ret pushBack ["U_B_CombatUniform_mcam_worn","Swat",550];
-			_ret pushBack ["U_I_GhillieSuit",nil,550];
+			_ret pushBack ["U_B_CombatUniform_mcam_worn","nil",550];
+			_ret pushBack ["U_B_CombatUniform_mcam_vest","nil",550];
 		};
 		if(__GETC__(life_coplevel) > 7) then
 		{
-			_ret pushBack ["U_B_CombatUniform_mcam_vest","Swat Leader",550];
+			_ret pushBack ["U_B_CTRG_1",nil,550];
+			_ret pushBack ["U_B_CTRG_2",nil,550];
+			_ret pushBack ["U_B_CTRG_3",nil,550];
 		};
 	};
 	
@@ -48,18 +49,18 @@ switch (_filter) do
 		if(__GETC__(life_coplevel) > 5) then
 		{
 			_ret pushBack ["H_HelmetB_plain_mcamo",nil,100];
+			_ret pushBack ["H_MilCap_mcamo",nil,100];
+			_ret pushBack ["H_Watchcap_blk",nil,100];
 		};
 		if(__GETC__(life_coplevel) > 7) then
 		{	
-			_ret pushBack ["H_MilCap_mcamo",nil,100];
-			_ret pushBack ["H_Watchcap_blk",nil,100];
+			_ret pushBack ["H_CrewHelmetHeli_B",nil,100];
 		};
 		if(__GETC__(life_coplevel) > 12) then
 		{	
 			_ret pushBack ["H_Beret_02",nil,100];
 			_ret pushBack ["H_Beret_ocamo",nil,100];
 			_ret pushBack ["H_Beret_Colonel",nil,100];
-			_ret pushBack ["H_CrewHelmetHeli_B",nil,100];
 		};
 	};
 	
@@ -93,9 +94,14 @@ switch (_filter) do
 		{
 			_ret pushBack ["V_TacVest_blk_POLICE",nil,1500];
 		};
+		if(__GETC__(life_coplevel) > 3) then
+		{
+		        _ret pushBack ["V_PlateCarrierGL_mtp",nil,150];
+		};
 		if(__GETC__(life_coplevel) > 8) then
 		{
 			_ret pushBack ["V_TacVestIR_blk",nil,100];
+			_ret pushBack ["V_PlateCarrierGL_blk",nil,150];
 		};
 	};
 	
@@ -116,7 +122,8 @@ switch (_filter) do
 		if(__GETC__(life_coplevel) > 3) then
 		{
 			_ret pushBack ["B_AssaultPack_blk",nil,2500];
-			_ret pushBack ["B_Carryall_cbr","Swat Bag",3500];
+			_ret pushBack ["B_Carryall_cbr",nil,3500];
+			_ret pushBack ["B_Carryall_mcamo",nil,2500];
 		};
 			if(__GETC__(life_coplevel) > 6) then
 		{
